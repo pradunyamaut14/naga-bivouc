@@ -97,7 +97,7 @@ const Footer = () => {
         <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © 2024 Naga Bivouac. All rights reserved.
+              © 2024 Naga Bivouac. All rights reserved II Designed and developed by Pradunya Maut 
             </p>
             <div className="flex gap-6 text-sm text-muted-foreground">
               <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
