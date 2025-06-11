@@ -6,12 +6,14 @@ import Gallery from "@/components/Gallery";
 import Contact from "@/components/Contact";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import StatesOverview from "@/components/StatesOverview";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       <Hero />
+      <StatesOverview />
       <About />
       <Services />
       <Gallery />
