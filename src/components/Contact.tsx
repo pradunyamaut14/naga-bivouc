@@ -1,11 +1,25 @@
 
+import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Loader2 } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import { sendContactForm, ContactFormData } from "@/services/emailService";
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState<ContactFormData>({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    adventureInterest: "",
+    message: "",
+  });
+
   const contactInfo = [
     {
       icon: MapPin,
@@ -28,6 +42,57 @@ const Contact = () => {
       details: ["Mon - Sat: 9:00 - 18:00", "Sunday: 10:00 - 16:00"]
     }
   ];
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!formData.firstName || !formData.email || !formData.message) {
+      toast({
+        title: "Missing Information",
+        description: "Please fill in all required fields.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const result = await sendContactForm(formData);
+      
+      if (result.success) {
+        toast({
+          title: "Message Sent Successfully!",
+          description: "Thank you for contacting us. We'll get back to you within 24 hours.",
+        });
+
+        // Reset form
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          adventureInterest: "",
+          message: "",
+        });
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      toast({
+        title: "Failed to Send Message",
+        description: "There was an error sending your message. Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section id="contact" className="py-20">
@@ -87,52 +152,100 @@ const Contact = () => {
               <CardHeader>
                 <CardTitle className="text-2xl">Send us a Message</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="text-sm font-medium mb-2 block">First Name</label>
-                    <Input placeholder="John" />
+              <CardContent>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="text-sm font-medium mb-2 block">First Name *</label>
+                      <Input 
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleInputChange}
+                        placeholder="John" 
+                        required
+                        disabled={isSubmitting}
+                      />
+                    </div>
+                    <div>
+                      <label className="text-sm font-medium mb-2 block">Last Name</label>
+                      <Input 
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleInputChange}
+                        placeholder="Doe" 
+                        disabled={isSubmitting}
+                      />
+                    </div>
                   </div>
+                  
                   <div>
-                    <label className="text-sm font-medium mb-2 block">Last Name</label>
-                    <Input placeholder="Doe" />
+                    <label className="text-sm font-medium mb-2 block">Email *</label>
+                    <Input 
+                      name="email"
+                      type="email" 
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      placeholder="john@example.com" 
+                      required
+                      disabled={isSubmitting}
+                    />
                   </div>
-                </div>
-                
-                <div>
-                  <label className="text-sm font-medium mb-2 block">Email</label>
-                  <Input type="email" placeholder="john@example.com" />
-                </div>
-                
-                <div>
-                  <label className="text-sm font-medium mb-2 block">Phone</label>
-                  <Input type="tel" placeholder="+91 98765 43210" />
-                </div>
-                
-                <div>
-                  <label className="text-sm font-medium mb-2 block">Adventure Interest</label>
-                  <select className="w-full px-3 py-2 border border-input rounded-md bg-background">
-                    <option>Select an adventure type</option>
-                    <option>Camping Expeditions</option>
-                    <option>Photography Tours</option>
-                    <option>Nature Trails</option>
-                    <option>Adventure Trekking</option>
-                    <option>Cultural Immersion</option>
-                    <option>Custom Itinerary</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label className="text-sm font-medium mb-2 block">Message</label>
-                  <Textarea 
-                    placeholder="Tell us about your adventure preferences, group size, dates, or any special requirements..."
-                    rows={4}
-                  />
-                </div>
-                
-                <Button size="lg" className="w-full">
-                  Send Message
-                </Button>
+                  
+                  <div>
+                    <label className="text-sm font-medium mb-2 block">Phone</label>
+                    <Input 
+                      name="phone"
+                      type="tel" 
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      placeholder="+91 98765 43210" 
+                      disabled={isSubmitting}
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="text-sm font-medium mb-2 block">Adventure Interest</label>
+                    <select 
+                      name="advent ureInterest"
+                      value={formData.adventureInterest}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 border border-input rounded-md bg-background"
+                      disabled={isSubmitting}
+                    >
+                      <option value="">Select an adventure type</option>
+                      <option value="Camping Expeditions">Camping Expeditions</option>
+                      <option value="Photography Tours">Photography Tours</option>
+                      <option value="Nature Trails">Nature Trails</option>
+                      <option value="Adventure Trekking">Adventure Trekking</option>
+                      <option value="Cultural Immersion">Cultural Immersion</option>
+                      <option value="Custom Itinerary">Custom Itinerary</option>
+                    </select>
+                  </div>
+                  
+                  <div>
+                    <label className="text-sm font-medium mb-2 block">Message *</label>
+                    <Textarea 
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      placeholder="Tell us about your adventure preferences, group size, dates, or any special requirements..."
+                      rows={4}
+                      required
+                      disabled={isSubmitting}
+                    />
+                  </div>
+                  
+                  <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      'Send Message'
+                    )}
+                  </Button>
+                </form>
               </CardContent>
             </Card>
           </div>

@@ -1,11 +1,15 @@
 
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import PackageBookingModal from "@/components/PackageBookingModal";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Clock, Users, MapPin, Star } from "lucide-react";
+import { useState } from "react";
 
 const Packages = () => {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
   const packages = [
     {
       id: 1,
@@ -95,6 +99,10 @@ const Packages = () => {
 
   const categories = ["All", "Complete Tour", "Nature & Adventure", "Trekking", "Wildlife", "Cultural", "Spiritual"];
 
+  const filteredPackages = selectedCategory === "All" 
+    ? packages 
+    : packages.filter(pkg => pkg.category === selectedCategory);
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -115,9 +123,10 @@ const Packages = () => {
             {categories.map((category) => (
               <Button
                 key={category}
-                variant={category === "All" ? "default" : "outline"}
+                variant={selectedCategory === category ? "default" : "outline"}
                 size="sm"
                 className="rounded-full"
+                onClick={() => setSelectedCategory(category)}
               >
                 {category}
               </Button>
@@ -130,7 +139,7 @@ const Packages = () => {
       <section className="py-16">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {packages.map((pkg) => (
+            {filteredPackages.map((pkg) => (
               <Card key={pkg.id} className="group hover:shadow-xl transition-shadow duration-300 overflow-hidden">
                 <div className="relative h-64 overflow-hidden">
                   <img
@@ -200,9 +209,11 @@ const Packages = () => {
                       </div>
                       <div className="text-xs text-muted-foreground">per person</div>
                     </div>
-                    <Button size="sm" className="group">
-                      Book Now
-                    </Button>
+                    <PackageBookingModal packageName={pkg.name}>
+                      <Button size="sm" className="group">
+                        Book Now
+                      </Button>
+                    </PackageBookingModal>
                   </div>
                 </CardContent>
               </Card>
@@ -211,8 +222,7 @@ const Packages = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-primary text-primary-foreground">
+      {/* CTA Section */}      <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">
             Can't Find the Perfect Package?

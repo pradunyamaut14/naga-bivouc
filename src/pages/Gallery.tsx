@@ -3,51 +3,61 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Camera, Mountain, Users, TreePine, Droplets, Music } from "lucide-react";
+import { Camera, Mountain, Users, TreePine, Droplets, Music, X } from "lucide-react";
+import { useState } from "react";
 
 const GalleryPage = () => {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
   const galleryCategories = [
     {
       icon: Mountain,
       title: "Mountain Landscapes",
       description: "Majestic peaks and scenic valleys",
       image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
-      count: "150+ Photos"
+      count: "150+ Photos",
+      category: "Mountains"
     },
     {
       icon: Users,
       title: "Cultural Heritage",
       description: "Traditional festivals and customs",
       image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9",
-      count: "200+ Photos"
+      count: "200+ Photos",
+      category: "Culture"
     },
     {
       icon: TreePine,
       title: "Wildlife & Nature",
       description: "Flora, fauna and natural wonders",
       image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e",
-      count: "100+ Photos"
+      count: "100+ Photos",
+      category: "Nature"
     },
     {
       icon: Droplets,
       title: "Waterfalls & Rivers",
       description: "Cascading falls and pristine waters",
       image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716",
-      count: "80+ Photos"
+      count: "80+ Photos",
+      category: "Water"
     },
     {
       icon: Music,
       title: "Festivals & Events",
       description: "Vibrant celebrations and performances",
       image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb",
-      count: "120+ Photos"
+      count: "120+ Photos",
+      category: "Culture"
     },
     {
       icon: Camera,
       title: "Adventure Activities",
       description: "Trekking, camping and outdoor sports",
       image: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86",
-      count: "90+ Photos"
+      count: "90+ Photos",
+      category: "Adventure"
     }
   ];
 
@@ -55,34 +65,62 @@ const GalleryPage = () => {
     {
       src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
       title: "Himalayan Sunrise",
-      location: "Arunachal Pradesh"
+      location: "Arunachal Pradesh",
+      category: "Mountains"
     },
     {
       src: "https://images.unsplash.com/photo-1433086966358-54859d0ed716",
       title: "Seven Sisters Falls",
-      location: "Meghalaya"
+      location: "Meghalaya",
+      category: "Water"
     },
     {
       src: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e",
       title: "One-Horned Rhino",
-      location: "Assam"
+      location: "Assam",
+      category: "Nature"
     },
     {
       src: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9",
       title: "Tea Garden Vista",
-      location: "Assam"
+      location: "Assam",
+      category: "Nature"
     },
     {
       src: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb",
       title: "Loktak Lake",
-      location: "Manipur"
+      location: "Manipur",
+      category: "Water"
     },
     {
       src: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86",
       title: "Mountain Village",
-      location: "Sikkim"
+      location: "Sikkim",
+      category: "Mountains"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1472396961693-142e6e269027",
+      title: "Wildlife Safari",
+      location: "Kaziranga",
+      category: "Nature"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+      title: "Cultural Festival",
+      location: "Nagaland",
+      category: "Culture"
     }
   ];
+
+  const categories = ["All", "Mountains", "Culture", "Nature", "Water", "Adventure"];
+
+  const filteredCategories = selectedCategory === "All" 
+    ? galleryCategories 
+    : galleryCategories.filter(item => item.category === selectedCategory);
+
+  const filteredImages = selectedCategory === "All" 
+    ? featuredImages 
+    : featuredImages.filter(item => item.category === selectedCategory);
 
   return (
     <div className="min-h-screen bg-background">
@@ -116,19 +154,35 @@ const GalleryPage = () => {
             <h2 className="text-4xl font-bold mb-6">
               Explore by <span className="text-primary">Category</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
               Browse our extensive collection organized by themes and experiences
             </p>
+
+            {/* Category Filter Buttons */}
+            <div className="flex flex-wrap justify-center gap-2 mb-8">
+              {categories.map((category) => (
+                <Button
+                  key={category}
+                  variant={selectedCategory === category ? "default" : "outline"}
+                  size="sm"
+                  onClick={() => setSelectedCategory(category)}
+                  className="rounded-full"
+                >
+                  {category}
+                </Button>
+              ))}
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {galleryCategories.map((category, index) => (
+            {filteredCategories.map((category, index) => (
               <Card key={index} className="group overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <div className="relative h-64 overflow-hidden">
                   <img
                     src={category.image}
                     alt={category.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer"
+                    onClick={() => setSelectedImage(category.image)}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 text-white">
@@ -159,13 +213,14 @@ const GalleryPage = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featuredImages.map((image, index) => (
+            {filteredImages.map((image, index) => (
               <Card key={index} className="group overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="relative h-80 overflow-hidden">
                   <img
                     src={image.src}
                     alt={image.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer"
+                    onClick={() => setSelectedImage(image.src)}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -199,6 +254,25 @@ const GalleryPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Image Lightbox Modal */}
+      {selectedImage && (
+        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
+          <div className="relative max-w-4xl max-h-[90vh] w-full">
+            <img
+              src={selectedImage}
+              alt="Gallery image"
+              className="w-full h-full object-contain rounded-lg"
+            />
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute -top-4 -right-4 bg-white rounded-full p-2 hover:bg-gray-100 transition-colors"
+            >
+              <X className="h-6 w-6" />
+            </button>
+          </div>
+        </div>
+      )}
 
       <Footer />
     </div>

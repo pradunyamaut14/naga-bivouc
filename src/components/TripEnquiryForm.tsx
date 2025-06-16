@@ -5,10 +5,13 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { sendTripEnquiry, TripEnquiryData } from "@/services/emailService";
+import { Loader2 } from "lucide-react";
 
 const TripEnquiryForm = () => {
   const { toast } = useToast();
-  const [formData, setFormData] = useState({
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState<TripEnquiryData>({
     firstName: "",
     lastName: "",
     email: "",
@@ -17,15 +20,15 @@ const TripEnquiryForm = () => {
     travelDates: "",
     duration: "",
     budget: "",
-    states: [] as string[],
-    activities: [] as string[],
+    states: [],
+    activities: [],
     specialRequirements: "",
   });
 
   const stateOptions = [
     "Arunachal Pradesh",
-    "Assam",
-    "Manipur", 
+    "Assam", 
+    "Manipur",
     "Meghalaya",
     "Mizoram",
     "Nagaland",
@@ -60,10 +63,9 @@ const TripEnquiryForm = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Basic validation
     if (!formData.firstName || !formData.email || !formData.phone) {
       toast({
         title: "Missing Information",
@@ -73,28 +75,43 @@ const TripEnquiryForm = () => {
       return;
     }
 
-    // In a real application, this would submit to a backend
-    console.log("Trip enquiry submitted:", formData);
-    
-    toast({
-      title: "Enquiry Submitted!",
-      description: "Thank you for your interest. We'll contact you within 24 hours to plan your perfect Northeast India adventure.",
-    });
+    setIsSubmitting(true);
 
-    // Reset form
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      groupSize: "",
-      travelDates: "",
-      duration: "",
-      budget: "",
-      states: [],
-      activities: [],
-      specialRequirements: "",
-    });
+    try {
+      const result = await sendTripEnquiry(formData);
+      
+      if (result.success) {
+        toast({
+          title: "Enquiry Submitted Successfully!",
+          description: "Thank you for your interest. We'll contact you within 24 hours to plan your perfect Northeast India adventure.",
+        });
+
+        // Reset form
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          groupSize: "",
+          travelDates: "",
+          duration: "",
+          budget: "",
+          states: [],
+          activities: [],
+          specialRequirements: "",
+        });
+      } else {
+        throw new Error('Failed to send enquiry');
+      }
+    } catch (error) {
+      toast({
+        title: "Submission Failed",
+        description: "There was an error sending your enquiry. Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -109,6 +126,7 @@ const TripEnquiryForm = () => {
             value={formData.firstName}
             onChange={handleInputChange}
             required
+            disabled={isSubmitting}
           />
         </div>
         <div>
@@ -118,6 +136,7 @@ const TripEnquiryForm = () => {
             name="lastName"
             value={formData.lastName}
             onChange={handleInputChange}
+            disabled={isSubmitting}
           />
         </div>
       </div>
@@ -132,6 +151,7 @@ const TripEnquiryForm = () => {
             value={formData.email}
             onChange={handleInputChange}
             required
+            disabled={isSubmitting}
           />
         </div>
         <div>
@@ -143,6 +163,7 @@ const TripEnquiryForm = () => {
             value={formData.phone}
             onChange={handleInputChange}
             required
+            disabled={isSubmitting}
           />
         </div>
       </div>
@@ -157,6 +178,7 @@ const TripEnquiryForm = () => {
             value={formData.groupSize}
             onChange={handleInputChange}
             className="w-full px-3 py-2 border border-input rounded-md bg-background"
+            disabled={isSubmitting}
           >
             <option value="">Select</option>
             <option value="1">Solo (1 person)</option>
@@ -174,6 +196,7 @@ const TripEnquiryForm = () => {
             value={formData.duration}
             onChange={handleInputChange}
             className="w-full px-3 py-2 border border-input rounded-md bg-background"
+            disabled={isSubmitting}
           >
             <option value="">Select</option>
             <option value="3-5 days">3-5 days</option>
@@ -190,6 +213,7 @@ const TripEnquiryForm = () => {
             value={formData.budget}
             onChange={handleInputChange}
             className="w-full px-3 py-2 border border-input rounded-md bg-background"
+            disabled={isSubmitting}
           >
             <option value="">Select</option>
             <option value="budget">Budget (₹10,000-25,000)</option>
@@ -207,6 +231,7 @@ const TripEnquiryForm = () => {
           placeholder="e.g., March 2024 or flexible"
           value={formData.travelDates}
           onChange={handleInputChange}
+          disabled={isSubmitting}
         />
       </div>
 
@@ -221,6 +246,7 @@ const TripEnquiryForm = () => {
                 checked={formData.states.includes(state)}
                 onChange={() => handleCheckboxChange('states', state)}
                 className="rounded"
+                disabled={isSubmitting}
               />
               <span className="text-sm">{state}</span>
             </label>
@@ -239,6 +265,7 @@ const TripEnquiryForm = () => {
                 checked={formData.activities.includes(activity)}
                 onChange={() => handleCheckboxChange('activities', activity)}
                 className="rounded"
+                disabled={isSubmitting}
               />
               <span className="text-sm">{activity}</span>
             </label>
@@ -256,11 +283,19 @@ const TripEnquiryForm = () => {
           onChange={handleInputChange}
           placeholder="Any dietary restrictions, accessibility needs, or specific interests..."
           rows={3}
+          disabled={isSubmitting}
         />
       </div>
 
-      <Button type="submit" size="lg" className="w-full">
-        Submit Trip Enquiry
+      <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+        {isSubmitting ? (
+          <>
+            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+            Submitting...
+          </>
+        ) : (
+          'Submit Trip Enquiry'
+        )}
       </Button>
     </form>
   );
