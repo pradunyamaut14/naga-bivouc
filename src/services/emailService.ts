@@ -1,15 +1,17 @@
 
 import emailjs from '@emailjs/browser';
 
-// EmailJS configuration
+// EmailJS configuration - You need to replace these with your actual values
 const SERVICE_ID = 'service_naga_bivouac';
 const TEMPLATE_ID_CONTACT = 'template_contact';
 const TEMPLATE_ID_ENQUIRY = 'template_enquiry';
 const TEMPLATE_ID_PACKAGE = 'template_package';
 const PUBLIC_KEY = 'your_public_key_here';
 
-// Initialize EmailJS
-emailjs.init(PUBLIC_KEY);
+// Initialize EmailJS with public key
+if (PUBLIC_KEY !== 'your_public_key_here') {
+  emailjs.init(PUBLIC_KEY);
+}
 
 export interface ContactFormData {
   firstName: string;
@@ -44,6 +46,17 @@ export interface PackageBookingData {
 
 export const sendContactForm = async (data: ContactFormData) => {
   try {
+    console.log('Attempting to send contact form:', data);
+    
+    // Check if EmailJS is properly configured
+    if (PUBLIC_KEY === 'your_public_key_here') {
+      console.error('EmailJS not configured properly. Please update the configuration.');
+      return { 
+        success: false, 
+        error: 'Email service not configured. Please contact the administrator.' 
+      };
+    }
+
     const templateParams = {
       to_email: 'mpradunya@gmail.com',
       from_name: `${data.firstName} ${data.lastName}`,
@@ -54,12 +67,16 @@ export const sendContactForm = async (data: ContactFormData) => {
       subject: 'New Contact Form Submission - Naga Bivouac'
     };
 
+    console.log('Sending with template params:', templateParams);
+
     const response = await emailjs.send(
       SERVICE_ID,
       TEMPLATE_ID_CONTACT,
-      templateParams
+      templateParams,
+      PUBLIC_KEY
     );
 
+    console.log('Email sent successfully:', response);
     return { success: true, response };
   } catch (error) {
     console.error('Failed to send contact form:', error);
@@ -69,6 +86,16 @@ export const sendContactForm = async (data: ContactFormData) => {
 
 export const sendTripEnquiry = async (data: TripEnquiryData) => {
   try {
+    console.log('Attempting to send trip enquiry:', data);
+    
+    if (PUBLIC_KEY === 'your_public_key_here') {
+      console.error('EmailJS not configured properly. Please update the configuration.');
+      return { 
+        success: false, 
+        error: 'Email service not configured. Please contact the administrator.' 
+      };
+    }
+
     const templateParams = {
       to_email: 'mpradunya@gmail.com',
       from_name: `${data.firstName} ${data.lastName}`,
@@ -84,12 +111,16 @@ export const sendTripEnquiry = async (data: TripEnquiryData) => {
       subject: 'New Trip Enquiry - Naga Bivouac'
     };
 
+    console.log('Sending with template params:', templateParams);
+
     const response = await emailjs.send(
       SERVICE_ID,
       TEMPLATE_ID_ENQUIRY,
-      templateParams
+      templateParams,
+      PUBLIC_KEY
     );
 
+    console.log('Email sent successfully:', response);
     return { success: true, response };
   } catch (error) {
     console.error('Failed to send trip enquiry:', error);
@@ -99,6 +130,16 @@ export const sendTripEnquiry = async (data: TripEnquiryData) => {
 
 export const sendPackageBooking = async (data: PackageBookingData) => {
   try {
+    console.log('Attempting to send package booking:', data);
+    
+    if (PUBLIC_KEY === 'your_public_key_here') {
+      console.error('EmailJS not configured properly. Please update the configuration.');
+      return { 
+        success: false, 
+        error: 'Email service not configured. Please contact the administrator.' 
+      };
+    }
+
     const templateParams = {
       to_email: 'mpradunya@gmail.com',
       from_name: data.name,
@@ -109,12 +150,16 @@ export const sendPackageBooking = async (data: PackageBookingData) => {
       subject: 'New Package Booking Request - Naga Bivouac'
     };
 
+    console.log('Sending with template params:', templateParams);
+
     const response = await emailjs.send(
       SERVICE_ID,
       TEMPLATE_ID_PACKAGE,
-      templateParams
+      templateParams,
+      PUBLIC_KEY
     );
 
+    console.log('Email sent successfully:', response);
     return { success: true, response };
   } catch (error) {
     console.error('Failed to send package booking:', error);

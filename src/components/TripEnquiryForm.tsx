@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -51,10 +50,12 @@ const TripEnquiryForm = () => {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
+    console.log('Trip enquiry input change:', { name, value });
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
   const handleCheckboxChange = (category: 'states' | 'activities', value: string) => {
+    console.log('Checkbox change:', { category, value });
     setFormData(prev => ({
       ...prev,
       [category]: prev[category].includes(value)
@@ -65,6 +66,7 @@ const TripEnquiryForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log('Trip enquiry form submission started:', formData);
     
     if (!formData.firstName || !formData.email || !formData.phone) {
       toast({
@@ -79,6 +81,7 @@ const TripEnquiryForm = () => {
 
     try {
       const result = await sendTripEnquiry(formData);
+      console.log('Trip enquiry result:', result);
       
       if (result.success) {
         toast({
@@ -101,9 +104,16 @@ const TripEnquiryForm = () => {
           specialRequirements: "",
         });
       } else {
-        throw new Error('Failed to send enquiry');
+        toast({
+          title: "Submission Failed",
+          description: result.error === 'Email service not configured. Please contact the administrator.' 
+            ? "Email service is not configured yet. Please contact us directly." 
+            : "There was an error sending your enquiry. Please try again or contact us directly.",
+          variant: "destructive",
+        });
       }
     } catch (error) {
+      console.error('Trip enquiry error:', error);
       toast({
         title: "Submission Failed",
         description: "There was an error sending your enquiry. Please try again or contact us directly.",

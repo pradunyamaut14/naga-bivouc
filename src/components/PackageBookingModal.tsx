@@ -28,11 +28,13 @@ const PackageBookingModal = ({ packageName, children }: PackageBookingModalProps
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
+    console.log('Package booking input change:', { name, value });
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log('Package booking form submission started:', formData);
     
     if (!formData.name || !formData.email || !formData.phone) {
       toast({
@@ -47,6 +49,7 @@ const PackageBookingModal = ({ packageName, children }: PackageBookingModalProps
 
     try {
       const result = await sendPackageBooking(formData);
+      console.log('Package booking result:', result);
       
       if (result.success) {
         toast({
@@ -63,9 +66,16 @@ const PackageBookingModal = ({ packageName, children }: PackageBookingModalProps
         });
         setOpen(false);
       } else {
-        throw new Error('Failed to send booking request');
+        toast({
+          title: "Booking Failed",
+          description: result.error === 'Email service not configured. Please contact the administrator.' 
+            ? "Email service is not configured yet. Please contact us directly." 
+            : "There was an error sending your booking request. Please try again or contact us directly.",
+          variant: "destructive",
+        });
       }
     } catch (error) {
+      console.error('Package booking error:', error);
       toast({
         title: "Booking Failed",
         description: "There was an error sending your booking request. Please try again or contact us directly.",

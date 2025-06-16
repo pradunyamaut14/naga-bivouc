@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -45,11 +44,13 @@ const Contact = () => {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
+    console.log('Contact form input change:', { name, value });
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log('Contact form submission started:', formData);
     
     if (!formData.firstName || !formData.email || !formData.message) {
       toast({
@@ -64,6 +65,7 @@ const Contact = () => {
 
     try {
       const result = await sendContactForm(formData);
+      console.log('Contact form result:', result);
       
       if (result.success) {
         toast({
@@ -81,9 +83,16 @@ const Contact = () => {
           message: "",
         });
       } else {
-        throw new Error('Failed to send message');
+        toast({
+          title: "Failed to Send Message",
+          description: result.error === 'Email service not configured. Please contact the administrator.' 
+            ? "Email service is not configured yet. Please contact us directly." 
+            : "There was an error sending your message. Please try again or contact us directly.",
+          variant: "destructive",
+        });
       }
     } catch (error) {
+      console.error('Contact form error:', error);
       toast({
         title: "Failed to Send Message",
         description: "There was an error sending your message. Please try again or contact us directly.",
@@ -206,7 +215,7 @@ const Contact = () => {
                   <div>
                     <label className="text-sm font-medium mb-2 block">Adventure Interest</label>
                     <select 
-                      name="advent ureInterest"
+                      name="adventureInterest"
                       value={formData.adventureInterest}
                       onChange={handleInputChange}
                       className="w-full px-3 py-2 border border-input rounded-md bg-background"
