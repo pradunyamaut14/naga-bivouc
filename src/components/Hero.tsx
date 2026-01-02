@@ -1,9 +1,9 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MapPin } from "lucide-react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import TripEnquiryForm from "./TripEnquiryForm";
+import { ArrowRight, MapPin, MessageCircle } from "lucide-react";
+
+const WHATSAPP_NUMBER = "919876543210"; // Replace with actual number
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -48,6 +48,11 @@ const Hero = () => {
 
     return () => clearInterval(timer);
   }, [heroImages.length]);
+
+  const handleWhatsAppClick = () => {
+    const message = encodeURIComponent("Hi! I'm interested in planning a trip to Northeast India. Please share more details.");
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
+  };
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -106,20 +111,15 @@ const Hero = () => {
 
           {/* CTA Button */}
           <div className="animate-fade-in [animation-delay:0.4s]">
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button size="lg" className="group bg-primary hover:bg-primary/90 text-lg px-8 py-6">
-                  Plan Your Adventure
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
-                <DialogHeader>
-                  <DialogTitle>Plan Your Northeast India Adventure</DialogTitle>
-                </DialogHeader>
-                <TripEnquiryForm />
-              </DialogContent>
-            </Dialog>
+            <Button 
+              size="lg" 
+              className="group bg-primary hover:bg-primary/90 text-lg px-8 py-6"
+              onClick={handleWhatsAppClick}
+            >
+              <MessageCircle className="mr-2 h-5 w-5" />
+              Plan Your Adventure
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
           </div>
         </div>
       </div>

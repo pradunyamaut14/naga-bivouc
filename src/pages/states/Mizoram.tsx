@@ -3,9 +3,9 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, Mountain, Camera, Users, TreePine } from "lucide-react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import TripEnquiryForm from "@/components/TripEnquiryForm";
+import { MapPin, MessageCircle } from "lucide-react";
+
+const WHATSAPP_NUMBER = "919876543210";
 
 const Mizoram = () => {
   const attractions = [
@@ -17,7 +17,7 @@ const Mizoram = () => {
     },
     {
       name: "Aizawl",
-      description: "Capital city perched on ridges with stunning valley views and Mizo culture.",
+      description: "Capital city perched on ridges with stunning valley views.",
       image: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86",
       category: "Urban"
     },
@@ -35,12 +35,17 @@ const Mizoram = () => {
     }
   ];
 
+  const handleWhatsAppClick = () => {
+    const message = encodeURIComponent("Hi! I'm interested in visiting Mizoram. Please share tour details.");
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1433086966358-54859d0ed716"
@@ -56,36 +61,27 @@ const Mizoram = () => {
             <span className="text-sm font-medium">Aizawl, Mizoram</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
             <span className="text-primary">Mizoram</span>
           </h1>
           
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Land of Blue Mountains - Where rolling hills meet the sky in endless shades of blue
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Land of Blue Mountains - Where rolling hills meet the sky
           </p>
           
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button size="lg">Plan Your Visit</Button>
-            </DialogTrigger>
-            <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
-              <DialogHeader>
-                <DialogTitle>Plan Your Mizoram Adventure</DialogTitle>
-              </DialogHeader>
-              <TripEnquiryForm />
-            </DialogContent>
-          </Dialog>
+          <Button size="lg" onClick={handleWhatsAppClick}>
+            <MessageCircle className="mr-2 h-5 w-5" />
+            Plan Your Visit
+          </Button>
         </div>
       </section>
 
       {/* Top Attractions */}
-      <section className="py-20 bg-secondary/20">
+      <section className="py-16 bg-secondary/20">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">
-              Explore <span className="text-primary">Mizoram</span>
-            </h2>
-          </div>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Explore <span className="text-primary">Mizoram</span>
+          </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {attractions.map((attraction, index) => (
@@ -101,9 +97,7 @@ const Mizoram = () => {
                   <CardTitle className="text-lg">{attraction.name}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-muted-foreground">
-                    {attraction.description}
-                  </p>
+                  <p className="text-sm text-muted-foreground">{attraction.description}</p>
                 </CardContent>
               </Card>
             ))}
