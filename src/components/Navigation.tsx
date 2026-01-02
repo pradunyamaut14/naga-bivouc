@@ -1,37 +1,38 @@
+
 import { useState } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Menu, X, Mountain, ChevronDown } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isStatesOpen, setIsStatesOpen] = useState(false);
 
   const navItems = [
-    { href: "/", label: "Home" },
-    { href: "/packages", label: "Packages" },
-    { href: "/gallery", label: "Gallery" },
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Gallery", href: "/gallery" },
+    { label: "Contact", href: "/contact" },
   ];
 
   const states = [
-    { href: "/states/arunachal-pradesh", label: "Arunachal Pradesh" },
-    { href: "/states/assam", label: "Assam" },
-    { href: "/states/manipur", label: "Manipur" },
-    { href: "/states/meghalaya", label: "Meghalaya" },
-    { href: "/states/mizoram", label: "Mizoram" },
-    { href: "/states/nagaland", label: "Nagaland" },
-    { href: "/states/sikkim", label: "Sikkim" },
-    { href: "/states/tripura", label: "Tripura" },
+    { label: "Arunachal Pradesh", href: "/states/arunachal-pradesh" },
+    { label: "Assam", href: "/states/assam" },
+    { label: "Manipur", href: "/states/manipur" },
+    { label: "Meghalaya", href: "/states/meghalaya" },
+    { label: "Mizoram", href: "/states/mizoram" },
+    { label: "Nagaland", href: "/states/nagaland" },
+    { label: "Sikkim", href: "/states/sikkim" },
+    { label: "Tripura", href: "/states/tripura" },
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
+    <nav className="fixed w-full z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold text-primary">
+        <div className="flex justify-between items-center h-16">
+          <div className="flex-shrink-0">
+            <Link to="/" className="flex items-center gap-2 text-2xl font-bold text-primary">
+              <Mountain className="h-6 w-6" />
               Naga Bivouac
             </Link>
           </div>
