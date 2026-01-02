@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -211,13 +212,17 @@ const About = () => {
             Join us for an unforgettable journey through the hidden gems of Northeast India
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg">
-              <Camera className="mr-2 h-4 w-4" />
-              View Our Packages
-            </Button>
-            <Button size="lg" variant="outline">
-              Contact Us Today
-            </Button>
+            <Link to="/packages">
+              <Button size="lg">
+                <Camera className="mr-2 h-4 w-4" />
+                View Our Packages
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button size="lg" variant="outline">
+                Contact Us Today
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

@@ -1,10 +1,13 @@
 
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Camera, Mountain, Users, TreePine, Droplets, Music, X } from "lucide-react";
 import { useState } from "react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import TripEnquiryForm from "@/components/TripEnquiryForm";
 
 const GalleryPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -244,13 +247,25 @@ const GalleryPage = () => {
             Join us on an unforgettable journey to capture the beauty and culture of Northeast India
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="group">
-              <Camera className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
-              Book Photography Tour
-            </Button>
-            <Button size="lg" variant="outline">
-              View All Galleries
-            </Button>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button size="lg" className="group">
+                  <Camera className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
+                  Book Photography Tour
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+                <DialogHeader>
+                  <DialogTitle>Book a Photography Tour</DialogTitle>
+                </DialogHeader>
+                <TripEnquiryForm />
+              </DialogContent>
+            </Dialog>
+            <Link to="/packages">
+              <Button size="lg" variant="outline">
+                View All Packages
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

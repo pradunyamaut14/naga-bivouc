@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Calendar, Camera, Mountain, Users, Utensils } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import TripEnquiryForm from "@/components/TripEnquiryForm";
 
 const Nagaland = () => {
   const attractions = [
@@ -69,9 +71,19 @@ const Nagaland = () => {
             Land of Festivals - Experience the vibrant tribal culture, pristine landscapes, and warm hospitality of the Naga people
           </p>
           
-          <Button size="lg" className="group">
-            Plan Your Visit
-          </Button>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button size="lg" className="group">
+                Plan Your Visit
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+              <DialogHeader>
+                <DialogTitle>Plan Your Nagaland Adventure</DialogTitle>
+              </DialogHeader>
+              <TripEnquiryForm />
+            </DialogContent>
+          </Dialog>
         </div>
       </section>
 
@@ -237,12 +249,12 @@ const Nagaland = () => {
               </Card>
               
               <Card className="p-6">
-                <Calendar className="h-8 w-8 text-gray-500 mx-auto mb-4" />
+                <Calendar className="h-8 w-8 text-muted-foreground mx-auto mb-4" />
                 <h3 className="text-lg font-semibold mb-2">June - September</h3>
                 <p className="text-sm text-muted-foreground">
                   Monsoon season with heavy rainfall. Limited outdoor activities but lush landscapes.
                 </p>
-                <div className="mt-4 text-gray-500 font-medium">Avoid</div>
+                <div className="mt-4 text-muted-foreground font-medium">Avoid</div>
               </Card>
             </div>
           </div>
