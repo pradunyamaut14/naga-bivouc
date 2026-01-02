@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Calendar, Camera, Mountain, Users, Music } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import TripEnquiryForm from "@/components/TripEnquiryForm";
 
 const Manipur = () => {
   const attractions = [
@@ -69,9 +71,19 @@ const Manipur = () => {
             Jewel of India - Land of classical dance, floating lakes, and rich cultural heritage
           </p>
           
-          <Button size="lg" className="group">
-            Plan Your Visit
-          </Button>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button size="lg" className="group">
+                Plan Your Visit
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+              <DialogHeader>
+                <DialogTitle>Plan Your Manipur Adventure</DialogTitle>
+              </DialogHeader>
+              <TripEnquiryForm />
+            </DialogContent>
+          </Dialog>
         </div>
       </section>
 

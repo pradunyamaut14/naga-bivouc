@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tent, Camera, MapPin, Users, TreePine, Compass } from "lucide-react";
@@ -75,19 +76,23 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
-                <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                  Learn More
-                </Button>
+                <Link to="/packages">
+                  <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                    Learn More
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           ))}
         </div>
 
         <div className="text-center mt-16">
-          <Button size="lg" className="group">
-            View All Services
-            <Compass className="ml-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
-          </Button>
+          <Link to="/packages">
+            <Button size="lg" className="group">
+              View All Packages
+              <Compass className="ml-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

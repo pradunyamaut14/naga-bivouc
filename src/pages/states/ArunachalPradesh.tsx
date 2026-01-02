@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Calendar, Camera, Mountain, Users, TreePine } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import TripEnquiryForm from "@/components/TripEnquiryForm";
 
 const ArunachalPradesh = () => {
   const attractions = [
@@ -69,9 +71,19 @@ const ArunachalPradesh = () => {
             Land of Dawn-Lit Mountains - Where India's sun rises first, revealing untouched Himalayan beauty and ancient Buddhist culture
           </p>
           
-          <Button size="lg" className="group">
-            Plan Your Visit
-          </Button>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button size="lg" className="group">
+                Plan Your Visit
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+              <DialogHeader>
+                <DialogTitle>Plan Your Arunachal Pradesh Adventure</DialogTitle>
+              </DialogHeader>
+              <TripEnquiryForm />
+            </DialogContent>
+          </Dialog>
         </div>
       </section>
 
