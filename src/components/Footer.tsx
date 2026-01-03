@@ -43,7 +43,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3 text-sm">
                 <Mail className="h-4 w-4 text-primary" />
-                <span>mpradunya@gmail.com</span>
+                <span>nagabivouc@gmail.com</span>
               </div>
             </div>
 
@@ -53,7 +53,7 @@ const Footer = () => {
                   <Facebook className="h-4 w-4" />
                 </Button>
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/nagabivouac?igsh=MXZmZ202OTkzZm83NQ==" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="sm" className="p-2">
                   <Instagram className="h-4 w-4" />
                 </Button>
