@@ -34,9 +34,9 @@ const About = () => {
             About <span className="text-primary">Naga Bivouac</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Nestled in the heart of Northeast India, Naga Bivouac offers extraordinary outdoor experiences 
-            that showcase the pristine beauty and rich cultural heritage of Nagaland. We specialize in 
-            creating memorable adventures that connect travelers with nature and local communities.
+           Naga Bivouc is an adventure and nature-focused initiative rooted in the wild landscapes of Nagaland. Inspired by the idea of a bivouc—a simple outdoor shelter under the open sky—we believe in travel that is raw, mindful, and deeply connected to nature.
+
+We curate authentic trekking, camping, and outdoor experiences that celebrate local culture, support communities, and promote sustainable tourism. At Naga Bivouc, every journey is about slowing down, embracing the outdoors, and experiencing the land in its truest form.
           </p>
         </div>
 
