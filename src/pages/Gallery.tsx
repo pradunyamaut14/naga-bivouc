@@ -15,8 +15,8 @@ const GalleryPage = () => {
   const galleryImages = [
     { src: "https://upload.wikimedia.org/wikipedia/commons/f/f8/Sunrise_in_the_Himalayas_%2811096205714%29.jpg", title: "Himalayan Sunrise", location: "Arunachal Pradesh", category: "Mountains" },
     { src: "https://www.trypdeals.com/wp-content/uploads/2024/12/Seven-Sisters-Falls-A-Mesmerizing-Natural-Wonder-in-Meghalaya.jpg", title: "Seven Sisters Falls", location: "Meghalaya", category: "Water" },
-    { src: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e", title: "Tea Gardens", location: "Assam", category: "Nature" },
-    { src: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9", title: "Forest Trail", location: "Nagaland", category: "Nature" },
+    { src: "https://media.assettype.com/english-sentinelassam%2Fimport%2Fh-upload%2F2021%2F02%2F01%2F194824-tea-garden-1.webp?w=1024&auto=format%2Ccompress&fit=max", title: "Tea Gardens", location: "Assam", category: "Nature" },
+    { src: "https://www.capertravelindia.com/images/nagaland-1.jpg", title: "Forest Trail", location: "Nagaland", category: "Nature" },
     { src: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb", title: "River Valley", location: "Manipur", category: "Water" },
     { src: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86", title: "Mountain Village", location: "Sikkim", category: "Mountains" },
     { src: "https://images.unsplash.com/photo-1472396961693-142e6e269027", title: "Wildlife", location: "Kaziranga", category: "Nature" },
