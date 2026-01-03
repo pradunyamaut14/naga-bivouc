@@ -14,7 +14,7 @@ const GalleryPage = () => {
 
   const galleryImages = [
     { src: "https://upload.wikimedia.org/wikipedia/commons/f/f8/Sunrise_in_the_Himalayas_%2811096205714%29.jpg", title: "Himalayan Sunrise", location: "Arunachal Pradesh", category: "Mountains" },
-    { src: "https://images.unsplash.com/photo-1433086966358-54859d0ed716", title: "Seven Sisters Falls", location: "Meghalaya", category: "Water" },
+    { src: "https://www.trypdeals.com/wp-content/uploads/2024/12/Seven-Sisters-Falls-A-Mesmerizing-Natural-Wonder-in-Meghalaya.jpg", title: "Seven Sisters Falls", location: "Meghalaya", category: "Water" },
     { src: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e", title: "Tea Gardens", location: "Assam", category: "Nature" },
     { src: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9", title: "Forest Trail", location: "Nagaland", category: "Nature" },
     { src: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb", title: "River Valley", location: "Manipur", category: "Water" },
