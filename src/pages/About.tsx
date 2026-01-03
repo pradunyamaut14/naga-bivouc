@@ -84,7 +84,7 @@ At Naga Bivouc, adventure is more than reaching a destination—it’s about nig
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86"
+                src="https://en.indiaboundtour.com/assets/images/1722240164Nagaland.jpg"
                 alt="Our journey"
                 className="rounded-2xl shadow-xl"
               />
