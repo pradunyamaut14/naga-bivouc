@@ -84,7 +84,7 @@ We curate authentic trekking, camping, and outdoor experiences that celebrate lo
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1590077428593-a55bb07c4665?w=800"
+                src="https://tripandtales.com/wp-content/uploads/2025/06/Hills-of-Nagaland.jpg"
                 alt="Naga cultural heritage"
                 className="aspect-square object-cover rounded-2xl"
               />
