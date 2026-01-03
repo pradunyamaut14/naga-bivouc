@@ -13,7 +13,7 @@ const GalleryPage = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const galleryImages = [
-    { src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e", title: "Himalayan Sunrise", location: "Arunachal Pradesh", category: "Mountains" },
+    { src: "https://upload.wikimedia.org/wikipedia/commons/f/f8/Sunrise_in_the_Himalayas_%2811096205714%29.jpg", title: "Himalayan Sunrise", location: "Arunachal Pradesh", category: "Mountains" },
     { src: "https://images.unsplash.com/photo-1433086966358-54859d0ed716", title: "Seven Sisters Falls", location: "Meghalaya", category: "Water" },
     { src: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e", title: "Tea Gardens", location: "Assam", category: "Nature" },
     { src: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9", title: "Forest Trail", location: "Nagaland", category: "Nature" },
