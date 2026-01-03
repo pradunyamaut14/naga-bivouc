@@ -83,9 +83,11 @@ const About = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center">
-                <Mountain className="h-32 w-32 text-primary/50" />
-              </div>
+              <img 
+                src="https://images.unsplash.com/photo-1590077428593-a55bb07c4665?w=800"
+                alt="Naga cultural heritage"
+                className="aspect-square object-cover rounded-2xl"
+              />
             </div>
           </div>
         </div>

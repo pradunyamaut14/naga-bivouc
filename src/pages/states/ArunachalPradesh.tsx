@@ -2,43 +2,36 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { MapPin, Camera, Mountain, Users, TreePine, MessageCircle } from "lucide-react";
-
-const WHATSAPP_NUMBER = "919876543210";
+import { MapPin } from "lucide-react";
+import WhatsAppInquiryForm from "@/components/WhatsAppInquiryForm";
 
 const ArunachalPradesh = () => {
   const attractions = [
     {
       name: "Tawang Monastery",
       description: "Largest monastery in India, perched at 10,000 feet with stunning Himalayan views.",
-      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
+      image: "https://images.unsplash.com/photo-1585136917228-5eadc0ed1fa8?w=800",
       category: "Spiritual"
     },
     {
       name: "Bomdila",
       description: "Scenic hill station offering panoramic views of snow-capped peaks and Buddhist culture.",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+      image: "https://images.unsplash.com/photo-1585136917228-5eadc0ed1fa8?w=800",
       category: "Hill Station"
     },
     {
       name: "Namdapha National Park",
       description: "Biodiversity hotspot with tigers, leopards, and over 1,000 bird species.",
-      image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e",
+      image: "https://images.unsplash.com/photo-1585136917228-5eadc0ed1fa8?w=800",
       category: "Wildlife"
     },
     {
       name: "Ziro Valley",
       description: "UNESCO World Heritage site known for its unique Apatani culture and music festival.",
-      image: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86",
+      image: "https://images.unsplash.com/photo-1585136917228-5eadc0ed1fa8?w=800",
       category: "Cultural"
     }
   ];
-
-  const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Hi! I'm interested in visiting Arunachal Pradesh. Please share tour details.");
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
-  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -48,8 +41,8 @@ const ArunachalPradesh = () => {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1469474968028-56623f02e42e"
-            alt="Arunachal Pradesh mountains"
+            src="https://images.unsplash.com/photo-1585136917228-5eadc0ed1fa8?w=1920"
+            alt="Arunachal Pradesh Tawang Monastery"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/50"></div>
@@ -68,11 +61,6 @@ const ArunachalPradesh = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Land of Dawn-Lit Mountains - Where India's sun rises first
           </p>
-          
-          <Button size="lg" onClick={handleWhatsAppClick}>
-            <MessageCircle className="mr-2 h-5 w-5" />
-            Plan Your Visit
-          </Button>
         </div>
       </section>
 
@@ -101,6 +89,16 @@ const ArunachalPradesh = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Inquiry Form */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-md mx-auto bg-card rounded-xl p-6 shadow-lg">
+            <h3 className="text-2xl font-bold text-center mb-6">Plan Your Arunachal Trip</h3>
+            <WhatsAppInquiryForm destination="Arunachal Pradesh" />
           </div>
         </div>
       </section>

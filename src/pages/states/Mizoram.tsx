@@ -2,43 +2,36 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { MapPin, MessageCircle } from "lucide-react";
-
-const WHATSAPP_NUMBER = "919876543210";
+import { MapPin } from "lucide-react";
+import WhatsAppInquiryForm from "@/components/WhatsAppInquiryForm";
 
 const Mizoram = () => {
   const attractions = [
     {
       name: "Blue Mountain",
       description: "Phawngpui, the highest peak offering panoramic views and rare blue orchids.",
-      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
       category: "Mountain"
     },
     {
       name: "Aizawl",
       description: "Capital city perched on ridges with stunning valley views.",
-      image: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
       category: "Urban"
     },
     {
       name: "Champhai",
       description: "Border town known as 'Rice Bowl of Mizoram' with scenic landscapes.",
-      image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
       category: "Cultural"
     },
     {
       name: "Palak Lake",
       description: "Largest natural lake in Mizoram surrounded by lush green hills.",
-      image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
       category: "Natural"
     }
   ];
-
-  const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Hi! I'm interested in visiting Mizoram. Please share tour details.");
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
-  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -48,7 +41,7 @@ const Mizoram = () => {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1433086966358-54859d0ed716"
+            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920"
             alt="Mizoram blue mountains"
             className="w-full h-full object-cover"
           />
@@ -68,11 +61,6 @@ const Mizoram = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Land of Blue Mountains - Where rolling hills meet the sky
           </p>
-          
-          <Button size="lg" onClick={handleWhatsAppClick}>
-            <MessageCircle className="mr-2 h-5 w-5" />
-            Plan Your Visit
-          </Button>
         </div>
       </section>
 
@@ -101,6 +89,16 @@ const Mizoram = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Inquiry Form */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-md mx-auto bg-card rounded-xl p-6 shadow-lg">
+            <h3 className="text-2xl font-bold text-center mb-6">Plan Your Mizoram Trip</h3>
+            <WhatsAppInquiryForm destination="Mizoram" />
           </div>
         </div>
       </section>

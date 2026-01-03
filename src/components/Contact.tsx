@@ -1,15 +1,8 @@
 
-import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
-
-const WHATSAPP_NUMBER = "919876543210";
+import { MapPin, Phone, Mail } from "lucide-react";
+import WhatsAppInquiryForm from "./WhatsAppInquiryForm";
 
 const Contact = () => {
-  const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Hi! I'm interested in Northeast India tours. Please share details.");
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
-  };
-
   return (
     <section id="contact" className="py-20 bg-secondary/20">
       <div className="container mx-auto px-4 lg:px-8">
@@ -18,7 +11,7 @@ const Contact = () => {
             Get in <span className="text-primary">Touch</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Ready to plan your adventure? Reach out to us via WhatsApp for quick responses.
+            Ready to plan your adventure? Fill out the form and we'll respond on WhatsApp.
           </p>
         </div>
 
@@ -57,23 +50,10 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* WhatsApp CTA */}
-            <div className="bg-background rounded-xl p-8 text-center shadow-sm">
-              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <MessageCircle className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Quick Response</h3>
-              <p className="text-muted-foreground text-sm mb-6">
-                Get instant replies on WhatsApp
-              </p>
-              <Button 
-                size="lg" 
-                className="w-full bg-green-500 hover:bg-green-600"
-                onClick={handleWhatsAppClick}
-              >
-                <MessageCircle className="mr-2 h-5 w-5" />
-                Chat on WhatsApp
-              </Button>
+            {/* WhatsApp Inquiry Form */}
+            <div className="bg-background rounded-xl p-6 shadow-sm">
+              <h3 className="text-xl font-bold mb-4">Plan Your Trip</h3>
+              <WhatsAppInquiryForm destination="Northeast India" />
             </div>
           </div>
         </div>

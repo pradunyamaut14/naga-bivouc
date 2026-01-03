@@ -2,43 +2,36 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { MapPin, MessageCircle } from "lucide-react";
-
-const WHATSAPP_NUMBER = "919876543210";
+import { MapPin } from "lucide-react";
+import WhatsAppInquiryForm from "@/components/WhatsAppInquiryForm";
 
 const Nagaland = () => {
   const attractions = [
     {
       name: "Hornbill Festival",
       description: "The 'Festival of Festivals' showcasing Naga culture and traditional dances.",
-      image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb",
+      image: "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?w=800",
       category: "Festival"
     },
     {
       name: "Dzukou Valley",
       description: "Valley of flowers with stunning landscapes, perfect for trekking.",
-      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
+      image: "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?w=800",
       category: "Nature"
     },
     {
       name: "Kohima War Cemetery",
       description: "Memorial honoring World War II heroes with peaceful gardens.",
-      image: "https://images.unsplash.com/photo-1472396961693-142e6e269027",
+      image: "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?w=800",
       category: "Historical"
     },
     {
       name: "Mon District",
       description: "Experience authentic Konyak tribe culture and village life.",
-      image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9",
+      image: "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?w=800",
       category: "Cultural"
     }
   ];
-
-  const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Hi! I'm interested in visiting Nagaland. Please share tour details.");
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
-  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -48,8 +41,8 @@ const Nagaland = () => {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1482938289607-e9573fc25ebb"
-            alt="Nagaland landscape"
+            src="https://images.unsplash.com/photo-1590077428593-a55bb07c4665?w=1920"
+            alt="Nagaland tribal culture"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/50"></div>
@@ -68,11 +61,6 @@ const Nagaland = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Land of Festivals - Experience vibrant tribal culture
           </p>
-          
-          <Button size="lg" onClick={handleWhatsAppClick}>
-            <MessageCircle className="mr-2 h-5 w-5" />
-            Plan Your Visit
-          </Button>
         </div>
       </section>
 
@@ -101,6 +89,16 @@ const Nagaland = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Inquiry Form */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-md mx-auto bg-card rounded-xl p-6 shadow-lg">
+            <h3 className="text-2xl font-bold text-center mb-6">Plan Your Nagaland Trip</h3>
+            <WhatsAppInquiryForm destination="Nagaland" />
           </div>
         </div>
       </section>

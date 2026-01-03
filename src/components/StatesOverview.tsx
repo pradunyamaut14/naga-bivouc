@@ -10,7 +10,7 @@ const StatesOverview = () => {
       name: "Arunachal Pradesh",
       tagline: "Land of Dawn-Lit Mountains",
       description: "Experience the first sunrise in India and explore pristine valleys, ancient monasteries, and vibrant tribal culture.",
-      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
+      image: "https://images.unsplash.com/photo-1585136917228-5eadc0ed1fa8?w=800",
       href: "/states/arunachal-pradesh",
       highlights: ["Tawang Monastery", "Ziro Valley", "Namdapha National Park"]
     },
@@ -18,7 +18,7 @@ const StatesOverview = () => {
       name: "Assam",
       tagline: "Gateway to Northeast",
       description: "Discover tea gardens, one-horned rhinos, and the mighty Brahmaputra river in this culturally rich state.",
-      image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9",
+      image: "https://images.unsplash.com/photo-1574068468068-a809653dad67?w=800",
       href: "/states/assam",
       highlights: ["Kaziranga National Park", "Tea Gardens", "Majuli Island"]
     },
@@ -26,7 +26,7 @@ const StatesOverview = () => {
       name: "Meghalaya",
       tagline: "Abode of Clouds",
       description: "Walk through living root bridges, explore limestone caves, and witness Asia's cleanest village.",
-      image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716",
+      image: "https://images.unsplash.com/photo-1625046305693-09d71e35d9a6?w=800",
       href: "/states/meghalaya",
       highlights: ["Living Root Bridges", "Cherrapunji", "Mawlynnong Village"]
     },
@@ -34,7 +34,7 @@ const StatesOverview = () => {
       name: "Sikkim",
       tagline: "Hidden Paradise",
       description: "Marvel at Kanchenjunga, explore Buddhist monasteries, and experience alpine beauty at its finest.",
-      image: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86",
+      image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800",
       href: "/states/sikkim",
       highlights: ["Kanchenjunga", "Rumtek Monastery", "Tsomgo Lake"]
     },
@@ -42,7 +42,7 @@ const StatesOverview = () => {
       name: "Nagaland",
       tagline: "Land of Festivals",
       description: "Immerse in vibrant tribal culture, witness the Hornbill Festival, and explore traditional villages.",
-      image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb",
+      image: "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?w=800",
       href: "/states/nagaland",
       highlights: ["Hornbill Festival", "Dzukou Valley", "Mon District"]
     },
@@ -50,7 +50,7 @@ const StatesOverview = () => {
       name: "Manipur",
       tagline: "Jewel of India",
       description: "Discover the birthplace of polo, pristine Loktak Lake, and rich martial arts traditions.",
-      image: "https://images.unsplash.com/photo-1472396961693-142e6e269027",
+      image: "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?w=800",
       href: "/states/manipur",
       highlights: ["Loktak Lake", "Kangla Fort", "Imphal Valley"]
     },
@@ -58,7 +58,7 @@ const StatesOverview = () => {
       name: "Mizoram",
       tagline: "Land of Blue Mountains",
       description: "Experience warm hospitality, rolling hills, and unique bamboo culture in India's second least populous state.",
-      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
       href: "/states/mizoram",
       highlights: ["Blue Mountain", "Champhai", "Reiek Peak"]
     },
@@ -66,7 +66,7 @@ const StatesOverview = () => {
       name: "Tripura",
       tagline: "Land of Diversity",
       description: "Explore ancient palaces, natural beauty, and the confluence of tribal and Bengali cultures.",
-      image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb",
+      image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800",
       href: "/states/tripura",
       highlights: ["Ujjayanta Palace", "Neermahal", "Sepahijala Wildlife Sanctuary"]
     }

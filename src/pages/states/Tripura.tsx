@@ -2,43 +2,36 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { MapPin, MessageCircle } from "lucide-react";
-
-const WHATSAPP_NUMBER = "919876543210";
+import { MapPin } from "lucide-react";
+import WhatsAppInquiryForm from "@/components/WhatsAppInquiryForm";
 
 const Tripura = () => {
   const attractions = [
     {
       name: "Ujjayanta Palace",
       description: "Former royal palace now serving as a museum showcasing Tripura's history.",
-      image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716",
+      image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800",
       category: "Historical"
     },
     {
       name: "Neermahal",
       description: "Water palace in the middle of Rudrasagar Lake, a unique marvel.",
-      image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb",
+      image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800",
       category: "Palace"
     },
     {
       name: "Sepahijala Wildlife Sanctuary",
       description: "Home to spectacled langurs and diverse bird species.",
-      image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e",
+      image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800",
       category: "Wildlife"
     },
     {
       name: "Unakoti",
       description: "Archaeological site with ancient rock carvings dating to 8th-9th century.",
-      image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9",
+      image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800",
       category: "Archaeological"
     }
   ];
-
-  const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Hi! I'm interested in visiting Tripura. Please share tour details.");
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
-  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -48,7 +41,7 @@ const Tripura = () => {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1582407947304-fd86f028f716"
+            src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=1920"
             alt="Tripura palace"
             className="w-full h-full object-cover"
           />
@@ -68,11 +61,6 @@ const Tripura = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Land of Palaces - Where royal heritage meets natural beauty
           </p>
-          
-          <Button size="lg" onClick={handleWhatsAppClick}>
-            <MessageCircle className="mr-2 h-5 w-5" />
-            Plan Your Visit
-          </Button>
         </div>
       </section>
 
@@ -101,6 +89,16 @@ const Tripura = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Inquiry Form */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-md mx-auto bg-card rounded-xl p-6 shadow-lg">
+            <h3 className="text-2xl font-bold text-center mb-6">Plan Your Tripura Trip</h3>
+            <WhatsAppInquiryForm destination="Tripura" />
           </div>
         </div>
       </section>
