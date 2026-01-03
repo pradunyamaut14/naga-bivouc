@@ -2,43 +2,36 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { MapPin, MessageCircle } from "lucide-react";
-
-const WHATSAPP_NUMBER = "919876543210";
+import { MapPin } from "lucide-react";
+import WhatsAppInquiryForm from "@/components/WhatsAppInquiryForm";
 
 const Sikkim = () => {
   const attractions = [
     {
       name: "Kanchenjunga",
       description: "Third highest mountain in the world, visible from various viewpoints.",
-      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
+      image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800",
       category: "Mountain"
     },
     {
       name: "Gangtok",
       description: "Capital city with monasteries, cable cars, and Himalayan views.",
-      image: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86",
+      image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800",
       category: "Urban"
     },
     {
       name: "Yumthang Valley",
       description: "Valley of flowers with hot springs and rhododendron blooms.",
-      image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9",
+      image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800",
       category: "Natural"
     },
     {
       name: "Rumtek Monastery",
       description: "One of the most significant monasteries with ancient Buddhist architecture.",
-      image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716",
+      image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800",
       category: "Spiritual"
     }
   ];
-
-  const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Hi! I'm interested in visiting Sikkim. Please share tour details.");
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
-  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -48,8 +41,8 @@ const Sikkim = () => {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1469474968028-56623f02e42e"
-            alt="Sikkim Himalayas"
+            src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=1920"
+            alt="Sikkim Himalayas with Kanchenjunga"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/50"></div>
@@ -68,11 +61,6 @@ const Sikkim = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Hidden Paradise - Where mighty Kanchenjunga guards ancient monasteries
           </p>
-          
-          <Button size="lg" onClick={handleWhatsAppClick}>
-            <MessageCircle className="mr-2 h-5 w-5" />
-            Plan Your Visit
-          </Button>
         </div>
       </section>
 
@@ -101,6 +89,16 @@ const Sikkim = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Inquiry Form */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-md mx-auto bg-card rounded-xl p-6 shadow-lg">
+            <h3 className="text-2xl font-bold text-center mb-6">Plan Your Sikkim Trip</h3>
+            <WhatsAppInquiryForm destination="Sikkim" />
           </div>
         </div>
       </section>

@@ -11,58 +11,58 @@ const Gallery = () => {
   const galleryItems = [
     {
       icon: Mountain,
-      title: "Mountain Peaks",
-      description: "Breathtaking views from Nagaland's highest peaks",
-      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
+      title: "Kanchenjunga Peak",
+      description: "Third highest mountain in the world from Sikkim",
+      image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800",
       category: "Mountains"
     },
     {
       icon: TreePine,
-      title: "Forest Trails",
-      description: "Lush green forests and pristine wilderness",
-      image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e",
+      title: "Living Root Bridges",
+      description: "Ancient bioengineering marvel in Meghalaya",
+      image: "https://images.unsplash.com/photo-1625046305693-09d71e35d9a6?w=800",
       category: "Nature"
     },
     {
       icon: Users,
-      title: "Cultural Heritage",
-      description: "Rich traditions and vibrant festivals",
-      image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9",
+      title: "Hornbill Festival",
+      description: "Festival of festivals celebrating Naga heritage",
+      image: "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?w=800",
       category: "Culture"
     },
     {
       icon: Camera,
-      title: "Wildlife",
-      description: "Diverse flora and fauna in natural habitats",
-      image: "https://images.unsplash.com/photo-1472396961693-142e6e269027",
+      title: "One-Horned Rhino",
+      description: "Kaziranga's famous wildlife in Assam",
+      image: "https://images.unsplash.com/photo-1574068468068-a809653dad67?w=800",
       category: "Wildlife"
     },
     {
       icon: Mountain,
-      title: "Himalayan Views",
-      description: "Spectacular mountain ranges and valleys",
-      image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716",
+      title: "Tawang Monastery",
+      description: "Largest monastery in India, Arunachal Pradesh",
+      image: "https://images.unsplash.com/photo-1585136917228-5eadc0ed1fa8?w=800",
       category: "Mountains"
     },
     {
       icon: TreePine,
       title: "Tea Gardens",
-      description: "Rolling hills covered in tea plantations",
-      image: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86",
+      description: "Rolling hills of Assam tea plantations",
+      image: "https://images.unsplash.com/photo-1574068468068-a809653dad67?w=800",
       category: "Nature"
     },
     {
       icon: Users,
-      title: "Traditional Dance",
-      description: "Colorful cultural performances",
-      image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb",
+      title: "Tribal Dance",
+      description: "Traditional performances of Northeast tribes",
+      image: "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?w=800",
       category: "Culture"
     },
     {
       icon: Camera,
-      title: "Bird Watching",
-      description: "Exotic birds in their natural habitat",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+      title: "Dzukou Valley",
+      description: "Valley of flowers in Nagaland",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
       category: "Wildlife"
     }
   ];

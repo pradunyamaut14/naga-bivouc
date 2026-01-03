@@ -2,43 +2,36 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { MapPin, MessageCircle } from "lucide-react";
-
-const WHATSAPP_NUMBER = "919876543210";
+import { MapPin } from "lucide-react";
+import WhatsAppInquiryForm from "@/components/WhatsAppInquiryForm";
 
 const Assam = () => {
   const attractions = [
     {
       name: "Kaziranga National Park",
       description: "UNESCO World Heritage site, home to two-thirds of the world's one-horned rhinoceros.",
-      image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e",
+      image: "https://images.unsplash.com/photo-1574068468068-a809653dad67?w=800",
       category: "Wildlife"
     },
     {
       name: "Majuli Island",
       description: "World's largest river island, center of Assamese culture and Vaishnavite monasteries.",
-      image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb",
+      image: "https://images.unsplash.com/photo-1574068468068-a809653dad67?w=800",
       category: "Cultural"
     },
     {
       name: "Tea Gardens",
       description: "Rolling hills covered with lush tea plantations producing world-famous Assam tea.",
-      image: "https://images.unsplash.com/photo-1587735230901-b1d6bd87e696",
+      image: "https://images.unsplash.com/photo-1574068468068-a809653dad67?w=800",
       category: "Plantation"
     },
     {
       name: "Kamakhya Temple",
       description: "Ancient Shakti Peeth temple dedicated to Goddess Kamakhya, one of the most sacred sites.",
-      image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716",
+      image: "https://images.unsplash.com/photo-1574068468068-a809653dad67?w=800",
       category: "Spiritual"
     }
   ];
-
-  const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Hi! I'm interested in visiting Assam. Please share tour details.");
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
-  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -48,7 +41,7 @@ const Assam = () => {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9"
+            src="https://images.unsplash.com/photo-1574068468068-a809653dad67?w=1920"
             alt="Assam tea gardens"
             className="w-full h-full object-cover"
           />
@@ -68,11 +61,6 @@ const Assam = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Gateway to Northeast - Land of tea gardens and one-horned rhinos
           </p>
-          
-          <Button size="lg" onClick={handleWhatsAppClick}>
-            <MessageCircle className="mr-2 h-5 w-5" />
-            Plan Your Visit
-          </Button>
         </div>
       </section>
 
@@ -101,6 +89,16 @@ const Assam = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Inquiry Form */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-md mx-auto bg-card rounded-xl p-6 shadow-lg">
+            <h3 className="text-2xl font-bold text-center mb-6">Plan Your Assam Trip</h3>
+            <WhatsAppInquiryForm destination="Assam" />
           </div>
         </div>
       </section>

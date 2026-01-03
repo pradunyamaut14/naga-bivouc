@@ -10,32 +10,32 @@ const Hero = () => {
 
   const heroImages = [
     {
-      src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
-      alt: "Majestic mountains of Northeast India",
+      src: "https://images.unsplash.com/photo-1585136917228-5eadc0ed1fa8?w=1920",
+      alt: "Tawang Monastery in Arunachal Pradesh",
       caption: "Arunachal Pradesh",
       description: "Land of Dawn-Lit Mountains"
     },
     {
-      src: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb",
-      alt: "Serene rivers and valleys",
+      src: "https://images.unsplash.com/photo-1625046305693-09d71e35d9a6?w=1920",
+      alt: "Living Root Bridge in Meghalaya",
       caption: "Meghalaya",
       description: "Abode of Clouds"
     },
     {
-      src: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9",
-      alt: "Dense forests and wildlife",
+      src: "https://images.unsplash.com/photo-1574068468068-a809653dad67?w=1920",
+      alt: "Tea gardens of Assam",
       caption: "Assam",
       description: "Gateway to Northeast"
     },
     {
-      src: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86",
-      alt: "Highland landscapes",
+      src: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=1920",
+      alt: "Kanchenjunga view from Sikkim",
       caption: "Sikkim",
       description: "Hidden Paradise"
     },
     {
-      src: "https://images.unsplash.com/photo-1433086966358-54859d0ed716",
-      alt: "Waterfalls and natural beauty",
+      src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920",
+      alt: "Rolling hills of Mizoram",
       caption: "Mizoram",
       description: "Land of Blue Mountains"
     }

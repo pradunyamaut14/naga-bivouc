@@ -2,43 +2,36 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { MapPin, MessageCircle } from "lucide-react";
-
-const WHATSAPP_NUMBER = "919876543210";
+import { MapPin } from "lucide-react";
+import WhatsAppInquiryForm from "@/components/WhatsAppInquiryForm";
 
 const Meghalaya = () => {
   const attractions = [
     {
       name: "Living Root Bridges",
       description: "Unique bridges grown from rubber tree roots by the Khasi people over centuries.",
-      image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e",
+      image: "https://images.unsplash.com/photo-1625046305693-09d71e35d9a6?w=800",
       category: "Natural Wonder"
     },
     {
       name: "Cherrapunji",
       description: "One of the wettest places on Earth, famous for dramatic waterfalls and caves.",
-      image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716",
+      image: "https://images.unsplash.com/photo-1625046305693-09d71e35d9a6?w=800",
       category: "Climate"
     },
     {
       name: "Mawlynnong Village",
       description: "Asia's cleanest village, known for its community-driven cleanliness initiatives.",
-      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
+      image: "https://images.unsplash.com/photo-1625046305693-09d71e35d9a6?w=800",
       category: "Cultural"
     },
     {
       name: "Dawki River",
       description: "Crystal clear river with water so transparent boats appear to float on air.",
-      image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb",
+      image: "https://images.unsplash.com/photo-1625046305693-09d71e35d9a6?w=800",
       category: "Natural"
     }
   ];
-
-  const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Hi! I'm interested in visiting Meghalaya. Please share tour details.");
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
-  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -48,8 +41,8 @@ const Meghalaya = () => {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1433086966358-54859d0ed716"
-            alt="Meghalaya waterfalls"
+            src="https://images.unsplash.com/photo-1625046305693-09d71e35d9a6?w=1920"
+            alt="Meghalaya Living Root Bridge"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/50"></div>
@@ -68,11 +61,6 @@ const Meghalaya = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Abode of Clouds - Where living bridges span rivers
           </p>
-          
-          <Button size="lg" onClick={handleWhatsAppClick}>
-            <MessageCircle className="mr-2 h-5 w-5" />
-            Plan Your Visit
-          </Button>
         </div>
       </section>
 
@@ -101,6 +89,16 @@ const Meghalaya = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Inquiry Form */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-md mx-auto bg-card rounded-xl p-6 shadow-lg">
+            <h3 className="text-2xl font-bold text-center mb-6">Plan Your Meghalaya Trip</h3>
+            <WhatsAppInquiryForm destination="Meghalaya" />
           </div>
         </div>
       </section>
