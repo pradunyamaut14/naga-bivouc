@@ -17,10 +17,10 @@ const GalleryPage = () => {
     { src: "https://www.trypdeals.com/wp-content/uploads/2024/12/Seven-Sisters-Falls-A-Mesmerizing-Natural-Wonder-in-Meghalaya.jpg", title: "Seven Sisters Falls", location: "Meghalaya", category: "Water" },
     { src: "https://media.assettype.com/english-sentinelassam%2Fimport%2Fh-upload%2F2021%2F02%2F01%2F194824-tea-garden-1.webp?w=1024&auto=format%2Ccompress&fit=max", title: "Tea Gardens", location: "Assam", category: "Nature" },
     { src: "https://www.capertravelindia.com/images/nagaland-1.jpg", title: "Forest Trail", location: "Nagaland", category: "Nature" },
-    { src: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb", title: "River Valley", location: "Manipur", category: "Water" },
-    { src: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86", title: "Mountain Village", location: "Sikkim", category: "Mountains" },
-    { src: "https://images.unsplash.com/photo-1472396961693-142e6e269027", title: "Wildlife", location: "Kaziranga", category: "Nature" },
-    { src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4", title: "Snow Peaks", location: "Sikkim", category: "Mountains" },
+    { src: "https://cdn.britannica.com/53/279553-050-0A596EF9/View-Of-Loktak-Lake-Famous-For-Floating-Islands-Called-Phumdis-Manipur-India.jpg?w=300", title: "River Valley", location: "Manipur", category: "Water" },
+    { src: "https://static2.tripoto.com/media/filter/nl/img/245847/TripDocument/1611108770_lachung_city_in_between_the_mountain_ranges.jpg", title: "Mountain Village", location: "Sikkim", category: "Mountains" },
+    { src: "https://b2bzend.s3.ap-south-1.amazonaws.com/img/4539/package/images/kaziranga--guwahati-adventure-escape_1743141936", title: "Wildlife", location: "Kaziranga", category: "Nature" },
+    { src: "https://static2.tripoto.com/media/filter/nl/img/245847/TripDocument/1610704888_60011448_712130342535479_8245125409067237376_n.jpg", title: "Snow Peaks", location: "Sikkim", category: "Mountains" },
   ];
 
   const categories = ["All", "Mountains", "Nature", "Water"];
