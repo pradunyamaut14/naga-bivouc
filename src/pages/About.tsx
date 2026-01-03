@@ -45,7 +45,7 @@ const About = () => {
       <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1469474968028-56623f02e42e"
+            src="https://en.indiaboundtour.com/assets/images/1722240164Nagaland.jpg"
             alt="About Naga Bivouac"
             className="w-full h-full object-cover"
           />
@@ -70,17 +70,15 @@ const About = () => {
               <h2 className="text-3xl font-bold mb-6">Our Story</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Founded by Pradunya Maut, Naga Bivouac began as a passionate project to showcase 
-                  the incredible beauty and rich cultural heritage of Northeast India.
-                </p>
-                <p>
-                  Our name "Bivouac" reflects our love for outdoor camping and authentic wilderness experiences. 
-                  We specialize in creating immersive journeys that connect travelers with the pristine 
-                  landscapes and vibrant cultures of all eight northeastern states.
-                </p>
-                <p>
-                  We've built strong relationships with local communities, ensuring our tourism 
-                  activities benefit the regions we explore.
+                 Naga Bivouc was born from a deep connection to the mountains, forests, and living cultures of Nagaland. We believe that travel should be meaningful, immersive, and respectful—an experience that allows people to slow down, reconnect with nature, and discover places in their most authentic form.
+
+The word “Bivouc” (derived from bivouac) refers to a temporary shelter or camp set up outdoors, often under the open sky, without the boundaries of conventional accommodation. It symbolizes freedom, simplicity, and self-reliance—the essence of true adventure. A bivouac is not just a place to rest; it is a moment of pause, reflection, and connection with nature. By choosing this name, Naga Bivouc represents a way of traveling that is raw, grounded, and deeply immersive.
+
+We curate adventure and nature-based experiences such as trekking, camping, expeditions, and offbeat explorations across some of the most untouched landscapes of Northeast India. Each journey is carefully planned with a strong emphasis on safety, sustainability, and comfort, while still preserving the thrill and authenticity of the outdoors.
+
+Community and sustainability are at the heart of everything we do. We work closely with local guides and communities, ensuring that our journeys create positive local impact while protecting natural ecosystems and cultural heritage. Our experiences are shaped by local stories, traditions, and knowledge passed down through generations.
+
+At Naga Bivouc, adventure is more than reaching a destination—it’s about nights spent under starlit skies, mornings wrapped in mountain mist, shared meals around a fire, and the quiet understanding that comes from being truly present. Whether you are seeking solitude, challenge, or connection, we invite you to experience Nagaland in its purest form—one bivouac at a time.
                 </p>
               </div>
             </div>
