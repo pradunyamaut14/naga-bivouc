@@ -72,11 +72,11 @@ const Hero = () => {
             </Button>
 
             <Button
-              size="lg"
-              variant="outline"
-              className="text-lg px-8 py-6 border-white/40 text-white hover:bg-white/10"
-              onClick={() => navigate("/packages")}
-            >
+  size="lg"
+  className="group bg-primary hover:bg-primary/90 text-lg px-8 py-6"
+  onClick={() => navigate("/packages")}
+>
+
               <Compass className="mr-2 h-5 w-5" />
               Explore Packages
             </Button>
