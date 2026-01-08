@@ -14,9 +14,9 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-
 const packages = [
-  // ================== NAGALAND ==================
+  // ===================== NAGALAND =====================
+
   {
     id: 1,
     title: "Nagaland Hornbill Festival Special",
@@ -26,33 +26,33 @@ const packages = [
     price: "₹18,000",
     priceNote: "per person",
     image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800",
-    highlights: ["Hornbill Festival", "Kisama", "Kohima War Cemetery", "Local Naga Cuisine"],
+    highlights: ["Hornbill Festival", "Kisama Heritage Village", "Kohima War Cemetery", "Khonoma Village"],
     itinerary: [
-      { day: 1, title: "Arrival in Dimapur – Kohima", description: "Pickup from Dimapur. Evening local walk." },
-      { day: 2, title: "Hornbill Festival", description: "Full day at Kisama Heritage Village." },
-      { day: 3, title: "Kohima & Khonoma", description: "Visit War Cemetery & Khonoma village." },
-      { day: 4, title: "Dzükou Valley Trek", description: "Day trek to Dzükou Valley." },
-      { day: 5, title: "Departure", description: "Return to Dimapur." }
+      { day: 1, title: "Arrival at Dimapur – Kohima", description: "Meet & greet at Dimapur. Drive to Kohima (approx 3 hrs). Check-in. Evening local market walk." },
+      { day: 2, title: "Hornbill Festival", description: "Full day at Kisama Heritage Village enjoying tribal dances, food stalls, cultural shows & crafts." },
+      { day: 3, title: "Kohima & Khonoma", description: "Visit War Cemetery, State Museum and Khonoma green village. Village walk & interaction." },
+      { day: 4, title: "Dzükou Valley Excursion", description: "Early start for trek to Dzükou Valley. Explore streams, meadows & viewpoints. Return by evening." },
+      { day: 5, title: "Departure", description: "After breakfast drive back to Dimapur for onward journey." }
     ],
-    includes: ["Stay", "All meals", "Transport", "Guide", "Festival Pass"],
+    includes: ["Accommodation", "All meals", "Transport", "Guide", "Festival Pass"],
     bestTime: "December"
   },
 
   {
     id: 2,
-    title: "Dzükou Valley Trekking Experience",
+    title: "Dzükou Valley Trekking & Camping",
     destination: "Nagaland",
     duration: "4 Days / 3 Nights",
     groupSize: "4-10 People",
     price: "₹12,500",
     priceNote: "per person",
     image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800",
-    highlights: ["Dzükou Valley", "Camping", "Japfu View", "Kohima"],
+    highlights: ["Dzükou Valley", "Camping", "Japfu Viewpoint", "Nature Trails"],
     itinerary: [
-      { day: 1, title: "Dimapur – Kohima", description: "Briefing & prep." },
-      { day: 2, title: "Trek to Dzükou", description: "Overnight camping." },
-      { day: 3, title: "Explore & Return", description: "Explore valley & trek back." },
-      { day: 4, title: "Departure", description: "Return to Dimapur." }
+      { day: 1, title: "Dimapur – Kohima", description: "Pickup from Dimapur, drive to Kohima. Evening trek briefing & rest." },
+      { day: 2, title: "Trek to Dzükou", description: "Drive to trek point and start trek. Reach Dzükou Valley, explore & overnight camping." },
+      { day: 3, title: "Explore & Return", description: "Morning valley walk & photography. Trek back and return to Kohima." },
+      { day: 4, title: "Departure", description: "After breakfast drive back to Dimapur." }
     ],
     includes: ["Camping", "Meals", "Guide", "Permits", "Transport"],
     bestTime: "October - May"
@@ -60,29 +60,138 @@ const packages = [
 
   {
     id: 3,
-    title: "Mon & Longwa Konyak Tribe Tour",
+    title: "Mon & Longwa Konyak Headhunters Trail",
     destination: "Nagaland",
     duration: "6 Days / 5 Nights",
     groupSize: "2-8 People",
     price: "₹26,000",
     priceNote: "per person",
     image: "https://images.unsplash.com/photo-1528127269322-539801943592?w=800",
-    highlights: ["Longwa", "Konyak Tribe", "Mon", "Myanmar Border"],
+    highlights: ["Longwa Village", "Konyak Tribe", "Myanmar Border", "Mon Villages"],
     itinerary: [
-      { day: 1, title: "Dimapur – Mon", description: "Scenic drive." },
-      { day: 2, title: "Longwa Village", description: "Chief’s house & border village." },
-      { day: 3, title: "Tribal Villages", description: "Explore Konyak villages." },
-      { day: 4, title: "Shangnyu & Hongphoi", description: "Historical villages." },
-      { day: 5, title: "Return to Dimapur", description: "Full day drive." },
-      { day: 6, title: "Departure", description: "Drop." }
+      { day: 1, title: "Dimapur – Mon", description: "Early morning scenic drive to Mon. Check-in & rest." },
+      { day: 2, title: "Longwa Village", description: "Visit Indo-Myanmar border village. Explore chief’s house & village life." },
+      { day: 3, title: "Konyak Villages", description: "Visit traditional villages, meet tattooed elders & explore morungs." },
+      { day: 4, title: "Shangnyu & Hongphoi", description: "Visit monolith village & nearby cultural villages." },
+      { day: 5, title: "Return Journey", description: "Drive back towards Dimapur. Overnight en-route." },
+      { day: 6, title: "Departure", description: "Continue drive to Dimapur & drop." }
     ],
-    includes: ["Stay", "All meals", "Transport", "Guide", "Permits"],
+    includes: ["Accommodation", "All meals", "Transport", "Guide", "Permits"],
     bestTime: "October - April"
   },
 
-  // ================== MEGHALAYA ==================
   {
     id: 4,
+    title: "Nagaland Heritage Villages Tour",
+    destination: "Nagaland",
+    duration: "5 Days / 4 Nights",
+    groupSize: "2-10 People",
+    price: "₹17,500",
+    priceNote: "per person",
+    image: "https://images.unsplash.com/photo-1593692716621-1b7f3f24f9b0?w=800",
+    highlights: ["Khonoma", "Tuophema", "Kisama", "Mokokchung", "Ungma"],
+    itinerary: [
+      { day: 1, title: "Dimapur – Kohima", description: "Visit Kisama & Kohima local sightseeing." },
+      { day: 2, title: "Khonoma & Tuophema", description: "Explore heritage villages, traditional houses & culture." },
+      { day: 3, title: "Kohima – Mokokchung", description: "Drive to Ao heartland. Evening cultural interaction." },
+      { day: 4, title: "Ungma Village", description: "Visit Nagaland’s oldest Ao village & local museum." },
+      { day: 5, title: "Departure", description: "Drive back to Dimapur." }
+    ],
+    includes: ["Accommodation", "Meals", "Transport", "Guide"],
+    bestTime: "September - April"
+  },
+
+  {
+    id: 5,
+    title: "Nagaland Nature & Wildlife Escape",
+    destination: "Nagaland",
+    duration: "4 Days / 3 Nights",
+    groupSize: "2-8 People",
+    price: "₹13,500",
+    priceNote: "per person",
+    image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800",
+    highlights: ["Intanki National Park", "Dzulekie", "Forest Trails"],
+    itinerary: [
+      { day: 1, title: "Dimapur – Intanki", description: "Transfer to Intanki National Park. Nature walk & bird watching." },
+      { day: 2, title: "Intanki – Dzulekie", description: "Drive to Dzulekie village. Explore forest trails." },
+      { day: 3, title: "Dzulekie – Kohima", description: "Scenic mountain drive & Kohima sightseeing." },
+      { day: 4, title: "Departure", description: "Return to Dimapur." }
+    ],
+    includes: ["Accommodation", "Meals", "Transport", "Guide"],
+    bestTime: "October - March"
+  },
+
+  {
+    id: 6,
+    title: "Kohima & Dzükou Short Escape",
+    destination: "Nagaland",
+    duration: "3 Days / 2 Nights",
+    groupSize: "2-6 People",
+    price: "₹9,500",
+    priceNote: "per person",
+    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800",
+    highlights: ["Kohima", "Dzükou Valley", "War Cemetery"],
+    itinerary: [
+      { day: 1, title: "Dimapur – Kohima", description: "Visit War Cemetery & local market." },
+      { day: 2, title: "Dzükou Trek", description: "Full day trek to Dzükou Valley." },
+      { day: 3, title: "Departure", description: "Return to Dimapur." }
+    ],
+    includes: ["Accommodation", "Meals", "Transport", "Guide"],
+    bestTime: "October - May"
+  },
+
+  {
+    id: 7,
+    title: "Eastern Nagaland Explorer (Tuensang & Longleng)",
+    destination: "Nagaland",
+    duration: "6 Days / 5 Nights",
+    groupSize: "2-8 People",
+    price: "₹24,000",
+    priceNote: "per person",
+    image: "https://images.unsplash.com/photo-1593692716621-1b7f3f24f9b0?w=800",
+    highlights: ["Chang & Phom Tribes", "Eastern Hills", "Remote Villages"],
+    itinerary: [
+      { day: 1, title: "Dimapur – Tuensang", description: "Long scenic drive & rest." },
+      { day: 2, title: "Chang Villages", description: "Village visits & cultural interaction." },
+      { day: 3, title: "Tuensang – Longleng", description: "Drive to Phom tribal region." },
+      { day: 4, title: "Phom Villages", description: "Explore villages & hill viewpoints." },
+      { day: 5, title: "Return Journey", description: "Drive back towards Dimapur." },
+      { day: 6, title: "Departure", description: "Drop at Dimapur." }
+    ],
+    includes: ["Accommodation", "Meals", "Transport", "Guide", "Permits"],
+    bestTime: "October - April"
+  },
+
+  {
+    id: 8,
+    title: "Nagaland Complete Grand Circuit",
+    destination: "Nagaland",
+    duration: "10 Days / 9 Nights",
+    groupSize: "4-10 People",
+    price: "₹42,000",
+    priceNote: "per person",
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800",
+    highlights: ["Kohima", "Dzükou", "Mokokchung", "Mon", "Longwa", "Intanki"],
+    itinerary: [
+      { day: 1, title: "Arrival Dimapur – Kohima", description: "Transfer & rest." },
+      { day: 2, title: "Kohima & Khonoma", description: "Sightseeing & village tour." },
+      { day: 3, title: "Dzükou Valley", description: "Trek & exploration." },
+      { day: 4, title: "Kohima – Mokokchung", description: "Travel day." },
+      { day: 5, title: "Ungma Village", description: "Ao culture exploration." },
+      { day: 6, title: "Mokokchung – Mon", description: "Long drive." },
+      { day: 7, title: "Longwa Village", description: "Border village exploration." },
+      { day: 8, title: "Return Journey", description: "Drive back towards Dimapur." },
+      { day: 9, title: "Intanki National Park", description: "Wildlife & forest trails." },
+      { day: 10, title: "Departure", description: "Drop at Dimapur." }
+    ],
+    includes: ["Accommodation", "All meals", "Transport", "Guide", "Permits"],
+    bestTime: "October - April"
+  },
+
+  // ===================== REST OF NORTHEAST =====================
+
+  {
+    id: 9,
     title: "Meghalaya Waterfalls & Root Bridges",
     destination: "Meghalaya",
     duration: "6 Days / 5 Nights",
@@ -90,22 +199,21 @@ const packages = [
     price: "₹22,000",
     priceNote: "per person",
     image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
-    highlights: ["Nohkalikai", "Double Decker Bridge", "Dawki", "Mawsmai Cave"],
+    highlights: ["Nohkalikai Falls", "Double Decker Root Bridge", "Dawki River", "Mawsmai Cave"],
     itinerary: [
-      { day: 1, title: "Guwahati – Shillong", description: "Evening market." },
-      { day: 2, title: "Cherrapunji", description: "Waterfalls & caves." },
-      { day: 3, title: "Nongriat Trek", description: "Root bridge trek." },
-      { day: 4, title: "Dawki & Mawlynnong", description: "Boat ride & cleanest village." },
-      { day: 5, title: "Shillong", description: "Local sightseeing." },
+      { day: 1, title: "Guwahati – Shillong", description: "Drive to Shillong & evening at Police Bazaar." },
+      { day: 2, title: "Shillong – Cherrapunji", description: "Visit waterfalls & caves." },
+      { day: 3, title: "Nongriat Trek", description: "Trek to Double Decker Root Bridge." },
+      { day: 4, title: "Dawki & Mawlynnong", description: "River boating & cleanest village." },
+      { day: 5, title: "Shillong Sightseeing", description: "Peak, museum & lake." },
       { day: 6, title: "Departure", description: "Drop Guwahati." }
     ],
-    includes: ["Stay", "Breakfast & Dinner", "Transport", "Guide"],
+    includes: ["Accommodation", "Breakfast & Dinner", "Transport", "Guide"],
     bestTime: "October - April"
   },
 
-  // ================== ASSAM ==================
   {
-    id: 5,
+    id: 10,
     title: "Kaziranga Wildlife Safari",
     destination: "Assam",
     duration: "4 Days / 3 Nights",
@@ -113,20 +221,19 @@ const packages = [
     price: "₹15,000",
     priceNote: "per person",
     image: "https://images.unsplash.com/photo-1581852017103-68ac65514cf7?w=800",
-    highlights: ["Rhino Safari", "Elephant Safari", "Birding", "Tea Gardens"],
+    highlights: ["Rhino Safari", "Elephant Safari", "Bird Watching"],
     itinerary: [
-      { day: 1, title: "Arrival Kaziranga", description: "Transfer from Jorhat." },
-      { day: 2, title: "Safari Day", description: "Elephant + Jeep safari." },
-      { day: 3, title: "Eastern Range", description: "Safari + Orchid Park." },
-      { day: 4, title: "Departure", description: "Drop Jorhat." }
+      { day: 1, title: "Arrival Kaziranga", description: "Transfer from Jorhat & rest." },
+      { day: 2, title: "Safari Day", description: "Elephant safari morning, Jeep safari afternoon." },
+      { day: 3, title: "Eastern Range Safari", description: "Jeep safari & Orchid Park." },
+      { day: 4, title: "Departure", description: "Drop at Jorhat." }
     ],
-    includes: ["Stay", "All meals", "Safaris", "Park Entry", "Transport"],
+    includes: ["Accommodation", "All meals", "Safaris", "Park Entry", "Transport"],
     bestTime: "November - April"
   },
 
-  // ================== ARUNACHAL ==================
   {
-    id: 6,
+    id: 11,
     title: "Tawang Arunachal Explorer",
     destination: "Arunachal Pradesh",
     duration: "7 Days / 6 Nights",
@@ -136,21 +243,20 @@ const packages = [
     image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800",
     highlights: ["Tawang Monastery", "Sela Pass", "Bumla Pass", "Madhuri Lake"],
     itinerary: [
-      { day: 1, title: "Guwahati – Bhalukpong", description: "Overnight." },
-      { day: 2, title: "Dirang", description: "Hot springs visit." },
-      { day: 3, title: "Tawang", description: "Sela Pass & Jaswant Garh." },
+      { day: 1, title: "Guwahati – Bhalukpong", description: "Drive & overnight." },
+      { day: 2, title: "Dirang", description: "Hot springs & local sightseeing." },
+      { day: 3, title: "Dirang – Tawang", description: "Sela Pass & Jaswant Garh." },
       { day: 4, title: "Tawang Sightseeing", description: "Monastery & market." },
-      { day: 5, title: "Bumla Pass", description: "Border excursion." },
-      { day: 6, title: "Bomdila", description: "Return journey." },
+      { day: 5, title: "Bumla Pass", description: "Border excursion & Madhuri Lake." },
+      { day: 6, title: "Bomdila", description: "Return journey & monastery visit." },
       { day: 7, title: "Departure", description: "Drop Guwahati." }
     ],
-    includes: ["Stay", "All meals", "Transport", "Permits", "Guide"],
+    includes: ["Accommodation", "All meals", "Transport", "Permits", "Guide"],
     bestTime: "March - June, Sept - Nov"
   },
 
-  // ================== SIKKIM ==================
   {
-    id: 7,
+    id: 12,
     title: "Sikkim Himalayan Spiritual Tour",
     destination: "Sikkim",
     duration: "6 Days / 5 Nights",
@@ -162,16 +268,39 @@ const packages = [
     itinerary: [
       { day: 1, title: "Bagdogra – Gangtok", description: "Evening free." },
       { day: 2, title: "Gangtok Sightseeing", description: "Monasteries & museum." },
-      { day: 3, title: "Tsomgo & Nathula", description: "Border excursion." },
-      { day: 4, title: "Pelling", description: "Scenic drive." },
-      { day: 5, title: "Khecheopalri Lake", description: "Local sightseeing." },
+      { day: 3, title: "Tsomgo & Nathula", description: "High altitude excursion." },
+      { day: 4, title: "Gangtok – Pelling", description: "Scenic drive." },
+      { day: 5, title: "Khecheopalri Lake", description: "Waterfalls & viewpoints." },
       { day: 6, title: "Departure", description: "Drop Bagdogra." }
     ],
-    includes: ["Stay", "Breakfast & Dinner", "Transport", "Permits", "Guide"],
+    includes: ["Accommodation", "Breakfast & Dinner", "Transport", "Permits", "Guide"],
     bestTime: "March - June, Sept - Dec"
+  },
+
+  {
+    id: 13,
+    title: "Nagaland + Meghalaya Combo Explorer",
+    destination: "Nagaland & Meghalaya",
+    duration: "8 Days / 7 Nights",
+    groupSize: "4-10 People",
+    price: "₹34,000",
+    priceNote: "per person",
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+    highlights: ["Kohima", "Dzükou", "Shillong", "Cherrapunji", "Dawki"],
+    itinerary: [
+      { day: 1, title: "Arrival Dimapur – Kohima", description: "Local sightseeing." },
+      { day: 2, title: "Kohima & Khonoma", description: "Village tour." },
+      { day: 3, title: "Dzükou Valley", description: "Trek." },
+      { day: 4, title: "Kohima – Shillong", description: "Transfer day." },
+      { day: 5, title: "Cherrapunji", description: "Waterfalls & caves." },
+      { day: 6, title: "Dawki & Mawlynnong", description: "River boating & village." },
+      { day: 7, title: "Shillong", description: "Local sightseeing." },
+      { day: 8, title: "Departure", description: "Drop Guwahati." }
+    ],
+    includes: ["Accommodation", "Meals", "Transport", "Guide", "Permits"],
+    bestTime: "October - April"
   }
 ];
-
 
 const Packages = () => {
   const [selectedPackage, setSelectedPackage] = useState<typeof packages[0] | null>(null);
