@@ -16,71 +16,96 @@ import {
 } from "@/components/ui/dialog";
 
 const packages = [
+  // ================== NAGALAND ==================
   {
     id: 1,
-    title: "Nagaland Hornbill Festival",
+    title: "Nagaland Hornbill Festival Special",
     destination: "Nagaland",
     duration: "5 Days / 4 Nights",
     groupSize: "2-10 People",
     price: "₹18,000",
     priceNote: "per person",
     image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800",
-    highlights: ["Hornbill Festival", "Kohima War Cemetery", "Khonoma Village", "Local Cuisine"],
+    highlights: ["Hornbill Festival", "Kisama", "Kohima War Cemetery", "Local Naga Cuisine"],
     itinerary: [
-      { day: 1, title: "Arrival in Dimapur", description: "Pickup from Dimapur airport/station. Drive to Kohima (74 km, ~3 hrs). Check-in and evening at leisure." },
-      { day: 2, title: "Hornbill Festival", description: "Full day at Kisama Heritage Village for Hornbill Festival. Witness tribal performances, traditional games, and local food stalls." },
-      { day: 3, title: "Kohima Exploration", description: "Visit Kohima War Cemetery, State Museum, and local markets. Evening cultural show." },
-      { day: 4, title: "Khonoma Village", description: "Day trip to Khonoma, Asia's first green village. Trek through the village, interact with locals." },
-      { day: 5, title: "Departure", description: "Morning at leisure. Transfer to Dimapur for departure." }
+      { day: 1, title: "Arrival in Dimapur – Kohima", description: "Pickup from Dimapur. Evening local walk." },
+      { day: 2, title: "Hornbill Festival", description: "Full day at Kisama Heritage Village." },
+      { day: 3, title: "Kohima & Khonoma", description: "Visit War Cemetery & Khonoma village." },
+      { day: 4, title: "Dzükou Valley Trek", description: "Day trek to Dzükou Valley." },
+      { day: 5, title: "Departure", description: "Return to Dimapur." }
     ],
-    includes: ["Accommodation", "All meals", "Transport", "Guide", "Festival entry"],
-    bestTime: "December (Festival dates)"
+    includes: ["Stay", "All meals", "Transport", "Guide", "Festival Pass"],
+    bestTime: "December"
   },
+
   {
     id: 2,
-    title: "Meghalaya Waterfalls & Caves",
+    title: "Dzükou Valley Trekking Experience",
+    destination: "Nagaland",
+    duration: "4 Days / 3 Nights",
+    groupSize: "4-10 People",
+    price: "₹12,500",
+    priceNote: "per person",
+    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800",
+    highlights: ["Dzükou Valley", "Camping", "Japfu View", "Kohima"],
+    itinerary: [
+      { day: 1, title: "Dimapur – Kohima", description: "Briefing & prep." },
+      { day: 2, title: "Trek to Dzükou", description: "Overnight camping." },
+      { day: 3, title: "Explore & Return", description: "Explore valley & trek back." },
+      { day: 4, title: "Departure", description: "Return to Dimapur." }
+    ],
+    includes: ["Camping", "Meals", "Guide", "Permits", "Transport"],
+    bestTime: "October - May"
+  },
+
+  {
+    id: 3,
+    title: "Mon & Longwa Konyak Tribe Tour",
+    destination: "Nagaland",
+    duration: "6 Days / 5 Nights",
+    groupSize: "2-8 People",
+    price: "₹26,000",
+    priceNote: "per person",
+    image: "https://images.unsplash.com/photo-1528127269322-539801943592?w=800",
+    highlights: ["Longwa", "Konyak Tribe", "Mon", "Myanmar Border"],
+    itinerary: [
+      { day: 1, title: "Dimapur – Mon", description: "Scenic drive." },
+      { day: 2, title: "Longwa Village", description: "Chief’s house & border village." },
+      { day: 3, title: "Tribal Villages", description: "Explore Konyak villages." },
+      { day: 4, title: "Shangnyu & Hongphoi", description: "Historical villages." },
+      { day: 5, title: "Return to Dimapur", description: "Full day drive." },
+      { day: 6, title: "Departure", description: "Drop." }
+    ],
+    includes: ["Stay", "All meals", "Transport", "Guide", "Permits"],
+    bestTime: "October - April"
+  },
+
+  // ================== MEGHALAYA ==================
+  {
+    id: 4,
+    title: "Meghalaya Waterfalls & Root Bridges",
     destination: "Meghalaya",
     duration: "6 Days / 5 Nights",
     groupSize: "2-8 People",
     price: "₹22,000",
     priceNote: "per person",
     image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
-    highlights: ["Living Root Bridges", "Nohkalikai Falls", "Dawki River", "Mawsmai Caves"],
+    highlights: ["Nohkalikai", "Double Decker Bridge", "Dawki", "Mawsmai Cave"],
     itinerary: [
-      { day: 1, title: "Arrival in Shillong", description: "Pickup from Guwahati airport. Drive to Shillong (100 km, ~3 hrs). Evening walk at Police Bazaar." },
-      { day: 2, title: "Cherrapunji", description: "Visit Nohkalikai Falls, Seven Sisters Falls, Mawsmai Caves, and Eco Park." },
-      { day: 3, title: "Double Decker Root Bridge", description: "Trek to the famous Double Decker Living Root Bridge in Nongriat (3500 steps down and up)." },
-      { day: 4, title: "Dawki & Mawlynnong", description: "Crystal clear Dawki river, boat ride at India-Bangladesh border. Visit Mawlynnong - Asia's cleanest village." },
-      { day: 5, title: "Shillong Sightseeing", description: "Elephant Falls, Shillong Peak, Don Bosco Museum, Cathedral." },
-      { day: 6, title: "Departure", description: "Transfer to Guwahati airport for departure." }
+      { day: 1, title: "Guwahati – Shillong", description: "Evening market." },
+      { day: 2, title: "Cherrapunji", description: "Waterfalls & caves." },
+      { day: 3, title: "Nongriat Trek", description: "Root bridge trek." },
+      { day: 4, title: "Dawki & Mawlynnong", description: "Boat ride & cleanest village." },
+      { day: 5, title: "Shillong", description: "Local sightseeing." },
+      { day: 6, title: "Departure", description: "Drop Guwahati." }
     ],
-    includes: ["Accommodation", "Breakfast & Dinner", "Transport", "Guide", "Boat ride"],
+    includes: ["Stay", "Breakfast & Dinner", "Transport", "Guide"],
     bestTime: "October - April"
   },
+
+  // ================== ASSAM ==================
   {
-    id: 3,
-    title: "Arunachal Adventure",
-    destination: "Arunachal Pradesh",
-    duration: "7 Days / 6 Nights",
-    groupSize: "4-12 People",
-    price: "₹32,000",
-    priceNote: "per person",
-    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800",
-    highlights: ["Tawang Monastery", "Sela Pass", "Bomdila", "War Memorial"],
-    itinerary: [
-      { day: 1, title: "Guwahati to Bhalukpong", description: "Drive to Bhalukpong (230 km, ~6 hrs). ILP check. Overnight stay." },
-      { day: 2, title: "Bhalukpong to Dirang", description: "Drive through beautiful landscapes to Dirang (140 km, ~5 hrs). Visit hot springs." },
-      { day: 3, title: "Dirang to Tawang", description: "Cross Sela Pass (13,700 ft), visit Jaswant Garh War Memorial. Reach Tawang by evening." },
-      { day: 4, title: "Tawang Exploration", description: "Visit Tawang Monastery (largest in India), Urgelling Monastery, local market." },
-      { day: 5, title: "Bumla Pass & Madhuri Lake", description: "Day trip to Bumla Pass (India-China border) and PT Tso (Madhuri Lake). Permit required." },
-      { day: 6, title: "Tawang to Bomdila", description: "Drive back to Bomdila. Visit Bomdila Monastery and craft center." },
-      { day: 7, title: "Departure", description: "Drive to Guwahati for departure." }
-    ],
-    includes: ["Accommodation", "All meals", "Transport", "ILP & Permits", "Guide"],
-    bestTime: "March - June, September - November"
-  },
-  {
-    id: 4,
+    id: 5,
     title: "Kaziranga Wildlife Safari",
     destination: "Assam",
     duration: "4 Days / 3 Nights",
@@ -88,58 +113,65 @@ const packages = [
     price: "₹15,000",
     priceNote: "per person",
     image: "https://images.unsplash.com/photo-1581852017103-68ac65514cf7?w=800",
-    highlights: ["Rhino Safari", "Elephant Safari", "Bird Watching", "Tea Gardens"],
+    highlights: ["Rhino Safari", "Elephant Safari", "Birding", "Tea Gardens"],
     itinerary: [
-      { day: 1, title: "Arrival at Kaziranga", description: "Pickup from Jorhat airport. Drive to Kaziranga (97 km, ~2.5 hrs). Evening nature walk." },
-      { day: 2, title: "Safari Day", description: "Early morning elephant safari in Central Range. Jeep safari in Western Range. Spot one-horned rhinos, elephants, and birds." },
-      { day: 3, title: "Eastern Range & Orchid Park", description: "Morning jeep safari in Eastern Range. Visit Kaziranga Orchid Park and tea garden." },
-      { day: 4, title: "Departure", description: "Morning bird watching. Transfer to Jorhat airport." }
+      { day: 1, title: "Arrival Kaziranga", description: "Transfer from Jorhat." },
+      { day: 2, title: "Safari Day", description: "Elephant + Jeep safari." },
+      { day: 3, title: "Eastern Range", description: "Safari + Orchid Park." },
+      { day: 4, title: "Departure", description: "Drop Jorhat." }
     ],
-    includes: ["Accommodation", "All meals", "Safaris", "Park entry", "Transport"],
+    includes: ["Stay", "All meals", "Safaris", "Park Entry", "Transport"],
     bestTime: "November - April"
   },
+
+  // ================== ARUNACHAL ==================
   {
-    id: 5,
-    title: "Sikkim Spiritual Journey",
+    id: 6,
+    title: "Tawang Arunachal Explorer",
+    destination: "Arunachal Pradesh",
+    duration: "7 Days / 6 Nights",
+    groupSize: "4-12 People",
+    price: "₹32,000",
+    priceNote: "per person",
+    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800",
+    highlights: ["Tawang Monastery", "Sela Pass", "Bumla Pass", "Madhuri Lake"],
+    itinerary: [
+      { day: 1, title: "Guwahati – Bhalukpong", description: "Overnight." },
+      { day: 2, title: "Dirang", description: "Hot springs visit." },
+      { day: 3, title: "Tawang", description: "Sela Pass & Jaswant Garh." },
+      { day: 4, title: "Tawang Sightseeing", description: "Monastery & market." },
+      { day: 5, title: "Bumla Pass", description: "Border excursion." },
+      { day: 6, title: "Bomdila", description: "Return journey." },
+      { day: 7, title: "Departure", description: "Drop Guwahati." }
+    ],
+    includes: ["Stay", "All meals", "Transport", "Permits", "Guide"],
+    bestTime: "March - June, Sept - Nov"
+  },
+
+  // ================== SIKKIM ==================
+  {
+    id: 7,
+    title: "Sikkim Himalayan Spiritual Tour",
     destination: "Sikkim",
     duration: "6 Days / 5 Nights",
     groupSize: "2-10 People",
     price: "₹24,000",
     priceNote: "per person",
     image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800",
-    highlights: ["Rumtek Monastery", "Tsomgo Lake", "Nathula Pass", "Gangtok MG Road"],
+    highlights: ["Tsomgo Lake", "Nathula Pass", "Rumtek Monastery", "MG Road"],
     itinerary: [
-      { day: 1, title: "Arrival in Gangtok", description: "Pickup from Bagdogra airport. Drive to Gangtok (125 km, ~4 hrs). Evening at MG Road." },
-      { day: 2, title: "Gangtok Sightseeing", description: "Visit Rumtek Monastery, Do Drul Chorten, Namgyal Institute of Tibetology, Flower Show." },
-      { day: 3, title: "Tsomgo & Nathula", description: "Excursion to Tsomgo Lake and Nathula Pass (Indo-China border). Baba Harbhajan Singh Temple." },
-      { day: 4, title: "Pelling", description: "Drive to Pelling (130 km, ~5 hrs). Visit Pemayangtse Monastery, Rabdentse Ruins." },
-      { day: 5, title: "Pelling & Khecheopalri", description: "Visit Khecheopalri Lake, Kanchenjunga Falls. Evening sunset point." },
-      { day: 6, title: "Departure", description: "Drive to Bagdogra airport for departure." }
+      { day: 1, title: "Bagdogra – Gangtok", description: "Evening free." },
+      { day: 2, title: "Gangtok Sightseeing", description: "Monasteries & museum." },
+      { day: 3, title: "Tsomgo & Nathula", description: "Border excursion." },
+      { day: 4, title: "Pelling", description: "Scenic drive." },
+      { day: 5, title: "Khecheopalri Lake", description: "Local sightseeing." },
+      { day: 6, title: "Departure", description: "Drop Bagdogra." }
     ],
-    includes: ["Accommodation", "Breakfast & Dinner", "Transport", "Permits", "Guide"],
-    bestTime: "March - June, September - December"
-  },
-  {
-    id: 6,
-    title: "Manipur Cultural Experience",
-    destination: "Manipur",
-    duration: "5 Days / 4 Nights",
-    groupSize: "2-8 People",
-    price: "₹16,000",
-    priceNote: "per person",
-    image: "https://images.unsplash.com/photo-1559827291-72ee739d0d9a?w=800",
-    highlights: ["Loktak Lake", "Keibul Lamjao", "INA Memorial", "Sangai Festival"],
-    itinerary: [
-      { day: 1, title: "Arrival in Imphal", description: "Pickup from Imphal airport. Visit Kangla Fort and Ima Keithel (Women's Market)." },
-      { day: 2, title: "Loktak Lake", description: "Full day at Loktak Lake - the floating lake. Visit Keibul Lamjao National Park (home of Sangai deer)." },
-      { day: 3, title: "War Memorials", description: "Visit INA Memorial, Moirang, and World War II sites. Shree Govindajee Temple." },
-      { day: 4, title: "Ukhrul", description: "Day trip to Ukhrul - land of Shirui Lily. Scenic drive through hills." },
-      { day: 5, title: "Departure", description: "Morning shopping for handicrafts. Transfer to airport." }
-    ],
-    includes: ["Accommodation", "All meals", "Transport", "Guide", "Entry fees"],
-    bestTime: "October - March"
+    includes: ["Stay", "Breakfast & Dinner", "Transport", "Permits", "Guide"],
+    bestTime: "March - June, Sept - Dec"
   }
 ];
+
 
 const Packages = () => {
   const [selectedPackage, setSelectedPackage] = useState<typeof packages[0] | null>(null);
