@@ -61,8 +61,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
 			},
+			naga: {
+				red: 'hsl(var(--naga-red))',
+				black: 'hsl(var(--naga-black))',
+				gold: 'hsl(var(--naga-gold))',
+				forest: 'hsl(var(--naga-forest))',
+				mist: 'hsl(var(--naga-mist))',
+				earth: 'hsl(var(--naga-earth))'
+			}
+		},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
