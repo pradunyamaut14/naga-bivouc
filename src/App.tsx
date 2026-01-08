@@ -9,6 +9,7 @@ import States from "./pages/States";
 import Gallery from "./pages/Gallery";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Packages from "./pages/Packages";
 import ArunachalPradesh from "./pages/states/ArunachalPradesh";
 import Assam from "./pages/states/Assam";
 import Manipur from "./pages/states/Manipur";
@@ -30,6 +31,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/states" element={<States />} />
+          <Route path="/packages" element={<Packages />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
