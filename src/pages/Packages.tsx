@@ -145,43 +145,63 @@ const Packages = () => {
   const [selectedPackage, setSelectedPackage] = useState<typeof packages[0] | null>(null);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="relative h-[40vh] flex items-center justify-center">
+      {/* Hero Section with Naga-inspired design */}
+      <section className="relative h-[45vh] flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920')"
+            backgroundImage: "url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1920')"
           }}
         >
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 naga-gradient opacity-80" />
+          <div className="absolute inset-0 naga-mist" />
         </div>
-        <div className="relative z-10 text-center text-white">
-          <h1 className="text-5xl font-bold mb-4">Tour Packages</h1>
-          <p className="text-xl opacity-90">Curated experiences across Northeast India</p>
+        {/* Tribal pattern accent */}
+        <div className="absolute bottom-0 left-0 right-0 h-2 naga-border border-b-4" />
+        <div className="relative z-10 text-center text-white px-4">
+          <p className="text-naga-gold font-medium tracking-widest uppercase mb-2">Explore the Unexplored</p>
+          <h1 className="text-5xl md:text-6xl font-display font-bold mb-4">Tour Packages</h1>
+          <p className="text-xl opacity-90 font-body max-w-2xl mx-auto">
+            Curated experiences through the mystical lands of Northeast India
+          </p>
         </div>
       </section>
 
       {/* Packages Grid */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-display font-bold text-foreground mb-3">
+              Our Signature Journeys
+            </h2>
+            <div className="w-24 h-1 bg-accent mx-auto mb-4" />
+            <p className="text-muted-foreground max-w-2xl mx-auto font-body">
+              Each package is crafted with deep knowledge of the land, its people, and traditions
+            </p>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {packages.map((pkg) => (
-              <Card key={pkg.id} className="overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="relative h-48">
+              <Card key={pkg.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 border-border hover:border-accent/50 group">
+                <div className="relative h-52 overflow-hidden">
                   <img 
                     src={pkg.image} 
                     alt={pkg.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <Badge className="absolute top-4 left-4 bg-primary">
+                  <div className="absolute inset-0 bg-gradient-to-t from-naga-black/70 via-transparent to-transparent" />
+                  <Badge className="absolute top-4 left-4 bg-naga-forest text-white border-0">
                     {pkg.destination}
                   </Badge>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <p className="text-2xl font-bold text-white">{pkg.price}</p>
+                    <p className="text-xs text-white/80">{pkg.priceNote}</p>
+                  </div>
                 </div>
-                <CardHeader>
-                  <CardTitle className="text-xl">{pkg.title}</CardTitle>
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-xl font-display text-foreground">{pkg.title}</CardTitle>
                   <div className="flex flex-wrap gap-3 text-sm text-muted-foreground mt-2">
                     <span className="flex items-center gap-1">
                       <Calendar className="h-4 w-4" />
@@ -193,91 +213,93 @@ const Packages = () => {
                     </span>
                   </div>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="pt-0">
                   <div className="flex flex-wrap gap-2 mb-4">
                     {pkg.highlights.slice(0, 3).map((highlight, idx) => (
-                      <Badge key={idx} variant="secondary" className="text-xs">
+                      <Badge key={idx} variant="outline" className="text-xs border-accent/30 text-muted-foreground">
                         {highlight}
                       </Badge>
                     ))}
                   </div>
                   
-                  <div className="flex items-center justify-between mt-4">
-                    <div>
-                      <p className="text-2xl font-bold text-primary">{pkg.price}</p>
-                      <p className="text-xs text-muted-foreground">{pkg.priceNote}</p>
-                    </div>
-                    <Dialog>
-                      <DialogTrigger asChild>
-                        <Button onClick={() => setSelectedPackage(pkg)}>
-                          View Details
-                        </Button>
-                      </DialogTrigger>
-                      <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
-                        <DialogHeader>
-                          <DialogTitle className="text-2xl">{pkg.title}</DialogTitle>
-                        </DialogHeader>
-                        
-                        <div className="space-y-6">
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button 
+                        onClick={() => setSelectedPackage(pkg)}
+                        className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium"
+                      >
+                        View Details
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto border-t-4 border-t-accent">
+                      <DialogHeader>
+                        <p className="text-accent text-sm font-medium tracking-wide uppercase">{pkg.destination}</p>
+                        <DialogTitle className="text-2xl font-display">{pkg.title}</DialogTitle>
+                      </DialogHeader>
+                      
+                      <div className="space-y-6">
+                        <div className="relative">
                           <img 
                             src={pkg.image} 
                             alt={pkg.title}
                             className="w-full h-64 object-cover rounded-lg"
                           />
-                          
-                          <div className="flex flex-wrap gap-4 text-sm">
-                            <span className="flex items-center gap-1">
-                              <Calendar className="h-4 w-4 text-primary" />
-                              {pkg.duration}
-                            </span>
-                            <span className="flex items-center gap-1">
-                              <Users className="h-4 w-4 text-primary" />
-                              {pkg.groupSize}
-                            </span>
-                            <span className="flex items-center gap-1">
-                              <MapPin className="h-4 w-4 text-primary" />
-                              {pkg.destination}
-                            </span>
-                            <span className="flex items-center gap-1">
-                              <IndianRupee className="h-4 w-4 text-primary" />
-                              {pkg.price} {pkg.priceNote}
-                            </span>
-                          </div>
+                          <div className="absolute bottom-0 left-0 right-0 h-1 naga-border border-b-4" />
+                        </div>
+                        
+                        <div className="flex flex-wrap gap-4 text-sm bg-secondary/50 p-4 rounded-lg">
+                          <span className="flex items-center gap-2">
+                            <Calendar className="h-4 w-4 text-accent" />
+                            <span className="font-medium">{pkg.duration}</span>
+                          </span>
+                          <span className="flex items-center gap-2">
+                            <Users className="h-4 w-4 text-accent" />
+                            <span className="font-medium">{pkg.groupSize}</span>
+                          </span>
+                          <span className="flex items-center gap-2">
+                            <MapPin className="h-4 w-4 text-accent" />
+                            <span className="font-medium">{pkg.destination}</span>
+                          </span>
+                          <span className="flex items-center gap-2">
+                            <IndianRupee className="h-4 w-4 text-accent" />
+                            <span className="font-bold text-primary">{pkg.price}</span>
+                            <span className="text-muted-foreground">{pkg.priceNote}</span>
+                          </span>
+                        </div>
 
-                          <div>
-                            <h4 className="font-semibold mb-2">Best Time to Visit</h4>
-                            <p className="text-muted-foreground">{pkg.bestTime}</p>
-                          </div>
+                        <div>
+                          <h4 className="font-display font-semibold mb-2 text-foreground">Best Time to Visit</h4>
+                          <p className="text-muted-foreground bg-accent/10 px-3 py-2 rounded inline-block">{pkg.bestTime}</p>
+                        </div>
 
-                          <div>
-                            <h4 className="font-semibold mb-3">Day-wise Itinerary</h4>
-                            <div className="space-y-3">
-                              {pkg.itinerary.map((day) => (
-                                <div key={day.day} className="border-l-2 border-primary pl-4">
-                                  <p className="font-medium">Day {day.day}: {day.title}</p>
-                                  <p className="text-sm text-muted-foreground">{day.description}</p>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-
-                          <div>
-                            <h4 className="font-semibold mb-2">Package Includes</h4>
-                            <div className="flex flex-wrap gap-2">
-                              {pkg.includes.map((item, idx) => (
-                                <Badge key={idx} variant="outline">{item}</Badge>
-                              ))}
-                            </div>
-                          </div>
-
-                          <div className="bg-secondary/30 p-4 rounded-lg">
-                            <h4 className="font-semibold mb-3">Book This Package</h4>
-                            <WhatsAppInquiryForm destination={`${pkg.title} - ${pkg.destination}`} />
+                        <div>
+                          <h4 className="font-display font-semibold mb-4 text-foreground">Day-wise Itinerary</h4>
+                          <div className="space-y-4">
+                            {pkg.itinerary.map((day) => (
+                              <div key={day.day} className="border-l-4 border-accent pl-4 py-2 bg-secondary/20 rounded-r-lg">
+                                <p className="font-semibold text-foreground">Day {day.day}: {day.title}</p>
+                                <p className="text-sm text-muted-foreground mt-1">{day.description}</p>
+                              </div>
+                            ))}
                           </div>
                         </div>
-                      </DialogContent>
-                    </Dialog>
-                  </div>
+
+                        <div>
+                          <h4 className="font-display font-semibold mb-3 text-foreground">Package Includes</h4>
+                          <div className="flex flex-wrap gap-2">
+                            {pkg.includes.map((item, idx) => (
+                              <Badge key={idx} variant="outline" className="border-naga-forest/50 text-naga-forest">{item}</Badge>
+                            ))}
+                          </div>
+                        </div>
+
+                        <div className="bg-gradient-to-r from-naga-forest/10 to-accent/10 p-6 rounded-lg border border-accent/20">
+                          <h4 className="font-display font-semibold mb-3 text-foreground">Book This Package</h4>
+                          <WhatsAppInquiryForm destination={`${pkg.title} - ${pkg.destination}`} />
+                        </div>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
                 </CardContent>
               </Card>
             ))}
@@ -285,23 +307,27 @@ const Packages = () => {
         </div>
       </section>
 
-      {/* Custom Package CTA */}
-      <section className="py-16 bg-primary/10">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Need a Custom Itinerary?</h2>
-          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+      {/* Custom Package CTA with Naga styling */}
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 naga-gradient opacity-90" />
+        <div className="absolute inset-0 naga-mist" />
+        <div className="absolute top-0 left-0 right-0 h-2 naga-border border-t-4" />
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <p className="text-accent font-medium tracking-widest uppercase mb-2">Personalized Experiences</p>
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-white">Need a Custom Itinerary?</h2>
+          <p className="text-white/80 mb-8 max-w-2xl mx-auto font-body">
             Can't find what you're looking for? We specialize in creating personalized travel experiences. 
             Tell us your preferences and we'll craft the perfect Northeast India adventure for you.
           </p>
           <Dialog>
             <DialogTrigger asChild>
-              <Button size="lg" className="bg-primary hover:bg-primary/90">
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8">
                 Request Custom Package
               </Button>
             </DialogTrigger>
-            <DialogContent>
+            <DialogContent className="border-t-4 border-t-accent">
               <DialogHeader>
-                <DialogTitle>Custom Package Inquiry</DialogTitle>
+                <DialogTitle className="font-display text-xl">Custom Package Inquiry</DialogTitle>
               </DialogHeader>
               <WhatsAppInquiryForm destination="Custom Northeast India Tour" />
             </DialogContent>
