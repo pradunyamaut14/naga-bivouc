@@ -31,7 +31,7 @@ const Gallery = () => {
       title: "Khonoma Village",
       location: "Nagaland",
       description: "Asia’s first green village and heritage Angami settlement.",
-      image: "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?w=1400",
+      image: "https://s7ap1.scene7.com/is/image/incredibleindia/khonoma-village-kohima-nagaland-1-attr-hero?qlt=82&ts=1727012456749",
       category: "Nagaland"
     },
     {
