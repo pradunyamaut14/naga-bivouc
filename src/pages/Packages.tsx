@@ -25,7 +25,7 @@ const packages = [
     groupSize: "2-8 People",
     price: "₹14,500",
     priceNote: "per person",
-    image: "https://images.unsplash.com/photo-1593692716621-1b7f3f24f9b0?w=1200",
+    image: "https://c.ndtvimg.com/2025-04/v0stofeg_village_625x300_08_April_25.jpg?im=FeatureCrop,algorithm=dnn,width=773,height=435",
     highlights: [
       "Khonoma Green Village",
       "Traditional Angami Houses",
