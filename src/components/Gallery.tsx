@@ -1,183 +1,281 @@
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Camera, Mountain, Users, TreePine, X } from "lucide-react";
+import { Camera, Mountain, Users, TreePine, X, MapPin } from "lucide-react";
+
+type GalleryItem = {
+  title: string;
+  description: string;
+  image: string;
+  category: string;
+  icon: any;
+  location: string;
+};
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
 
-  const galleryItems = [
+  const galleryItems: GalleryItem[] = [
+    // ================= NAGALAND =================
     {
       icon: Mountain,
-      title: "Kanchenjunga Peak",
-      description: "Third highest mountain in the world from Sikkim",
-      image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800",
-      category: "Mountains"
+      title: "Dzukou Valley",
+      location: "Nagaland",
+      description: "The legendary valley of flowers on the Nagaland–Manipur border.",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400",
+      category: "Nagaland"
     },
+    {
+      icon: TreePine,
+      title: "Khonoma Village",
+      location: "Nagaland",
+      description: "Asia’s first green village and heritage Angami settlement.",
+      image: "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?w=1400",
+      category: "Nagaland"
+    },
+    {
+      icon: Mountain,
+      title: "Longwa Village",
+      location: "Mon, Nagaland",
+      description: "The Indo–Myanmar border village of the Konyak tribe.",
+      image: "https://images.unsplash.com/photo-1582550945154-66ea8fff25e1?w=1400",
+      category: "Nagaland"
+    },
+
+    // ================= ASSAM =================
+    {
+      icon: TreePine,
+      title: "Kaziranga National Park",
+      location: "Assam",
+      description: "Home of the one-horned rhinoceros and rich wildlife.",
+      image: "https://images.unsplash.com/photo-1574068468068-a809653dad67?w=1400",
+      category: "Assam"
+    },
+    {
+      icon: Mountain,
+      title: "Majuli River Island",
+      location: "Assam",
+      description: "World’s largest river island and Vaishnavite cultural hub.",
+      image: "https://images.unsplash.com/photo-1600359731977-7f4b3c8e3e34?w=1400",
+      category: "Assam"
+    },
+    {
+      icon: TreePine,
+      title: "Assam Tea Gardens",
+      location: "Assam",
+      description: "Endless green tea estates producing the world-famous Assam tea.",
+      image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1400",
+      category: "Assam"
+    },
+
+    // ================= MEGHALAYA =================
     {
       icon: TreePine,
       title: "Living Root Bridges",
-      description: "Ancient bioengineering marvel in Meghalaya",
-      image: "https://images.unsplash.com/photo-1625046305693-09d71e35d9a6?w=800",
-      category: "Nature"
-    },
-    {
-      icon: Users,
-      title: "Hornbill Festival",
-      description: "Festival of festivals celebrating Naga heritage",
-      image: "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?w=800",
-      category: "Culture"
-    },
-    {
-      icon: Camera,
-      title: "One-Horned Rhino",
-      description: "Kaziranga's famous wildlife in Assam",
-      image: "https://images.unsplash.com/photo-1574068468068-a809653dad67?w=800",
-      category: "Wildlife"
+      location: "Meghalaya",
+      description: "Natural bridges grown by the Khasi tribe over generations.",
+      image: "https://images.unsplash.com/photo-1625046305693-09d71e35d9a6?w=1400",
+      category: "Meghalaya"
     },
     {
       icon: Mountain,
+      title: "Dawki River",
+      location: "Meghalaya",
+      description: "Crystal clear river near Bangladesh border.",
+      image: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1400",
+      category: "Meghalaya"
+    },
+    {
+      icon: Mountain,
+      title: "Cherrapunji",
+      location: "Meghalaya",
+      description: "One of the wettest places on Earth with dramatic landscapes.",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400",
+      category: "Meghalaya"
+    },
+
+    // ================= ARUNACHAL =================
+    {
+      icon: Mountain,
       title: "Tawang Monastery",
-      description: "Largest monastery in India, Arunachal Pradesh",
-      image: "https://images.unsplash.com/photo-1585136917228-5eadc0ed1fa8?w=800",
-      category: "Mountains"
+      location: "Arunachal Pradesh",
+      description: "Largest monastery in India, high in the Himalayas.",
+      image: "https://images.unsplash.com/photo-1585136917228-5eadc0ed1fa8?w=1400",
+      category: "Arunachal"
+    },
+    {
+      icon: Mountain,
+      title: "Sela Pass",
+      location: "Arunachal Pradesh",
+      description: "High-altitude mountain pass often covered in snow.",
+      image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1400",
+      category: "Arunachal"
     },
     {
       icon: TreePine,
-      title: "Tea Gardens",
-      description: "Rolling hills of Assam tea plantations",
-      image: "https://images.unsplash.com/photo-1574068468068-a809653dad67?w=800",
-      category: "Nature"
+      title: "Ziro Valley",
+      location: "Arunachal Pradesh",
+      description: "Home of the Apatani tribe and famous music festival.",
+      image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1400",
+      category: "Arunachal"
+    },
+
+    // ================= SIKKIM =================
+    {
+      icon: Mountain,
+      title: "Gurudongmar Lake",
+      location: "Sikkim",
+      description: "One of the highest lakes in the world.",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400",
+      category: "Sikkim"
     },
     {
-      icon: Users,
-      title: "Tribal Dance",
-      description: "Traditional performances of Northeast tribes",
-      image: "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?w=800",
-      category: "Culture"
+      icon: Mountain,
+      title: "Nathula Pass",
+      location: "Sikkim",
+      description: "Historic Indo-China border mountain pass.",
+      image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1400",
+      category: "Sikkim"
+    },
+
+    // ================= MANIPUR =================
+    {
+      icon: TreePine,
+      title: "Loktak Lake",
+      location: "Manipur",
+      description: "Famous floating lake with phumdis.",
+      image: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1400",
+      category: "Manipur"
     },
     {
-      icon: Camera,
-      title: "Dzukou Valley",
-      description: "Valley of flowers in Nagaland",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
-      category: "Wildlife"
+      icon: Mountain,
+      title: "Kangla Fort",
+      location: "Manipur",
+      description: "Ancient seat of Manipuri kingdom.",
+      image: "https://images.unsplash.com/photo-1582550945154-66ea8fff25e1?w=1400",
+      category: "Manipur"
+    },
+
+    // ================= MIZORAM =================
+    {
+      icon: Mountain,
+      title: "Vantawng Falls",
+      location: "Mizoram",
+      description: "Highest waterfall in Mizoram.",
+      image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1400",
+      category: "Mizoram"
+    },
+    {
+      icon: Mountain,
+      title: "Reiek Peak",
+      location: "Mizoram",
+      description: "Scenic peak near Aizawl.",
+      image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1400",
+      category: "Mizoram"
+    },
+
+    // ================= TRIPURA =================
+    {
+      icon: Mountain,
+      title: "Ujjayanta Palace",
+      location: "Tripura",
+      description: "Royal palace turned museum in Agartala.",
+      image: "https://images.unsplash.com/photo-1582550945154-66ea8fff25e1?w=1400",
+      category: "Tripura"
+    },
+    {
+      icon: TreePine,
+      title: "Neermahal",
+      location: "Tripura",
+      description: "Water palace in the middle of Rudrasagar Lake.",
+      image: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1400",
+      category: "Tripura"
     }
   ];
 
-  const categories = ["All", "Mountains", "Nature", "Culture", "Wildlife"];
+  const categories = [
+    "All",
+    "Nagaland",
+    "Assam",
+    "Meghalaya",
+    "Arunachal",
+    "Sikkim",
+    "Manipur",
+    "Mizoram",
+    "Tripura"
+  ];
 
-  const filteredItems = selectedCategory === "All" 
-    ? galleryItems 
-    : galleryItems.filter(item => item.category === selectedCategory);
+  const filteredItems =
+    selectedCategory === "All"
+      ? galleryItems
+      : galleryItems.filter((item) => item.category === selectedCategory);
 
   return (
-    <section id="gallery" className="py-20 bg-naga-mist/10 relative">
-      {/* Tribal Border Top */}
+    <section id="gallery" className="py-24 bg-naga-mist/10 relative">
       <div className="absolute top-0 left-0 right-0 h-1 naga-border"></div>
 
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Experience <span className="text-naga-red">Gallery</span>
+        <div className="text-center mb-14">
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
+            Explore <span className="text-naga-red">Northeast India</span>
           </h2>
-          <p className="font-body text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-            Discover the stunning landscapes, rich culture, and unforgettable moments that await you 
-            in Northeast India through our curated collection of experiences.
+          <p className="text-muted-foreground max-w-3xl mx-auto">
+            From the warrior hills of Nagaland to the river islands of Assam and the misty valleys of Meghalaya.
           </p>
-
-          {/* Category Filter Buttons */}
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
-            {categories.map((category) => (
-              <Button
-                key={category}
-                variant={selectedCategory === category ? "default" : "outline"}
-                size="sm"
-                onClick={() => setSelectedCategory(category)}
-                className={`rounded-full font-body ${
-                  selectedCategory === category 
-                    ? "bg-naga-red hover:bg-naga-red/90 text-white border-naga-gold/30" 
-                    : "border-naga-gold/30 hover:bg-naga-red/10 hover:border-naga-red/50"
-                }`}
-              >
-                {category}
-              </Button>
-            ))}
-          </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {filteredItems.map((item, index) => (
-            <Card 
-              key={index} 
-              className="group overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer bg-card border-naga-gold/20 hover:border-naga-red/40"
-              onClick={() => setSelectedImage(item.image)}
+        {/* Filters */}
+        <div className="flex flex-wrap justify-center gap-2 mb-10">
+          {categories.map((cat) => (
+            <Button
+              key={cat}
+              size="sm"
+              variant={selectedCategory === cat ? "default" : "outline"}
+              onClick={() => setSelectedCategory(cat)}
+              className={selectedCategory === cat ? "bg-naga-red text-white" : ""}
             >
-              <div className="relative aspect-square overflow-hidden">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-naga-black/70 via-naga-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <item.icon className="h-6 w-6 mb-2 text-naga-gold" />
-                    <h3 className="font-display font-semibold">{item.title}</h3>
-                  </div>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="font-display text-lg font-semibold mb-2 text-foreground">{item.title}</h3>
-                <p className="font-body text-muted-foreground text-sm">{item.description}</p>
+              {cat}
+            </Button>
+          ))}
+        </div>
+
+        {/* Grid */}
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {filteredItems.map((item, idx) => (
+            <Card
+              key={idx}
+              onClick={() => setSelectedItem(item)}
+              className="cursor-pointer overflow-hidden group"
+            >
+              <div className="relative aspect-square">
+                <img src={item.image} className="w-full h-full object-cover group-hover:scale-110 transition" />
               </div>
             </Card>
           ))}
         </div>
 
-        {/* Featured Image Placeholder */}
-        <div className="relative rounded-2xl overflow-hidden border border-naga-gold/30">
-          <div className="aspect-[21/9] naga-gradient flex items-center justify-center">
-            <div className="text-center">
-              <Camera className="h-16 w-16 text-naga-red mx-auto mb-4" />
-              <h3 className="font-display text-2xl font-bold mb-2 text-foreground">Stunning Northeast India Landscapes</h3>
-              <p className="font-body text-muted-foreground">Discover the beauty that awaits you</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="text-center mt-12">
-          <Button 
-            size="lg" 
-            variant="outline" 
-            className="group font-body border-naga-gold/30 hover:bg-naga-red/10 hover:border-naga-red/50"
-          >
-            <Camera className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform text-naga-red" />
-            View Full Gallery
-          </Button>
-        </div>
-
-        {/* Image Lightbox Modal */}
-        {selectedImage && (
-          <div className="fixed inset-0 bg-naga-black/90 flex items-center justify-center z-50 p-4">
-            <div className="relative max-w-4xl max-h-[90vh] w-full">
-              <img
-                src={selectedImage}
-                alt="Gallery image"
-                className="w-full h-full object-contain rounded-lg border-2 border-naga-gold/30"
-              />
+        {/* Lightbox */}
+        {selectedItem && (
+          <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
+            <div className="max-w-5xl w-full relative">
+              <img src={selectedItem.image} className="w-full max-h-[80vh] object-contain rounded-xl" />
+              <div className="text-white mt-4">
+                <h3 className="text-2xl font-bold">{selectedItem.title}</h3>
+                <p className="text-naga-gold flex items-center"><MapPin className="h-4 w-4 mr-1" /> {selectedItem.location}</p>
+                <p className="text-gray-300 mt-2">{selectedItem.description}</p>
+              </div>
               <button
-                onClick={() => setSelectedImage(null)}
-                className="absolute -top-4 -right-4 bg-naga-red rounded-full p-2 hover:bg-naga-red/80 transition-colors text-white"
+                onClick={() => setSelectedItem(null)}
+                className="absolute -top-4 -right-4 bg-naga-red p-2 rounded-full"
               >
-                <X className="h-6 w-6" />
+                <X className="text-white" />
               </button>
             </div>
           </div>
         )}
       </div>
 
-      {/* Tribal Border Bottom */}
       <div className="absolute bottom-0 left-0 right-0 h-1 naga-border"></div>
     </section>
   );
