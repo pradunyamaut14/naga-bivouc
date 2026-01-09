@@ -4,103 +4,103 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Nagaland-inspired Design System
-   Colors drawn from: misty mountains, lush forests, traditional Naga shawls (red, black, yellow), hornbill feathers
+/* Nagaland-inspired Design System with Blue Theme
+   Colors drawn from: misty mountains, lush forests, traditional elements with modern blue accents
 */
 
 @layer base {
   :root {
     /* Deep forest and earth tones */
-    --background: 30 15% 97%;
-    --foreground: 20 25% 12%;
+    --background: 210 20% 97%;
+    --foreground: 215 25% 12%;
 
-    --card: 30 20% 98%;
-    --card-foreground: 20 25% 12%;
+    --card: 210 25% 98%;
+    --card-foreground: 215 25% 12%;
 
-    --popover: 30 20% 98%;
-    --popover-foreground: 20 25% 12%;
+    --popover: 210 25% 98%;
+    --popover-foreground: 215 25% 12%;
 
-    /* Traditional Naga Red - from warrior shawls */
-    --primary: 0 72% 35%;
-    --primary-foreground: 30 20% 98%;
+    /* Deep Blue - primary accent */
+    --primary: 215 75% 40%;
+    --primary-foreground: 210 25% 98%;
 
     /* Forest Green undertones */
     --secondary: 150 25% 92%;
     --secondary-foreground: 150 35% 20%;
 
     /* Muted earth tones */
-    --muted: 30 15% 92%;
-    --muted-foreground: 20 10% 45%;
+    --muted: 210 15% 92%;
+    --muted-foreground: 215 10% 45%;
 
     /* Warm amber accent - from traditional ornaments */
     --accent: 38 85% 55%;
-    --accent-foreground: 20 25% 12%;
+    --accent-foreground: 215 25% 12%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 30 20% 98%;
+    --destructive-foreground: 210 25% 98%;
 
-    --border: 30 15% 85%;
-    --input: 30 15% 85%;
-    --ring: 0 72% 35%;
+    --border: 210 15% 85%;
+    --input: 210 15% 85%;
+    --ring: 215 75% 40%;
 
     --radius: 0.5rem;
 
-    /* Sidebar - deep forest */
-    --sidebar-background: 150 30% 12%;
-    --sidebar-foreground: 30 15% 95%;
-    --sidebar-primary: 0 72% 45%;
-    --sidebar-primary-foreground: 30 20% 98%;
-    --sidebar-accent: 150 25% 18%;
-    --sidebar-accent-foreground: 30 15% 95%;
-    --sidebar-border: 150 20% 20%;
-    --sidebar-ring: 0 72% 45%;
+    /* Sidebar - deep blue */
+    --sidebar-background: 215 35% 12%;
+    --sidebar-foreground: 210 15% 95%;
+    --sidebar-primary: 215 75% 50%;
+    --sidebar-primary-foreground: 210 25% 98%;
+    --sidebar-accent: 215 25% 18%;
+    --sidebar-accent-foreground: 210 15% 95%;
+    --sidebar-border: 215 20% 20%;
+    --sidebar-ring: 215 75% 50%;
 
-    /* Custom Nagaland tokens */
-    --naga-red: 0 72% 35%;
-    --naga-black: 20 25% 8%;
+    /* Custom Nagaland tokens with Blue theme */
+    --naga-red: 215 75% 40%;
+    --naga-black: 215 25% 8%;
     --naga-gold: 38 85% 55%;
-    --naga-forest: 150 35% 25%;
-    --naga-mist: 200 15% 85%;
-    --naga-earth: 25 30% 30%;
+    --naga-forest: 200 45% 35%;
+    --naga-mist: 210 20% 90%;
+    --naga-earth: 215 30% 30%;
   }
 
   .dark {
-    --background: 20 25% 8%;
-    --foreground: 30 15% 95%;
+    --background: 215 25% 8%;
+    --foreground: 210 15% 95%;
 
-    --card: 20 20% 12%;
-    --card-foreground: 30 15% 95%;
+    --card: 215 20% 12%;
+    --card-foreground: 210 15% 95%;
 
-    --popover: 20 20% 12%;
-    --popover-foreground: 30 15% 95%;
+    --popover: 215 20% 12%;
+    --popover-foreground: 210 15% 95%;
 
-    --primary: 0 65% 50%;
-    --primary-foreground: 30 20% 98%;
+    --primary: 215 70% 55%;
+    --primary-foreground: 210 25% 98%;
 
-    --secondary: 150 20% 15%;
-    --secondary-foreground: 150 25% 85%;
+    --secondary: 200 20% 15%;
+    --secondary-foreground: 200 25% 85%;
 
-    --muted: 20 15% 18%;
-    --muted-foreground: 30 10% 60%;
+    --muted: 215 15% 18%;
+    --muted-foreground: 210 10% 60%;
 
     --accent: 38 80% 50%;
-    --accent-foreground: 20 25% 8%;
+    --accent-foreground: 215 25% 8%;
 
     --destructive: 0 62% 40%;
-    --destructive-foreground: 30 20% 98%;
+    --destructive-foreground: 210 25% 98%;
 
-    --border: 20 15% 20%;
-    --input: 20 15% 20%;
-    --ring: 0 65% 50%;
+    --border: 215 15% 20%;
+    --input: 215 15% 20%;
+    --ring: 215 70% 55%;
 
-    --sidebar-background: 20 25% 6%;
-    --sidebar-foreground: 30 15% 95%;
-    --sidebar-primary: 0 65% 55%;
-    --sidebar-primary-foreground: 30 20% 98%;
-    --sidebar-accent: 20 20% 12%;
-    --sidebar-accent-foreground: 30 15% 95%;
-    --sidebar-border: 20 15% 15%;
-    --sidebar-ring: 0 65% 55%;
+    --sidebar-background: 215 25% 6%;
+    --sidebar-foreground: 210 15% 95%;
+    --sidebar-primary: 215 70% 55%;
+    --sidebar-primary-foreground: 210 25% 98%;
+    --sidebar-accent: 215 20% 12%;
+    --sidebar-accent-foreground: 210 15% 95%;
+    --sidebar-border: 215 15% 15%;
+    --sidebar-ring: 215 70% 55%;
   }
 }
 
@@ -143,26 +143,26 @@
     overflow: hidden;
   }
 
-  /* Naga tribal pattern border */
+  /* Naga tribal pattern border with blue theme */
   .naga-border {
     border-image: repeating-linear-gradient(
       90deg,
       hsl(var(--naga-red)) 0px,
       hsl(var(--naga-red)) 8px,
-      hsl(var(--naga-black)) 8px,
-      hsl(var(--naga-black)) 16px,
+      hsl(var(--naga-forest)) 8px,
+      hsl(var(--naga-forest)) 16px,
       hsl(var(--naga-gold)) 16px,
       hsl(var(--naga-gold)) 24px
     ) 4;
   }
 
-  /* Gradient inspired by Naga mountains at dawn */
+  /* Gradient inspired by Naga mountains with blue tones */
   .naga-gradient {
     background: linear-gradient(
       135deg,
-      hsl(var(--naga-forest)) 0%,
-      hsl(var(--naga-black)) 50%,
-      hsl(var(--naga-red) / 0.8) 100%
+      hsl(var(--naga-mist)) 0%,
+      hsl(210 25% 95%) 50%,
+      hsl(var(--naga-mist)) 100%
     );
   }
 

@@ -29,7 +29,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-naga-black text-naga-mist relative">
+    <footer className="bg-[hsl(215,35%,15%)] text-naga-mist relative">
       {/* Tribal Border Top */}
       <div className="absolute top-0 left-0 right-0 h-2 naga-border"></div>
 
