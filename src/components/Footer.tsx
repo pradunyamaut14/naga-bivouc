@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
-import { Mountain, Mail, Phone, MapPin, Facebook, Instagram, MessageCircle, Heart, Code } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram, MessageCircle, Heart, Code } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
-const WHATSAPP_NUMBER = "919876543210"; // Replace with actual number
+const WHATSAPP_NUMBER = "917099623366";
 
 const Footer = () => {
   const quickLinks = [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
+    { label: "Packages", href: "/packages" },
     { label: "Gallery", href: "/gallery" },
     { label: "Contact", href: "/contact" },
     { label: "Explore States", href: "/states" },
@@ -27,51 +29,54 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-primary/5 pt-16 pb-8">
-      <div className="container mx-auto px-4 lg:px-8">
+    <footer className="bg-naga-black text-naga-mist relative">
+      {/* Tribal Border Top */}
+      <div className="absolute top-0 left-0 right-0 h-2 naga-border"></div>
+
+      <div className="container mx-auto px-4 lg:px-8 pt-20 pb-8">
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
 
           {/* Company Info */}
           <div>
-            <Link to="/" className="flex items-center gap-2 mb-4">
-              <Mountain className="h-8 w-8 text-primary" />
-              <h3 className="text-2xl font-bold">Naga Bivouac</h3>
+            <Link to="/" className="flex items-center gap-3 mb-4">
+              <img src={logo} alt="Naga Bivouac" className="h-12 w-12 object-contain" />
+              <h3 className="font-display text-2xl font-bold text-naga-gold">Naga Bivouac</h3>
             </Link>
 
-            <p className="text-muted-foreground mb-6 text-sm">
+            <p className="font-body text-naga-mist/80 mb-6 text-sm leading-relaxed">
               Discover the raw beauty, hidden cultures, and untold stories of Nagaland and Northeast India through authentic travel experiences.
             </p>
             
             <div className="space-y-2 mb-6">
               <div className="flex items-center gap-3 text-sm">
-                <MapPin className="h-4 w-4 text-primary" />
-                <span>Kohima, Nagaland, India</span>
+                <MapPin className="h-4 w-4 text-naga-red" />
+                <span className="font-body text-naga-mist/80">Kohima, Nagaland, India</span>
               </div>
               <div className="flex items-center gap-3 text-sm">
-                <Phone className="h-4 w-4 text-primary" />
-                <span>+91 98765 43210</span>
+                <Phone className="h-4 w-4 text-naga-forest" />
+                <span className="font-body text-naga-mist/80">+91 70996 23366</span>
               </div>
               <div className="flex items-center gap-3 text-sm">
-                <Mail className="h-4 w-4 text-primary" />
-                <span>nagabivouc@gmail.com</span>
+                <Mail className="h-4 w-4 text-naga-gold" />
+                <span className="font-body text-naga-mist/80">nagabivouac@gmail.com</span>
               </div>
             </div>
 
             <div className="flex gap-3">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" size="sm" className="p-2">
+                <Button variant="outline" size="sm" className="p-2 border-naga-gold/30 bg-transparent hover:bg-naga-red/20 hover:border-naga-red text-naga-mist">
                   <Facebook className="h-4 w-4" />
                 </Button>
               </a>
 
               <a href="https://www.instagram.com/nagabivouac?igsh=MXZmZ202OTkzZm83NQ==" target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" size="sm" className="p-2">
+                <Button variant="outline" size="sm" className="p-2 border-naga-gold/30 bg-transparent hover:bg-naga-red/20 hover:border-naga-red text-naga-mist">
                   <Instagram className="h-4 w-4" />
                 </Button>
               </a>
 
-              <Button variant="outline" size="sm" className="p-2" onClick={handleWhatsAppClick}>
+              <Button variant="outline" size="sm" className="p-2 border-naga-gold/30 bg-transparent hover:bg-naga-forest/20 hover:border-naga-forest text-naga-mist" onClick={handleWhatsAppClick}>
                 <MessageCircle className="h-4 w-4" />
               </Button>
             </div>
@@ -79,13 +84,13 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="font-display text-lg font-semibold mb-4 text-naga-gold">Quick Links</h4>
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
                     to={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                    className="font-body text-naga-mist/70 hover:text-naga-red transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -96,10 +101,11 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Experiences</h4>
+            <h4 className="font-display text-lg font-semibold mb-4 text-naga-gold">Experiences</h4>
             <ul className="space-y-2">
               {services.map((service, index) => (
-                <li key={index} className="text-muted-foreground text-sm">
+                <li key={index} className="font-body text-naga-mist/70 text-sm flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-naga-red"></span>
                   {service}
                 </li>
               ))}
@@ -108,11 +114,14 @@ const Footer = () => {
 
           {/* Contact CTA */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Plan Your Trip</h4>
-            <p className="text-muted-foreground text-sm mb-4">
+            <h4 className="font-display text-lg font-semibold mb-4 text-naga-gold">Plan Your Trip</h4>
+            <p className="font-body text-naga-mist/70 text-sm mb-4">
               Want a custom itinerary or quick response? Chat with us directly on WhatsApp.
             </p>
-            <Button onClick={handleWhatsAppClick} className="w-full">
+            <Button 
+              onClick={handleWhatsAppClick} 
+              className="w-full bg-naga-red hover:bg-naga-red/90 text-white font-body border border-naga-gold/30"
+            >
               <MessageCircle className="mr-2 h-4 w-4" />
               Chat on WhatsApp
             </Button>
@@ -121,15 +130,15 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-border pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="border-t border-naga-gold/20 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
 
-          <p className="text-sm text-muted-foreground text-center md:text-left">
+          <p className="font-body text-sm text-naga-mist/60 text-center md:text-left">
             © 2026 Naga Bivouac. All rights reserved.
           </p>
 
-          <p className="text-sm text-muted-foreground flex items-center gap-1">
-            Built with <Heart className="h-4 w-4 text-red-500" /> by 
-            <span className="font-medium text-primary ml-1">Pradunya Maut</span>
+          <p className="font-body text-sm text-naga-mist/60 flex items-center gap-1">
+            Built with <Heart className="h-4 w-4 text-naga-red" /> by 
+            <span className="font-medium text-naga-gold ml-1">Pradunya Maut</span>
             <Code className="h-4 w-4 ml-1" />
           </p>
 
