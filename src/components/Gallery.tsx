@@ -23,7 +23,7 @@ const Gallery = () => {
       title: "Dzukou Valley",
       location: "Nagaland",
       description: "The legendary valley of flowers on the Nagaland–Manipur border.",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400",
+      image: "https://s7ap1.scene7.com/is/image/incredibleindia/dzukou-valley-kohima-nagaland-attr-hero-1?qlt=82&ts=1727012411648",
       category: "Nagaland"
     },
     {
