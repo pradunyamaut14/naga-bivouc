@@ -19,7 +19,7 @@ import {
 
 const packages = [
 
-  // ⭐⭐⭐⭐⭐ =================== NAGALAND (PRIORITY) =================== ⭐⭐⭐⭐⭐
+  // ===================== NAGALAND (PRIORITY) =====================
 
   {
     id: 0,
@@ -31,14 +31,14 @@ const packages = [
     price: "₹14,500",
     priceNote: "per person",
     image: "https://footloosedev.com/wp-content/uploads/KHONOMA-1024x491.jpg",
-    highlights: ["Khonoma Green Village", "Angami Culture", "Kohima War Cemetery", "Dzulekie Forest", "Traditional Food"],
+    highlights: ["Khonoma Green Village", "Angami Culture", "Kohima War Cemetery", "Dzulekie Forest"],
     itinerary: [
-      { day: 1, title: "Arrival Dimapur – Kohima", description: "Pickup from Dimapur airport/railway station. Drive to Kohima. Visit Kohima War Cemetery, local market & State Museum. Overnight in Kohima." },
-      { day: 2, title: "Kohima – Khonoma Heritage Village", description: "After breakfast drive to Khonoma (Asia’s first green village). Guided village walk covering morungs, forts, terraced fields and traditional Angami houses. Interaction with villagers. Traditional Naga dinner. Overnight in Khonoma homestay." },
-      { day: 3, title: "Khonoma – Dzulekie Nature Trails", description: "Morning forest walk & birding near Dzulekie. Explore forest trails, viewpoints and streams. Afternoon free for photography and village life experience." },
-      { day: 4, title: "Khonoma – Dimapur Departure", description: "After breakfast drive back to Dimapur for onward journey." }
+      { day: 1, title: "Arrival Dimapur – Kohima", description: "Pickup from Dimapur. Visit Kohima War Cemetery, local market & museum." },
+      { day: 2, title: "Kohima – Khonoma", description: "Drive to Khonoma. Guided village walk, morungs, forts & traditional houses." },
+      { day: 3, title: "Dzulekie Forest Trails", description: "Nature walk, birding & photography near Dzulekie." },
+      { day: 4, title: "Departure", description: "Return to Dimapur." }
     ],
-    includes: ["Hotel + Heritage Homestay", "All Meals", "Local Guide", "All Transfers", "Village Entry Fees"],
+    includes: ["Hotel + Homestay", "All Meals", "Local Guide", "Transport"],
     bestTime: "October - April"
   },
 
@@ -51,15 +51,15 @@ const packages = [
     price: "₹19,500",
     priceNote: "per person",
     image: "https://api.breakbag.com/storage/images/hornbill-festival-tour-package-p52mi15ouw20crfl-1755862727125.webp",
-    highlights: ["Hornbill Festival", "Kisama Heritage Village", "Kohima", "Khonoma", "Local Food"],
+    highlights: ["Hornbill Festival", "Kisama", "Kohima", "Khonoma"],
     itinerary: [
-      { day: 1, title: "Arrival Dimapur – Kohima", description: "Pickup & drive to Kohima. Evening local market walk." },
-      { day: 2, title: "Hornbill Festival", description: "Full day at Kisama Heritage Village enjoying tribal dances, crafts, food stalls and cultural shows." },
-      { day: 3, title: "Kohima Sightseeing", description: "Visit Kohima War Cemetery, State Museum & Cathedral Church." },
-      { day: 4, title: "Khonoma Village", description: "Visit Khonoma heritage village and interact with locals." },
-      { day: 5, title: "Departure", description: "Drive back to Dimapur." }
+      { day: 1, title: "Arrival Kohima", description: "Local market & rest." },
+      { day: 2, title: "Hornbill Festival", description: "Full day festival at Kisama." },
+      { day: 3, title: "Kohima Sightseeing", description: "War cemetery, museum, church." },
+      { day: 4, title: "Khonoma Village", description: "Village walk & culture." },
+      { day: 5, title: "Departure", description: "Return to Dimapur." }
     ],
-    includes: ["Hotel", "All Meals", "Transport", "Guide", "Festival Pass"],
+    includes: ["Hotel", "Meals", "Transport", "Guide", "Festival Pass"],
     bestTime: "December"
   },
 
@@ -72,16 +72,16 @@ const packages = [
     price: "₹27,000",
     priceNote: "per person",
     image: "https://api.breakbag.com/storage/images/the-last-head-hunters-of-nagal-z54ln5ladigq9yaa-1761642150728.webp",
-    highlights: ["Longwa Village", "Konyak Tribe", "Myanmar Border", "Traditional Morungs"],
+    highlights: ["Longwa", "Konyak Tribe", "Myanmar Border"],
     itinerary: [
-      { day: 1, title: "Dimapur – Mon", description: "Long scenic drive to Mon. Check-in & rest." },
-      { day: 2, title: "Longwa Village", description: "Visit Indo-Myanmar border village. Explore chief’s house & village life." },
-      { day: 3, title: "Konyak Villages", description: "Visit Shangnyu & nearby villages. Meet tattooed elders." },
-      { day: 4, title: "Cultural Exploration", description: "Village walks, morungs, traditional houses." },
-      { day: 5, title: "Return Journey", description: "Drive back towards Dimapur." },
-      { day: 6, title: "Departure", description: "Drop at Dimapur." }
+      { day: 1, title: "Dimapur – Mon", description: "Long scenic drive." },
+      { day: 2, title: "Longwa", description: "Border village & chief’s house." },
+      { day: 3, title: "Shangnyu", description: "Monolith & villages." },
+      { day: 4, title: "Village Life", description: "Culture & traditions." },
+      { day: 5, title: "Return", description: "Drive back." },
+      { day: 6, title: "Departure", description: "Drop Dimapur." }
     ],
-    includes: ["Hotel", "All Meals", "Transport", "Guide", "Permits"],
+    includes: ["Hotel", "Meals", "Guide", "Transport", "Permits"],
     bestTime: "October - April"
   },
 
@@ -94,49 +94,73 @@ const packages = [
     price: "₹38,000",
     priceNote: "per person",
     image: "https://dulcimertours.com/wp-content/uploads/2024/12/ChatGPT-Image-Nov-17-2025-01_00_50-PM.png",
-    highlights: ["Kohima", "Khonoma", "Mokokchung", "Mon", "Longwa", "Intanki"],
+    highlights: ["Kohima", "Khonoma", "Mokokchung", "Mon", "Intanki"],
     itinerary: [
-      { day: 1, title: "Arrival Dimapur – Kohima", description: "Sightseeing." },
+      { day: 1, title: "Dimapur – Kohima", description: "Sightseeing." },
       { day: 2, title: "Khonoma", description: "Village tour." },
-      { day: 3, title: "Mokokchung", description: "Ao heartland." },
-      { day: 4, title: "Ungma Village", description: "Oldest Ao village." },
+      { day: 3, title: "Mokokchung", description: "Ao villages." },
+      { day: 4, title: "Ungma", description: "Oldest Ao village." },
       { day: 5, title: "Mon", description: "Konyak region." },
       { day: 6, title: "Longwa", description: "Border village." },
-      { day: 7, title: "Return Journey", description: "Travel day." },
-      { day: 8, title: "Intanki National Park", description: "Wildlife & forest." },
+      { day: 7, title: "Return", description: "Travel day." },
+      { day: 8, title: "Intanki", description: "Wildlife." },
       { day: 9, title: "Departure", description: "Dimapur drop." }
     ],
-    includes: ["Hotel", "All Meals", "Transport", "Guide", "Permits"],
+    includes: ["Hotel", "Meals", "Guide", "Transport", "Permits"],
     bestTime: "October - April"
   },
 
-  // =================== OTHER NORTHEAST ===================
+  // ===================== OTHER NORTHEAST =====================
 
   {
     id: 4,
-    title: "Tawang & High Passes of Arunachal",
+    title: "Tawang High Passes Explorer",
     destination: "Arunachal Pradesh",
     duration: "7 Days / 6 Nights",
     groupSize: "4-10 People",
     price: "₹32,000",
     priceNote: "per person",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Tawang_Gate.jpg/1280px-Tawang_Gate.jpg",
-    highlights: ["Tawang Monastery", "Sela Pass", "Bumla Pass"],
+    highlights: ["Tawang", "Sela Pass", "Bumla Pass"],
     itinerary: [
       { day: 1, title: "Guwahati – Bhalukpong", description: "Drive." },
-      { day: 2, title: "Dirang", description: "Hot springs & valley." },
+      { day: 2, title: "Dirang", description: "Hot springs." },
       { day: 3, title: "Tawang", description: "Via Sela Pass." },
       { day: 4, title: "Tawang Sightseeing", description: "Monastery & market." },
-      { day: 5, title: "Bumla Pass", description: "Border excursion." },
-      { day: 6, title: "Bomdila", description: "Return journey." },
+      { day: 5, title: "Bumla Pass", description: "Border visit." },
+      { day: 6, title: "Bomdila", description: "Return." },
       { day: 7, title: "Departure", description: "Guwahati." }
     ],
-    includes: ["Hotel", "All Meals", "Transport", "Guide", "Permits"],
+    includes: ["Hotel", "Meals", "Guide", "Transport", "Permits"],
     bestTime: "March - June, Sept - Nov"
   },
 
   {
     id: 5,
+    title: "Anini & Dibang Valley Expedition",
+    destination: "Arunachal Pradesh",
+    duration: "8 Days / 7 Nights",
+    groupSize: "4-8 People",
+    price: "₹36,000",
+    priceNote: "per person",
+    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200",
+    highlights: ["Anini", "Dibang Valley", "Mayodia Pass"],
+    itinerary: [
+      { day: 1, title: "Dibrugarh – Roing", description: "Drive." },
+      { day: 2, title: "Mayodia Pass", description: "Scenic mountain drive." },
+      { day: 3, title: "Anini", description: "Explore valley." },
+      { day: 4, title: "Anini", description: "Tribal villages & rivers." },
+      { day: 5, title: "Return", description: "Roing." },
+      { day: 6, title: "Dibrugarh", description: "Return." },
+      { day: 7, title: "Buffer", description: "Leisure day." },
+      { day: 8, title: "Departure", description: "Drop." }
+    ],
+    includes: ["Hotel", "Meals", "Guide", "Transport", "Permits"],
+    bestTime: "October - April"
+  },
+
+  {
+    id: 6,
     title: "Kaziranga Wildlife Safari",
     destination: "Assam",
     duration: "4 Days / 3 Nights",
@@ -144,17 +168,122 @@ const packages = [
     price: "₹15,000",
     priceNote: "per person",
     image: "https://www.kaziranganationalpark-india.com/blog/wp-content/uploads/2024/04/kaziranga-safari-zones.jpg",
-    highlights: ["One-horned Rhino", "Elephant Safari", "Birding"],
+    highlights: ["Rhino Safari", "Elephant Safari"],
     itinerary: [
-      { day: 1, title: "Arrival", description: "Check-in." },
+      { day: 1, title: "Arrival", description: "Check-in & rest." },
       { day: 2, title: "Safari", description: "Elephant + Jeep safari." },
-      { day: 3, title: "Safari", description: "Eastern range safari." },
+      { day: 3, title: "Safari", description: "Eastern range." },
       { day: 4, title: "Departure", description: "Jorhat/Guwahati." }
     ],
-    includes: ["Resort", "All Meals", "Safaris", "Transport"],
+    includes: ["Resort", "Meals", "Safaris", "Transport"],
     bestTime: "November - April"
-  }
+  },
 
+  {
+    id: 7,
+    title: "Meghalaya Waterfalls & Root Bridges",
+    destination: "Meghalaya",
+    duration: "6 Days / 5 Nights",
+    groupSize: "2-8 People",
+    price: "₹22,000",
+    priceNote: "per person",
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200",
+    highlights: ["Cherrapunji", "Nongriat", "Dawki"],
+    itinerary: [
+      { day: 1, title: "Shillong", description: "Arrival." },
+      { day: 2, title: "Cherrapunji", description: "Waterfalls & caves." },
+      { day: 3, title: "Nongriat Trek", description: "Double decker bridge." },
+      { day: 4, title: "Dawki", description: "Boat ride." },
+      { day: 5, title: "Shillong", description: "Sightseeing." },
+      { day: 6, title: "Departure", description: "Guwahati." }
+    ],
+    includes: ["Hotel", "Breakfast & Dinner", "Guide", "Transport"],
+    bestTime: "October - April"
+  },
+
+  {
+    id: 8,
+    title: "Sikkim Himalayan Spiritual Tour",
+    destination: "Sikkim",
+    duration: "6 Days / 5 Nights",
+    groupSize: "2-8 People",
+    price: "₹24,000",
+    priceNote: "per person",
+    image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=1200",
+    highlights: ["Gangtok", "Tsomgo", "Nathula"],
+    itinerary: [
+      { day: 1, title: "Gangtok", description: "Arrival." },
+      { day: 2, title: "Sightseeing", description: "Monasteries." },
+      { day: 3, title: "Tsomgo & Nathula", description: "High altitude lakes." },
+      { day: 4, title: "Pelling", description: "Scenic drive." },
+      { day: 5, title: "Khecheopalri", description: "Lake & waterfalls." },
+      { day: 6, title: "Departure", description: "Bagdogra." }
+    ],
+    includes: ["Hotel", "Breakfast & Dinner", "Guide", "Transport"],
+    bestTime: "March - June, Sept - Dec"
+  },
+
+  {
+    id: 9,
+    title: "Manipur Floating Lake & Culture Tour",
+    destination: "Manipur",
+    duration: "5 Days / 4 Nights",
+    groupSize: "2-8 People",
+    price: "₹17,000",
+    priceNote: "per person",
+    image: "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?w=1200",
+    highlights: ["Loktak Lake", "Imphal", "Ukhrul"],
+    itinerary: [
+      { day: 1, title: "Imphal", description: "Arrival & Kangla." },
+      { day: 2, title: "Loktak", description: "Floating lake." },
+      { day: 3, title: "Ukhrul", description: "Hill district." },
+      { day: 4, title: "Imphal", description: "War cemetery." },
+      { day: 5, title: "Departure", description: "Airport drop." }
+    ],
+    includes: ["Hotel", "Meals", "Guide", "Transport"],
+    bestTime: "October - March"
+  },
+
+  {
+    id: 10,
+    title: "Mizoram Blue Mountains Escape",
+    destination: "Mizoram",
+    duration: "5 Days / 4 Nights",
+    groupSize: "2-8 People",
+    price: "₹19,000",
+    priceNote: "per person",
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200",
+    highlights: ["Aizawl", "Reiek", "Champhai"],
+    itinerary: [
+      { day: 1, title: "Aizawl", description: "Arrival." },
+      { day: 2, title: "Reiek", description: "Hill village." },
+      { day: 3, title: "Champhai", description: "Border town." },
+      { day: 4, title: "Aizawl", description: "Culture & markets." },
+      { day: 5, title: "Departure", description: "Airport drop." }
+    ],
+    includes: ["Hotel", "Meals", "Guide", "Transport"],
+    bestTime: "October - March"
+  },
+
+  {
+    id: 11,
+    title: "Tripura Royal Heritage Tour",
+    destination: "Tripura",
+    duration: "4 Days / 3 Nights",
+    groupSize: "2-8 People",
+    price: "₹14,000",
+    priceNote: "per person",
+    image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=1200",
+    highlights: ["Ujjayanta Palace", "Neermahal"],
+    itinerary: [
+      { day: 1, title: "Agartala", description: "Arrival & palace." },
+      { day: 2, title: "Neermahal", description: "Lake palace." },
+      { day: 3, title: "Local Tour", description: "Temples & museums." },
+      { day: 4, title: "Departure", description: "Airport drop." }
+    ],
+    includes: ["Hotel", "Meals", "Guide", "Transport"],
+    bestTime: "October - March"
+  }
 ];
 
 // ======================== COMPONENT ========================
@@ -193,11 +322,53 @@ const Packages = () => {
                   <DialogTrigger asChild>
                     <Button className="w-full" onClick={() => setSelectedPackage(pkg)}>View Details</Button>
                   </DialogTrigger>
-                  <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
+
+                  <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
                     <DialogHeader>
                       <DialogTitle>{pkg.title}</DialogTitle>
                     </DialogHeader>
-                    <WhatsAppInquiryForm destination={pkg.title} />
+
+                    <div className="space-y-6">
+                      <img src={pkg.image} className="w-full h-64 object-cover rounded-lg" />
+
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm bg-secondary/40 p-4 rounded-lg">
+                        <div><b>Duration:</b> {pkg.duration}</div>
+                        <div><b>Group:</b> {pkg.groupSize}</div>
+                        <div><b>Destination:</b> {pkg.destination}</div>
+                        <div><b>Price:</b> {pkg.price}</div>
+                      </div>
+
+                      <div>
+                        <h3 className="font-semibold text-lg mb-3">Day-wise Itinerary</h3>
+                        <div className="space-y-3">
+                          {pkg.itinerary.map((day) => (
+                            <div key={day.day} className="border-l-4 border-primary pl-4 py-2 bg-secondary/20 rounded-r">
+                              <p className="font-semibold">Day {day.day}: {day.title}</p>
+                              <p className="text-sm text-muted-foreground">{day.description}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div>
+                        <h3 className="font-semibold text-lg mb-2">Package Includes</h3>
+                        <div className="flex flex-wrap gap-2">
+                          {pkg.includes.map((item, idx) => (
+                            <Badge key={idx} variant="outline">{item}</Badge>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div>
+                        <p className="text-sm"><b>Best Time:</b> {pkg.bestTime}</p>
+                      </div>
+
+                      <div className="bg-secondary/30 p-6 rounded-lg">
+                        <h3 className="font-semibold mb-3">Book This Package</h3>
+                        <WhatsAppInquiryForm destination={pkg.title} />
+                      </div>
+
+                    </div>
                   </DialogContent>
                 </Dialog>
               </CardContent>
