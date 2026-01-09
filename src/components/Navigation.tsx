@@ -1,8 +1,8 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Mountain, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,8 +33,8 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center gap-2 text-2xl font-bold text-primary">
-              <Mountain className="h-6 w-6" />
-              Naga Bivouac
+              <img src={logo} alt="Naga Bivouac" className="h-12 w-12 object-contain" />
+              <span className="hidden sm:inline">Naga Bivouac</span>
             </Link>
           </div>
 
