@@ -9,7 +9,7 @@ const StatesOverview = () => {
       name: "Nagaland",
       tagline: "Land of Festivals & Tribes",
       description: "Immerse in vibrant tribal culture, witness the Hornbill Festival, trek Dzükou Valley and explore traditional villages.",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800",
+      image: "https://s7ap1.scene7.com/is/image/incredibleindia/hornbill-festival-nagaland-blog-art-hero?qlt=82&ts=1726674759960",
       href: "/states/nagaland",
       highlights: ["Hornbill Festival", "Dzükou Valley", "Mon District"],
       featured: true
@@ -18,7 +18,7 @@ const StatesOverview = () => {
       name: "Arunachal Pradesh",
       tagline: "Land of Dawn-Lit Mountains",
       description: "Experience the first sunrise in India, explore pristine valleys, ancient monasteries, and dramatic Himalayan passes.",
-      image: "https://images.unsplash.com/photo-1585136917228-5eadc0ed1fa8?w=800",
+      image: "https://i.ytimg.com/vi/qYMLlByo0_Y/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCo5mEP9D2Oko4SfRhroLGaLOJ9FQ",
       href: "/states/arunachal-pradesh",
       highlights: ["Tawang Monastery", "Ziro Valley", "Sela Pass"]
     },
@@ -26,7 +26,7 @@ const StatesOverview = () => {
       name: "Assam",
       tagline: "Gateway to Northeast",
       description: "Discover tea gardens, one-horned rhinos, and the mighty Brahmaputra river in this culturally rich state.",
-      image: "https://images.unsplash.com/photo-1574068468068-a809653dad67?w=800",
+      image: "https://assamholidays.com/wp-content/uploads/2025/01/WhatsApp-Image-2025-01-17-at-18.33.01-1080x675.jpeg",
       href: "/states/assam",
       highlights: ["Kaziranga National Park", "Tea Gardens", "Majuli Island"]
     },
@@ -34,7 +34,7 @@ const StatesOverview = () => {
       name: "Meghalaya",
       tagline: "Abode of Clouds",
       description: "Walk through living root bridges, explore limestone caves, waterfalls, and Asia’s cleanest villages.",
-      image: "https://images.unsplash.com/photo-1625046305693-09d71e35d9a6?w=800",
+      image: "https://media.assettype.com/english-sentinelassam%2Fimport%2Fh-upload%2F2021%2F10%2F05%2F258733-meghalaya-cover-picture.webp?w=1024&auto=format%2Ccompress&fit=max",
       href: "/states/meghalaya",
       highlights: ["Living Root Bridges", "Cherrapunji", "Mawlynnong"]
     },
@@ -42,7 +42,7 @@ const StatesOverview = () => {
       name: "Sikkim",
       tagline: "Himalayan Paradise",
       description: "Marvel at Kanchenjunga, explore Buddhist monasteries, and experience pristine alpine landscapes.",
-      image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800",
+      image: "https://www.esikkimtourism.in/wp-content/uploads/2019/04/3rd-image.jpg",
       href: "/states/sikkim",
       highlights: ["Kanchenjunga", "Rumtek Monastery", "Tsomgo Lake"]
     },
@@ -50,7 +50,7 @@ const StatesOverview = () => {
       name: "Manipur",
       tagline: "Jewel of India",
       description: "Discover Loktak Lake, ancient forts, and the birthplace of polo with rich martial traditions.",
-      image: "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?w=800",
+      image: "https://discoveryofbharat.com/wp-content/uploads/2025/03/Manipuri-Dance.jpg",
       href: "/states/manipur",
       highlights: ["Loktak Lake", "Kangla Fort", "Imphal Valley"]
     },
@@ -58,7 +58,7 @@ const StatesOverview = () => {
       name: "Mizoram",
       tagline: "Land of Blue Mountains",
       description: "Experience rolling hills, bamboo culture, and some of the cleanest and most scenic towns in India.",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+      image: "https://www.indiasinvitation.com/wp-content/uploads/2019/12/Places-to-visit-in-Mizoram.jpg",
       href: "/states/mizoram",
       highlights: ["Reiek Peak", "Blue Mountain", "Champhai"]
     },
@@ -66,7 +66,7 @@ const StatesOverview = () => {
       name: "Tripura",
       tagline: "Land of Royal Heritage",
       description: "Explore ancient palaces, lakeside monuments, and the blend of tribal and Bengali cultures.",
-      image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800",
+      image: "https://memorableindia.com/wp-content/uploads/2019/05/Tripura.jpg",
       href: "/states/tripura",
       highlights: ["Ujjayanta Palace", "Neermahal", "Sepahijala"]
     }
