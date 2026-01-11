@@ -70,7 +70,7 @@ const ContactPage = () => {
                     <div>
                       <h4 className="font-semibold mb-1">Address</h4>
                       <p className="text-muted-foreground">
-                        Kohima, Nagaland<br />Northeast India
+                        Doviepie Inn, Khonoma<br />District - Kohima, Nagaland
                       </p>
                     </div>
                   </div>
@@ -81,7 +81,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold mb-1">Phone</h4>
-                      <p className="text-muted-foreground">+91 98765 43210</p>
+                      <p className="text-muted-foreground">+91 85751 85649</p>
                     </div>
                   </div>
 

@@ -51,11 +51,11 @@ const Footer = () => {
             <div className="space-y-2 mb-6">
               <div className="flex items-center gap-3 text-sm">
                 <MapPin className="h-4 w-4 text-naga-red" />
-                <span className="font-body text-naga-mist/80">Kohima, Nagaland, India</span>
+                <span className="font-body text-naga-mist/80">Doviepie Inn, Khonoma, District - Kohima, Nagaland</span>
               </div>
               <div className="flex items-center gap-3 text-sm">
                 <Phone className="h-4 w-4 text-naga-forest" />
-                <span className="font-body text-naga-mist/80">+91 70996 23366</span>
+                <span className="font-body text-naga-mist/80">+91 85751 85649</span>
               </div>
               <div className="flex items-center gap-3 text-sm">
                 <Mail className="h-4 w-4 text-naga-gold" />
