@@ -39,7 +39,7 @@ const Gallery = () => {
       title: "Longwa Village",
       location: "Mon, Nagaland",
       description: "The Indo–Myanmar border village of the Konyak tribe.",
-      image: "https://images.unsplash.com/photo-1582550945154-66ea8fff25e1?w=1400",
+      image: "https://www.cheekypassports.com/wp-content/uploads/2019/04/Face-decorations-as-testimony-to-a-violent-headhunting-past-in-Longwa.jpg",
       category: "Nagaland"
     },
 
@@ -49,7 +49,7 @@ const Gallery = () => {
       title: "Kaziranga National Park",
       location: "Assam",
       description: "Home of the one-horned rhinoceros and rich wildlife.",
-      image: "https://images.unsplash.com/photo-1574068468068-a809653dad67?w=1400",
+      image: "https://i.ytimg.com/vi/-Ucld-GcXOU/maxresdefault.jpg",
       category: "Assam"
     },
     {
@@ -57,7 +57,7 @@ const Gallery = () => {
       title: "Majuli River Island",
       location: "Assam",
       description: "World’s largest river island and Vaishnavite cultural hub.",
-      image: "https://images.unsplash.com/photo-1600359731977-7f4b3c8e3e34?w=1400",
+      image: "https://www.gourav.pro/wp-content/uploads/2025/10/Majuli-Island_-The-Worlds-Largest-River-Island-in-Assam-A-Comprehensive-Travel-Guide-1-1024x573.jpg",
       category: "Assam"
     },
     {
@@ -65,7 +65,7 @@ const Gallery = () => {
       title: "Assam Tea Gardens",
       location: "Assam",
       description: "Endless green tea estates producing the world-famous Assam tea.",
-      image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1400",
+      image: "https://www.kaziranga-national-park.com/blog/wp-content/uploads/2024/02/Halmari-Tea-Estate-Assam.jpg",
       category: "Assam"
     },
 
@@ -83,7 +83,7 @@ const Gallery = () => {
       title: "Dawki River",
       location: "Meghalaya",
       description: "Crystal clear river near Bangladesh border.",
-      image: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1400",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkdC7HF_ZqHPX_yPc6XeFv1ay-2gZPYiHFaA&s",
       category: "Meghalaya"
     },
     {
@@ -91,7 +91,7 @@ const Gallery = () => {
       title: "Cherrapunji",
       location: "Meghalaya",
       description: "One of the wettest places on Earth with dramatic landscapes.",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400",
+      image: "https://wanderon-images.gumlet.io/blogs/new/2024/04/things-to-do-in-cherrapunji.jpg",
       category: "Meghalaya"
     },
 
@@ -101,7 +101,7 @@ const Gallery = () => {
       title: "Tawang Monastery",
       location: "Arunachal Pradesh",
       description: "Largest monastery in India, high in the Himalayas.",
-      image: "https://images.unsplash.com/photo-1585136917228-5eadc0ed1fa8?w=1400",
+      image: "https://s7ap1.scene7.com/is/image/incredibleindia/tawang-monastery-tawang-arunachal-pradesh-1-attr-hero?qlt=82&ts=1742169936069",
       category: "Arunachal"
     },
     {
@@ -109,7 +109,7 @@ const Gallery = () => {
       title: "Sela Pass",
       location: "Arunachal Pradesh",
       description: "High-altitude mountain pass often covered in snow.",
-      image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1400",
+      image: "https://hblimg.mmtcdn.com/content/hubble/img/tawangdestimgs/mmt/activities/m_Sela_Pass_1_l_426_640.jpg",
       category: "Arunachal"
     },
     {
@@ -117,7 +117,7 @@ const Gallery = () => {
       title: "Ziro Valley",
       location: "Arunachal Pradesh",
       description: "Home of the Apatani tribe and famous music festival.",
-      image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1400",
+      image: "https://www.naturetravelagency.com/uploads/1730551339Ziro%20Valley%20resort.jpg",
       category: "Arunachal"
     },
 
@@ -127,7 +127,7 @@ const Gallery = () => {
       title: "Gurudongmar Lake",
       location: "Sikkim",
       description: "One of the highest lakes in the world.",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400",
+      image: "https://res.cloudinary.com/kmadmin/image/upload/v1618490887/kiomoi/Lachen_Gurudongmar_Lake_1618490886395.jpg",
       category: "Sikkim"
     },
     {
@@ -135,7 +135,7 @@ const Gallery = () => {
       title: "Nathula Pass",
       location: "Sikkim",
       description: "Historic Indo-China border mountain pass.",
-      image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1400",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7T08Vxk3cFc-sUWYM-UK0IPdkHo7-aSukwA&s",
       category: "Sikkim"
     },
 
@@ -145,7 +145,7 @@ const Gallery = () => {
       title: "Loktak Lake",
       location: "Manipur",
       description: "Famous floating lake with phumdis.",
-      image: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1400",
+      image: "https://img-cdn.publive.online/fit-in/640x430/filters:format(webp)/bw-travel/media/media_files/2025/05/15/Ixn6qd9m52TpTViMKO5N.png",
       category: "Manipur"
     },
     {
@@ -153,7 +153,7 @@ const Gallery = () => {
       title: "Kangla Fort",
       location: "Manipur",
       description: "Ancient seat of Manipuri kingdom.",
-      image: "https://images.unsplash.com/photo-1582550945154-66ea8fff25e1?w=1400",
+      image: "https://indiano.travel/wp-content/uploads/2022/05/Beautiful-outside-View-of-kangla-fort.-Imphal-Manipur.jpg",
       category: "Manipur"
     },
 
@@ -163,7 +163,7 @@ const Gallery = () => {
       title: "Vantawng Falls",
       location: "Mizoram",
       description: "Highest waterfall in Mizoram.",
-      image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1400",
+      image: "https://cdn1.tripoto.com/media/filter/nl/img/2380291/Image/1700050448_04_19_1513678760.jpg.webp",
       category: "Mizoram"
     },
     {
@@ -171,7 +171,7 @@ const Gallery = () => {
       title: "Reiek Peak",
       location: "Mizoram",
       description: "Scenic peak near Aizawl.",
-      image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1400",
+      image: "https://s7ap1.scene7.com/is/image/incredibleindia/reiek-tlang-mountain-aizawl-mizoram-blog-ntr-exp-cit-pop?qlt=82&ts=1726674782400",
       category: "Mizoram"
     },
 
@@ -181,7 +181,7 @@ const Gallery = () => {
       title: "Ujjayanta Palace",
       location: "Tripura",
       description: "Royal palace turned museum in Agartala.",
-      image: "https://images.unsplash.com/photo-1582550945154-66ea8fff25e1?w=1400",
+      image: "https://s7ap1.scene7.com/is/image/incredibleindia/ujjayanta-palace-agartala-tripura-1-attr-hero?qlt=82&ts=1726651012562",
       category: "Tripura"
     },
     {
@@ -189,7 +189,7 @@ const Gallery = () => {
       title: "Neermahal",
       location: "Tripura",
       description: "Water palace in the middle of Rudrasagar Lake.",
-      image: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1400",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTghlIJoPnmJsBcPBSgcZNumlB1WxMSzjYTAw&s",
       category: "Tripura"
     }
   ];
