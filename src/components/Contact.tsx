@@ -32,7 +32,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-display font-semibold text-foreground">Location</h3>
-                  <p className="font-body text-sm text-muted-foreground">Kohima, Nagaland, India</p>
+                  <p className="font-body text-sm text-muted-foreground">Doviepie Inn, Khonoma, District - Kohima, Nagaland</p>
                 </div>
               </div>
 
@@ -43,7 +43,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-display font-semibold text-foreground">Phone</h3>
-                  <p className="font-body text-sm text-muted-foreground">+91 70996 23366</p>
+                  <p className="font-body text-sm text-muted-foreground">+91 85751 85649</p>
                 </div>
               </div>
 

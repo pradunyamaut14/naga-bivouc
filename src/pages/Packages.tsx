@@ -299,7 +299,7 @@ const Packages = () => {
       </section>
 
       <section className="py-16 container mx-auto px-4 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {packages.sort((a, b) => (b.featured === true) - (a.featured === true)).map((pkg) => (
+        {packages.sort((a, b) => Number(b.featured === true) - Number(a.featured === true)).map((pkg) => (
           <Card key={pkg.id} className="overflow-hidden hover:shadow-xl">
             <div className="relative h-52">
               <img src={pkg.image} className="w-full h-full object-cover" />
