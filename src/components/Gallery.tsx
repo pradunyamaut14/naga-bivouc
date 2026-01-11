@@ -75,7 +75,7 @@ const Gallery = () => {
       title: "Living Root Bridges",
       location: "Meghalaya",
       description: "Natural bridges grown by the Khasi tribe over generations.",
-      image: "https://images.unsplash.com/photo-1625046305693-09d71e35d9a6?w=1400",
+      image: "https://res.cloudinary.com/roundglass/image/upload/v1649765953/rg/collective/media/meghalaya-nongriat-double-decker-living-root-bridge-greenery-people-ashwin-ezhumalai_mmdvms.jpg",
       category: "Meghalaya"
     },
     {
