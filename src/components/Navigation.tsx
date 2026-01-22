@@ -32,9 +32,23 @@ const Navigation = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center gap-2 text-2xl font-bold text-primary">
-              <img src={logo} alt="Naga Bivouac" className="h-10 w-10 sm:h-12 sm:w-12 object-contain drop-shadow-md" />
-              <span className="text-lg sm:text-2xl font-bold tracking-tight">Naga Bivouac</span>
+            <Link to="/" className="flex items-center gap-3 group">
+              <div className="relative">
+                <div className="absolute inset-0 bg-primary/20 rounded-full blur-md group-hover:blur-lg transition-all duration-300"></div>
+                <img 
+                  src={logo} 
+                  alt="Naga Bivouac" 
+                  className="relative h-10 w-10 sm:h-12 sm:w-12 object-contain drop-shadow-lg group-hover:scale-105 transition-transform duration-300" 
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-lg sm:text-xl font-display font-bold tracking-tight bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+                  Naga Bivouac
+                </span>
+                <span className="text-[10px] sm:text-xs text-muted-foreground tracking-widest uppercase">
+                  Explore the Northeast
+                </span>
+              </div>
             </Link>
           </div>
 
