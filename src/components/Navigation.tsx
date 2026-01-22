@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import logo from "@/assets/logo.png";
@@ -7,16 +7,6 @@ import logo from "@/assets/logo.png";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isStatesOpen, setIsStatesOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const navItems = [
     { label: "Home", href: "/" },
@@ -37,79 +27,48 @@ const Navigation = () => {
     { label: "Tripura", href: "/states/tripura" },
   ];
 
-  const isActive = (href: string) => location.pathname === href;
-
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      isScrolled 
-        ? "bg-background/98 backdrop-blur-lg shadow-lg border-b border-border" 
-        : "bg-background/80 backdrop-blur-md"
-    }`}>
+    <nav className="fixed w-full z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          {/* Logo Section - Enhanced */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="relative">
-              <div className="absolute inset-0 bg-primary/20 rounded-full blur-md group-hover:bg-primary/30 transition-all duration-300"></div>
-              <img 
-                src={logo} 
-                alt="Naga Bivouac" 
-                className="h-14 w-14 object-contain relative z-10 drop-shadow-lg group-hover:scale-105 transition-transform duration-300" 
-              />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl sm:text-2xl font-display font-bold text-primary group-hover:text-primary/80 transition-colors">
-                Naga Bivouac
-              </span>
-              <span className="text-xs text-muted-foreground hidden sm:block">
-                Explore Northeast India
-              </span>
-            </div>
-          </Link>
+        <div className="flex justify-between items-center h-16">
+          <div className="flex-shrink-0">
+            <Link to="/" className="flex items-center gap-2 text-2xl font-bold text-primary">
+              <img src={logo} alt="Naga Bivouac" className="h-12 w-12 object-contain" />
+              <span className="hidden sm:inline">Naga Bivouac</span>
+            </Link>
+          </div>
 
-          {/* Desktop Navigation - Enhanced */}
+          {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="flex items-center gap-1">
+            <div className="ml-10 flex items-baseline space-x-8">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   to={item.href}
-                  className={`relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                    isActive(item.href)
-                      ? "text-primary bg-primary/10"
-                      : "text-muted-foreground hover:text-primary hover:bg-primary/5"
-                  }`}
+                  className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
                 >
                   {item.label}
-                  {isActive(item.href) && (
-                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-primary rounded-full"></span>
-                  )}
                 </Link>
               ))}
               
-              {/* States Dropdown - Enhanced */}
+              {/* States Dropdown */}
               <div className="relative">
                 <button
                   onClick={() => setIsStatesOpen(!isStatesOpen)}
-                  onBlur={() => setTimeout(() => setIsStatesOpen(false), 200)}
-                  className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                    isStatesOpen
-                      ? "text-primary bg-primary/10"
-                      : "text-muted-foreground hover:text-primary hover:bg-primary/5"
-                  }`}
+                  className="flex items-center text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
                 >
                   States
-                  <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isStatesOpen ? "rotate-180" : ""}`} />
+                  <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
                 
                 {isStatesOpen && (
-                  <div className="absolute top-full right-0 mt-2 w-56 bg-card border border-border rounded-xl shadow-xl z-50 overflow-hidden animate-fade-in">
+                  <div className="absolute top-full left-0 mt-2 w-56 bg-background border border-border rounded-md shadow-lg z-50">
                     <div className="py-2">
                       {states.map((state) => (
                         <Link
                           key={state.href}
                           to={state.href}
-                          className="block px-4 py-2.5 text-sm text-muted-foreground hover:text-primary hover:bg-primary/5 transition-colors"
+                          className="block px-4 py-2 text-sm text-muted-foreground hover:text-primary hover:bg-secondary transition-colors"
                           onClick={() => setIsStatesOpen(false)}
                         >
                           {state.label}
@@ -122,32 +81,27 @@ const Navigation = () => {
             </div>
           </div>
 
-          {/* Mobile menu button - Enhanced */}
+          {/* Mobile menu button */}
           <div className="md:hidden">
             <Button
               variant="ghost"
-              size="icon"
+              size="sm"
               onClick={() => setIsOpen(!isOpen)}
-              className="h-12 w-12 rounded-xl hover:bg-primary/10"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
           </div>
         </div>
 
-        {/* Mobile Navigation - Enhanced */}
+        {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden animate-fade-in">
-            <div className="px-2 pt-2 pb-4 space-y-1 bg-card/50 backdrop-blur-lg rounded-xl mb-4 border border-border">
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background border-t border-border">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   to={item.href}
-                  className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
-                    isActive(item.href)
-                      ? "text-primary bg-primary/10"
-                      : "text-muted-foreground hover:text-primary hover:bg-primary/5"
-                  }`}
+                  className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors duration-200"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
@@ -155,20 +109,18 @@ const Navigation = () => {
               ))}
               
               {/* Mobile States Section */}
-              <div className="px-4 py-3">
-                <div className="text-sm font-semibold text-primary mb-3">Explore States</div>
-                <div className="grid grid-cols-2 gap-2">
-                  {states.map((state) => (
-                    <Link
-                      key={state.href}
-                      to={state.href}
-                      className="px-3 py-2 text-xs text-muted-foreground hover:text-primary hover:bg-primary/5 rounded-lg transition-colors"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {state.label}
-                    </Link>
-                  ))}
-                </div>
+              <div className="px-3 py-2">
+                <div className="text-sm font-medium text-primary mb-2">States</div>
+                {states.map((state) => (
+                  <Link
+                    key={state.href}
+                    to={state.href}
+                    className="block px-2 py-1 text-sm text-muted-foreground hover:text-primary transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {state.label}
+                  </Link>
+                ))}
               </div>
             </div>
           </div>
