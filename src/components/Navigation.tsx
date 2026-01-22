@@ -33,8 +33,8 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center gap-2 text-2xl font-bold text-primary">
-              <img src={logo} alt="Naga Bivouac" className="h-12 w-12 object-contain" />
-              <span className="hidden sm:inline">Naga Bivouac</span>
+              <img src={logo} alt="Naga Bivouac" className="h-10 w-10 sm:h-12 sm:w-12 object-contain drop-shadow-md" />
+              <span className="text-lg sm:text-2xl font-bold tracking-tight">Naga Bivouac</span>
             </Link>
           </div>
 
