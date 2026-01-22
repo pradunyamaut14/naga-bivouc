@@ -29,23 +29,23 @@ const Navigation = () => {
 
   return (
     <nav className="fixed w-full z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center gap-3 group">
-              <div className="relative">
+      <div className="container mx-auto px-3 sm:px-4 lg:px-8">
+        <div className="flex justify-between items-center h-14 sm:h-16">
+          <div className="flex-shrink-0 min-w-0 flex-1 max-w-[200px] xs:max-w-[240px] sm:max-w-none">
+            <Link to="/" className="flex items-center gap-2 sm:gap-3 group">
+              <div className="relative flex-shrink-0">
                 <div className="absolute inset-0 bg-primary/20 rounded-full blur-md group-hover:blur-lg transition-all duration-300"></div>
                 <img 
                   src={logo} 
                   alt="Naga Bivouac" 
-                  className="relative h-10 w-10 sm:h-12 sm:w-12 object-contain drop-shadow-lg group-hover:scale-105 transition-transform duration-300" 
+                  className="relative h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 object-contain drop-shadow-lg group-hover:scale-105 transition-transform duration-300" 
                 />
               </div>
-              <div className="flex flex-col">
-                <span className="text-lg sm:text-xl font-display font-bold tracking-tight bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+              <div className="flex flex-col min-w-0">
+                <span className="text-sm sm:text-lg md:text-xl font-display font-bold tracking-tight bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent truncate">
                   Naga Bivouac
                 </span>
-                <span className="text-[10px] sm:text-xs text-muted-foreground tracking-widest uppercase">
+                <span className="text-[8px] sm:text-[10px] md:text-xs text-muted-foreground tracking-wider sm:tracking-widest uppercase truncate">
                   Explore the Northeast
                 </span>
               </div>
