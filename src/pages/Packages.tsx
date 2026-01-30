@@ -100,11 +100,6 @@ const PackageCard = ({ pkg }: { pkg: TourPackage }) => {
             {pkg.category === "festival" ? <><Music className="h-3 w-3 mr-1" /> Festival</> : <><Mountain className="h-3 w-3 mr-1" /> Adventure</>}
           </Badge>
         </div>
-        <div className="absolute bottom-3 right-3">
-          <Badge className="bg-background/90 text-foreground font-bold text-base px-3 py-1">
-            {pkg.price}
-          </Badge>
-        </div>
       </div>
       
       <CardHeader className="pb-2">
@@ -187,12 +182,6 @@ const PackageCard = ({ pkg }: { pkg: TourPackage }) => {
                       <p className="text-xs text-muted-foreground">Best Time</p>
                     </div>
                   </div>
-                </div>
-
-                {/* Price Banner */}
-                <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 text-center">
-                  <p className="text-3xl font-bold text-primary">{pkg.price}</p>
-                  <p className="text-sm text-muted-foreground">{pkg.priceNote}</p>
                 </div>
 
                 {/* Highlights */}

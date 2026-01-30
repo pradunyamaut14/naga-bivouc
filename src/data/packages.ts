@@ -12,8 +12,6 @@ export interface TourPackage {
   destination: string;
   duration: string;
   groupSize: string;
-  price: string;
-  priceNote: string;
   image: string;
   highlights: string[];
   itinerary: PackageItinerary[];
@@ -32,8 +30,6 @@ export const packages: TourPackage[] = [
     destination: "Assam",
     duration: "5 Days / 4 Nights",
     groupSize: "2-12 People",
-    price: "₹28,000",
-    priceNote: "per person",
     image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1200",
     highlights: ["Dehing Patkai Festival", "Majuli Music Festival", "Tribal Culture", "Rainforest Trek", "Brahmaputra Experience"],
     itinerary: [
@@ -54,8 +50,6 @@ export const packages: TourPackage[] = [
     destination: "Assam",
     duration: "5 Days / 4 Nights",
     groupSize: "2-12 People",
-    price: "₹24,000",
-    priceNote: "per person",
     image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200",
     highlights: ["Majuli Music Festival", "Dehing Patkai Festival", "Sattriya Dance", "Brahmaputra Sunset", "Tea Gardens"],
     itinerary: [
@@ -77,8 +71,6 @@ export const packages: TourPackage[] = [
     destination: "Arunachal Pradesh",
     duration: "5 Days / 4 Nights",
     groupSize: "2-10 People",
-    price: "₹26,000",
-    priceNote: "per person",
     image: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=1200",
     highlights: ["Ziro Music Festival", "Apatani Tribal Culture", "Pine-Clad Hills", "Indie & Fusion Music", "Himalayan Birdlife"],
     itinerary: [
@@ -99,8 +91,6 @@ export const packages: TourPackage[] = [
     destination: "Arunachal Pradesh",
     duration: "5 Days / 4 Nights",
     groupSize: "2-10 People",
-    price: "₹32,000",
-    priceNote: "per person",
     image: "https://images.unsplash.com/photo-1564769625688-13808d09d44e?w=1200",
     highlights: ["Losar (Tibetan New Year)", "Tawang Monastery", "Cham Dance", "Sela Pass", "Buddhist Culture"],
     itinerary: [
@@ -124,8 +114,6 @@ export const packages: TourPackage[] = [
     destination: "Assam, Meghalaya, Arunachal Pradesh",
     duration: "10 Days / 9 Nights",
     groupSize: "4-10 People",
-    price: "₹58,000",
-    priceNote: "per person",
     image: "https://images.unsplash.com/photo-1601024445121-e5b82f020549?w=1200",
     highlights: ["River Rafting (Jia Bhoroli)", "Paragliding (Mawkdok)", "Trekking (Talley Valley)", "Rock Climbing (Ziro)", "Mawsmai Caves"],
     itinerary: [
@@ -151,8 +139,6 @@ export const packages: TourPackage[] = [
     destination: "Assam, Arunachal Pradesh, Nagaland",
     duration: "10 Days / 9 Nights",
     groupSize: "4-8 People",
-    price: "₹62,000",
-    priceNote: "per person",
     image: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=1200",
     highlights: ["River Rafting (Jia Bhoroli)", "Dzukou Valley Trek", "Japfu Peak", "Mechuka Rock Climbing", "Memba Tribal Villages"],
     itinerary: [
@@ -178,8 +164,6 @@ export const packages: TourPackage[] = [
     destination: "Assam, Nagaland, Meghalaya",
     duration: "10 Days / 9 Nights",
     groupSize: "4-10 People",
-    price: "₹55,000",
-    priceNote: "per person",
     image: "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=1200",
     highlights: ["River Rafting (Jia Bhoroli)", "Dzukou Valley & Japfu Peak", "Paragliding (Mawkdok)", "Rock Climbing (Shnongpdeng)", "Umngot River"],
     itinerary: [
