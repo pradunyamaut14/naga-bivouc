@@ -181,5 +181,206 @@ export const packages: TourPackage[] = [
     includes: ["Certified guides & all adventure gear", "Homestays, eco camps & hotel accommodation", "ILP for Nagaland", "Local transportation throughout"],
     excludes: ["Air/train fare", "Travel insurance", "Meals not specified", "Tips/personal expenses"],
     bestTime: "October - April"
+  },
+  {
+    id: 8,
+    category: "wildlife",
+    title: "Manas National Park – Brahmaputra Foothill Butterflies",
+    destination: "Baksa District, Western Assam",
+    duration: "5 Days / 4 Nights",
+    groupSize: "2-8 People",
+    habitat: "Subtropical moist forests, grasslands, riverbanks",
+    bestSpecies: [
+      "Kaiser-i-Hind (Teinopalpus imperialis)",
+      "Red Helen",
+      "Great Nawab",
+      "Common Jay",
+      "Tailed Jay",
+      "Common Bluebottle"
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: "Guwahati to Manas",
+        description:
+          "Arrive at Guwahati Airport – Drive to Manas National Park (137km/3hours). Evening forest edge walk. Stay: Eco-lodge near Bhuyanpara range."
+      },
+      {
+        day: 2,
+        title: "Bhuyanpara Trail",
+        description:
+          "Butterfly walk in Bhuyanpara trail zone. Focus on Nawabs, Jays, and Swallowtails. Photography by streams & undergrowth."
+      },
+      {
+        day: 3,
+        title: "Mathanguri Riverside",
+        description:
+          "Visit Mathanguri riverside and adjacent grassland. Target: Common Mormon, Blue Tiger, Leopard Lacewing. Golden hour photography."
+      },
+      {
+        day: 4,
+        title: "Forest Buffer Walk",
+        description:
+          "Butterfly walk along forest buffer & tea-garden edge habitats. Spotting: Common Snow Flat, Indian Map, Glassy Tiger."
+      },
+      {
+        day: 5,
+        title: "Return to Guwahati",
+        description:
+          "Return to Guwahati with en-route roadside butterfly photography."
+      }
+    ]
+  },
+
+  {
+    id: 9,
+    category: "wildlife",
+    title: "Garbhanga Reserve Forest – Guwahati’s Urban Butterfly Haven",
+    destination: "Kamrup District, Assam",
+    duration: "5 Days / 4 Nights",
+    groupSize: "2-8 People",
+    habitat: "Tropical semi-evergreen forest, stream patches, forest edge",
+    bestSpecies: [
+      "Blue Mormon",
+      "Grey Count",
+      "Peacock Pansy",
+      "Danaid Eggfly",
+      "Common Rose",
+      "Glass Bluebottle"
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: "Basistha–Garbhanga Walk",
+        description:
+          "Arrive at Guwahati Airport – Butterfly walk in Basistha–Garbhanga forest patch (51km/1.5hours). Evening light photography."
+      },
+      {
+        day: 2,
+        title: "Garbhanga Hotspot",
+        description:
+          "Full-day trail at Garbhanga. Focus on Papilionidae and Nymphalidae species. Stream puddling photography."
+      },
+      {
+        day: 3,
+        title: "Deepor Beel",
+        description:
+          "Butterfly-watching at Deepor Beel wetland periphery. Target: Grass Yellows, Marsh Skipper, Baronet, Bushbrown. Sunset shoot."
+      },
+      {
+        day: 4,
+        title: "Rani Forest Fringe",
+        description:
+          "Trail at Fatasil and Rani forest fringe. Focus: Count species, Blue Oakleaf, Commander."
+      },
+      {
+        day: 5,
+        title: "Departure",
+        description:
+          "Butterfly documentation session and departure."
+      }
+    ]
+  },
+
+  {
+    id: 10,
+    category: "wildlife",
+    title: "Dehing Patkai Wildlife Sanctuary – Eastern Assam Butterfly Zone",
+    destination: "Dibrugarh–Tinsukia Region, Assam",
+    duration: "5 Days / 4 Nights",
+    groupSize: "2-8 People",
+    habitat: "Tropical evergreen rainforest, stream corridors",
+    bestSpecies: [
+      "Purple Sapphire",
+      "Red Spot Duke",
+      "Tawny Rajah",
+      "Fluffy Tit",
+      "Circe",
+      "Great Eggfly"
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: "Dibrugarh to Dehing",
+        description:
+          "Arrive Dibrugarh Airport – Drive to Dehing Patkai (97km/2hours). Evening walk at forest trail junction."
+      },
+      {
+        day: 2,
+        title: "Jeypore–Upper Dehing",
+        description:
+          "Butterfly walk targeting Red Spot Duke, Circe, Yellow Orange Tip. Hide photography."
+      },
+      {
+        day: 3,
+        title: "Patkai Hills Buffer",
+        description:
+          "Mid-elevation butterfly walk. Focus on Fluffy Tit, Rajahs, Nabis, Punchinellos."
+      },
+      {
+        day: 4,
+        title: "Interface Zone",
+        description:
+          "Grassland–forest interface exploration. Spotting: Club Beak, Sailor, Common Evening Brown."
+      },
+      {
+        day: 5,
+        title: "Return to Dibrugarh",
+        description:
+          "Return to Dibrugarh with roadside butterfly stop."
+      }
+    ]
+  },
+
+  {
+    id: 11,
+    category: "wildlife",
+    title: "Nameri National Park – Himalayan Foothill Butterflies",
+    destination: "Sonitpur District, Assam",
+    duration: "5 Days / 4 Nights",
+    groupSize: "2-8 People",
+    habitat: "Tropical forest, riverside trails, bamboo patches",
+    bestSpecies: [
+      "Indian Yellow Nawab",
+      "Grey Pansy",
+      "Common Maplet",
+      "Cruiser",
+      "Common Sailor",
+      "Commander"
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: "Tezpur to Nameri",
+        description:
+          "Arrive Tezpur Airport – Drive to Nameri (32km/1hour). Evening walk near Jia Bharali riverbed."
+      },
+      {
+        day: 2,
+        title: "Bhalukpong Trail",
+        description:
+          "Butterfly trail at Bhalukpong forest patch. Focus: Sailors, Nawabs, Eggflies."
+      },
+      {
+        day: 3,
+        title: "Boat Spotting",
+        description:
+          "Boat-assisted butterfly spotting along riverbank. Target: Cruiser, Baronet, Pansies, Swallowtails."
+      },
+      {
+        day: 4,
+        title: "Potasali Edge Walk",
+        description:
+          "Edge walk at Potasali & bamboo trail shoot. Target: Grass Yellows, Crimson Rose, Common Mormon."
+      },
+      {
+        day: 5,
+        title: "Return to Tezpur",
+        description:
+          "Return to Tezpur with short morning trail shoot."
+      }
+    ]
   }
+
 ];
+
