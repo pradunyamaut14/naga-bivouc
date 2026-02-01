@@ -21,38 +21,38 @@ const GalleryPage = () => {
   const galleryImages: GalleryImage[] = [
     // ======================== KHONOMA & NAGALAND (MAIN) ========================
 
-    { src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee", title: "Khonoma Village Morning", location: "Khonoma, Nagaland", category: "Villages" },
-    { src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e", title: "Khonoma Hills", location: "Khonoma, Nagaland", category: "Mountains" },
-    { src: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e", title: "Forest Walk", location: "Khonoma, Nagaland", category: "Nature" },
-    { src: "https://images.unsplash.com/photo-1501785888041-af3ef285b470", title: "Khonoma Valley", location: "Khonoma, Nagaland", category: "Mountains" },
-    { src: "https://images.unsplash.com/photo-1502082553048-f009c37129b9", title: "Dzukou Trail", location: "Nagaland", category: "Nature" },
-    { src: "https://images.unsplash.com/photo-1500382017468-9049fed747ef", title: "Terrace Fields", location: "Khonoma, Nagaland", category: "Villages" },
-    { src: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da", title: "Naga Village Homes", location: "Nagaland", category: "Villages" },
-    { src: "https://images.unsplash.com/photo-1491553895911-0055eca6402d", title: "Khonoma Waterfall", location: "Khonoma, Nagaland", category: "Water" },
+    { src: "https://footloosedev.com/wp-content/uploads/2017/12/naga-village-Copy.jpg", title: "Khonoma Village Morning", location: "Khonoma, Nagaland", category: "Villages" },
+    { src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4yhV-fyEvYVkzv0Qb2q6Achxm5HREr7D3-w&s", title: "Khonoma Hills", location: "Khonoma, Nagaland", category: "Mountains" },
+    { src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoXsiAnjysVTznB6qFxXR0ofHOw3LtklG0rg&s", title: "Forest Walk", location: "Khonoma, Nagaland", category: "Nature" },
+    { src: "https://i0.wp.com/histravelinstincts.com/wp-content/uploads/2020/06/Rice-fields-at-Khonoma-Village5.jpg?fit=1200%2C675&ssl=1", title: "Khonoma Valley", location: "Khonoma, Nagaland", category: "Mountains" },
+    { src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_QSdg3el03xegELW6FkqK5Goos0ZEqBX-BQ&s", title: "Dzukou Trail", location: "Nagaland", category: "Nature" },
+    { src: "https://unconventionalandvivid.com/wp-content/uploads/2019/07/imgonline-com-ua-compressed-yelTXbnUjBpnVnU.jpg", title: "Terrace Fields", location: "Khonoma, Nagaland", category: "Villages" },
+    { src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS16PXk8VSOFrGEA6KvXsd_b4qrJOQqwoTUPw&s", title: "Naga Village Homes", location: "Nagaland", category: "Villages" },
+    { src: "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/97/73/ce.jpg", title: "Khonoma Waterfall", location: "Khonoma, Nagaland", category: "Water" },
 
-    { src: "https://images.unsplash.com/photo-1501706362039-c6e80948f59b", title: "Dzukou Valley Greens", location: "Nagaland", category: "Mountains" },
-    { src: "https://images.unsplash.com/photo-1474511320723-9a56873867b5", title: "Forest Light", location: "Nagaland", category: "Nature" },
-    { src: "https://images.unsplash.com/photo-1548013146-72479768bada", title: "Naga Cultural Life", location: "Nagaland", category: "Culture" },
-    { src: "https://images.unsplash.com/photo-1605649487212-47bdab064df7", title: "Traditional Festival", location: "Nagaland", category: "Culture" },
+    { src: "https://xplro.com/wp-content/uploads/2024/07/Xplro-2024-07-24T004630.304.jpg.webp", title: "Dzukou Valley Greens", location: "Nagaland", category: "Mountains" },
+    { src: "https://media.assettype.com/english-sentinelassam%2Fimport%2Fh-upload%2F2022%2F12%2F14%2F421106-forest.webp?rect=0%2C0%2C646%2C363&w=480&dpr=2&auto=format%2Ccompress&fit=max&q=85", title: "Forest Light", location: "Nagaland", category: "Nature" },
+    { src: "https://www.thesevensister.com/blog/wp-content/uploads/2017/01/Hornbill-Festival-of-Nagaland.jpg, title: "Naga Cultural Life", location: "Nagaland", category: "Culture" },
+    { src: "https://i0.wp.com/kaziranganationalparkassam.in/wp-content/uploads/2018/07/aaa-kaushik-3.jpg?resize=648%2C432&ssl=1", title: "Traditional Festival", location: "Nagaland", category: "Culture" },
 
-    { src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee", title: "Morning Mist", location: "Khonoma, Nagaland", category: "Nature" },
-    { src: "https://images.unsplash.com/photo-1501785888041-af3ef285b470", title: "Hill Ridges", location: "Nagaland", category: "Mountains" },
-    { src: "https://images.unsplash.com/photo-1502082553048-f009c37129b9", title: "Valley Trail", location: "Nagaland", category: "Nature" },
-    { src: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da", title: "Village Pathway", location: "Khonoma, Nagaland", category: "Villages" },
+    { src: "https://images.squarespace-cdn.com/content/v1/5424e0cfe4b0bfab03c744b9/1517638387972-YPDPKDAQLVX1U10MF5CG/MM8255_131215_11105A.jpg?format=1500w", title: "Morning Mist", location: "Khonoma, Nagaland", category: "Nature" },
+    { src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeXJAHNU6GusnsdDwmxs63O4icusJsnXMb8g&s", title: "Hill Ridges", location: "Nagaland", category: "Mountains" },
+    { src: "https://s7ap1.scene7.com/is/image/incredibleindia/Dzukou-Valley-Nagaland-Guide-To-Hidden-Valley19-hero?qlt=82&ts=1726817575460", title: "Valley Trail", location: "Nagaland", category: "Nature" },
+    { src: "https://static2.tripoto.com/media/filter/tst/img/371044/TripDocument/1505033137_20161010_120620.jpg.webp", title: "Village Pathway", location: "Khonoma, Nagaland", category: "Villages" },
 
     // ======================== KOHIMA / HORNBILL ========================
 
-    { src: "https://images.unsplash.com/photo-1593693397690-362cb9666fc2", title: "Hornbill Festival", location: "Kohima, Nagaland", category: "Culture" },
-    { src: "https://images.unsplash.com/photo-1544098485-2a40b1c65a6b", title: "Traditional Attire", location: "Kohima, Nagaland", category: "Culture" },
-    { src: "https://images.unsplash.com/photo-1605649487212-47bdab064df7", title: "Naga Dance", location: "Kohima, Nagaland", category: "Culture" },
-    { src: "https://images.unsplash.com/photo-1548013146-72479768bada", title: "Festival Colors", location: "Nagaland", category: "Culture" },
+    { src: "https://media.assettype.com/sentinelassam-english%2F2025-02-04%2Fcl8payd4%2FHornbill-Festival-Feature.jpg", title: "Hornbill Festival", location: "Kohima, Nagaland", category: "Culture" },
+    { src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW74mkfu6D4FNQpA8eCvAOUKpO48zNfAf5ZQ&s", title: "Traditional Attire", location: "Kohima, Nagaland", category: "Culture" },
+    { src: "https://images.indianexpress.com/2025/12/hornbill-festival_20251201204445.jpg?w=1200", title: "Naga Dance", location: "Kohima, Nagaland", category: "Culture" },
+    { src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4ZyYngLcPGkdlZnLMLhGo0qssfbXHb8s9gQ&s", title: "Festival Colors", location: "Nagaland", category: "Culture" },
 
     // ======================== WILDLIFE / NATURE (NAGALAND) ========================
 
-    { src: "https://images.unsplash.com/photo-1474511320723-9a56873867b5", title: "Forest Wildlife", location: "Nagaland", category: "Wildlife" },
-    { src: "https://images.unsplash.com/photo-1501706362039-c6e80948f59b", title: "Bird in Hills", location: "Nagaland", category: "Wildlife" },
-    { src: "https://images.unsplash.com/photo-1491553895911-0055eca6402d", title: "Hidden Stream", location: "Nagaland", category: "Water" },
-    { src: "https://images.unsplash.com/photo-1500382017468-9049fed747ef", title: "Village River", location: "Nagaland", category: "Water" },
+    { src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgqisL4tQYz7gk47_XD-uAV8ZKTJtw61RzhA&s", title: "Forest Wildlife", location: "Nagaland", category: "Wildlife" },
+    { src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXwAVccT7y7ZQj9R2uD_ZK2pxoUE_4jyIMrA&s", title: "Bird in Hills", location: "Nagaland", category: "Wildlife" },
+    { src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyI4hJm1sM8LoebwGkvi6sNIguT90-tnswfA&s", title: "Hidden Stream", location: "Nagaland", category: "Water" },
+    { src: "https://theholidayscout.com/images/location/21-nagaland.jpg", title: "Village River", location: "Nagaland", category: "Water" },
 
     // ======================== OTHER NE (SMALL AMOUNT) ========================
 
