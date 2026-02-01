@@ -32,7 +32,7 @@ const GalleryPage = () => {
 
     { src: "https://xplro.com/wp-content/uploads/2024/07/Xplro-2024-07-24T004630.304.jpg.webp", title: "Dzukou Valley Greens", location: "Nagaland", category: "Mountains" },
     { src: "https://media.assettype.com/english-sentinelassam%2Fimport%2Fh-upload%2F2022%2F12%2F14%2F421106-forest.webp?rect=0%2C0%2C646%2C363&w=480&dpr=2&auto=format%2Ccompress&fit=max&q=85", title: "Forest Light", location: "Nagaland", category: "Nature" },
-    { src: "https://www.thesevensister.com/blog/wp-content/uploads/2017/01/Hornbill-Festival-of-Nagaland.jpg, title: "Naga Cultural Life", location: "Nagaland", category: "Culture" },
+    { src: "https://www.thesevensister.com/blog/wp-content/uploads/2017/01/Hornbill-Festival-of-Nagaland.jpg", title: "Naga Cultural Life", location: "Nagaland", category: "Culture" },
     { src: "https://i0.wp.com/kaziranganationalparkassam.in/wp-content/uploads/2018/07/aaa-kaushik-3.jpg?resize=648%2C432&ssl=1", title: "Traditional Festival", location: "Nagaland", category: "Culture" },
 
     { src: "https://images.squarespace-cdn.com/content/v1/5424e0cfe4b0bfab03c744b9/1517638387972-YPDPKDAQLVX1U10MF5CG/MM8255_131215_11105A.jpg?format=1500w", title: "Morning Mist", location: "Khonoma, Nagaland", category: "Nature" },
