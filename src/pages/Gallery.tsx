@@ -1,8 +1,10 @@
+"use client";
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, X } from "lucide-react";
+import { X } from "lucide-react";
 import { useState } from "react";
 
 const WHATSAPP_NUMBER = "919876543210";
@@ -80,10 +82,18 @@ const GalleryPage = () => {
 
       {/* Hero */}
       <section className="relative h-[40vh] flex items-center justify-center">
-        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e" className="absolute inset-0 w-full h-full object-cover" />
+        <img
+          src="https://images.unsplash.com/photo-1469474968028-56623f02e42e"
+          alt="Nagaland landscape"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+
         <div className="absolute inset-0 bg-black/60" />
+
         <div className="relative text-center text-white">
-          <h1 className="text-5xl font-bold">Nagaland <span className="text-primary">Gallery</span></h1>
+          <h1 className="text-5xl font-bold">
+            Nagaland <span className="text-primary">Gallery</span>
+          </h1>
           <p className="mt-2 text-lg">Khonoma • Dzukou • Kohima • Hornbill</p>
         </div>
       </section>
@@ -92,7 +102,13 @@ const GalleryPage = () => {
       <section className="py-10 container mx-auto px-4 text-center">
         <div className="flex flex-wrap justify-center gap-3">
           {categories.map((cat) => (
-            <Button key={cat} variant={selectedCategory === cat ? "default" : "outline"} size="sm" className="rounded-full" onClick={() => setSelectedCategory(cat)}>
+            <Button
+              key={cat}
+              variant={selectedCategory === cat ? "default" : "outline"}
+              size="sm"
+              className="rounded-full"
+              onClick={() => setSelectedCategory(cat)}
+            >
               {cat}
             </Button>
           ))}
@@ -103,9 +119,18 @@ const GalleryPage = () => {
       <section className="container mx-auto px-4 pb-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {filteredImages.map((image, index) => (
-            <Card key={index} className="overflow-hidden cursor-pointer group" onClick={() => setSelectedImage(image)}>
+            <Card
+              key={index}
+              className="overflow-hidden cursor-pointer group"
+              onClick={() => setSelectedImage(image)}
+            >
               <div className="relative h-64">
-                <img src={image.src} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img
+                  src={image.src}
+                  alt={image.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white">
                   <h3 className="font-semibold">{image.title}</h3>
                   <p className="text-sm text-white/80">{image.location}</p>
@@ -120,12 +145,21 @@ const GalleryPage = () => {
       {selectedImage && (
         <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
           <div className="relative max-w-5xl w-full">
-            <img src={selectedImage.src} className="w-full max-h-[85vh] object-contain rounded-lg" />
+            <img
+              src={selectedImage.src}
+              alt={selectedImage.title}
+              className="w-full max-h-[85vh] object-contain rounded-lg"
+            />
+
             <div className="text-white mt-4 text-center">
               <h3 className="text-xl font-semibold">{selectedImage.title}</h3>
               <p className="text-white/70">{selectedImage.location}</p>
             </div>
-            <button onClick={() => setSelectedImage(null)} className="absolute -top-4 -right-4 bg-white p-2 rounded-full">
+
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-2 right-2 bg-white p-2 rounded-full"
+            >
               <X />
             </button>
           </div>
