@@ -64,7 +64,7 @@ const ArunachalPradesh = () => {
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1585136917228-5eadc0ed1fa8?w=1920"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfTgxnB5fMg2sIKfhLpBUu6LsLas3iz4Bq1Q&s"
             alt="Arunachal Pradesh"
             className="w-full h-full object-cover scale-105"
           />
