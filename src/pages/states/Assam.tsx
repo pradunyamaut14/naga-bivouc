@@ -64,7 +64,7 @@ const Assam = () => {
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1574068468068-a809653dad67?w=1920"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl0VpPOZxCSYIZLJuYrDMRNYr09D5SbLEORg&s"
             alt="Assam Tea Gardens"
             className="w-full h-full object-cover scale-105"
           />
