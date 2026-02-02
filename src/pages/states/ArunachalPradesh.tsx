@@ -9,49 +9,49 @@ const ArunachalPradesh = () => {
     {
       name: "Tawang Monastery",
       description: "Largest monastery in India, perched at 10,000 ft. The spiritual heart of Arunachal.",
-      image: "https://images.unsplash.com/photo-1585136917228-5eadc0ed1fa8?w=800",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZDFdDxTEcbq9ODyxa2HvPqOBczi6ts1i-VA&s",
       category: "Spiritual"
     },
     {
       name: "Sela Pass",
       description: "High-altitude pass at 13,700 ft with breathtaking snow landscapes.",
-      image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800",
+      image: "https://hblimg.mmtcdn.com/content/hubble/img/tawangdestimgs/mmt/activities/m_Sela_Pass_1_l_426_640.jpg",
       category: "Mountains"
     },
     {
       name: "Ziro Valley",
       description: "UNESCO tentative heritage site, famous for Apatani culture & music festival.",
-      image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800",
+      image: "https://travelogyindia.b-cdn.net/storage/app/upload/ziro-arunachal-pradesh.jpg",
       category: "Cultural"
     },
     {
       name: "Namdapha National Park",
       description: "One of India’s richest biodiversity hotspots.",
-      image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800",
+      image: "https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2022/01/04131348/shutterstock_1325065313-1558x900.jpg",
       category: "Wildlife"
     },
     {
       name: "Bomdila",
       description: "Hill town with monasteries & panoramic Himalayan views.",
-      image: "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?w=800",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK7N3GrGU7IcIKNklXC1733CSUALUUZclQcA&s",
       category: "Hill Station"
     },
     {
       name: "Dirang Valley",
       description: "Beautiful valley with hot springs & rivers.",
-      image: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=800",
+      image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/03/db/69/thupsung-dhargye-ling.jpg?w=600&h=-1&s=1",
       category: "Nature"
     },
     {
       name: "Bumla Pass",
       description: "Indo-China border pass near Tawang.",
-      image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800",
+      image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/f1/8f/43/road-to-bum-la.jpg?w=900&h=-1&s=1",
       category: "Adventure"
     },
     {
       name: "Mechuka",
       description: "Remote hidden valley with untouched landscapes.",
-      image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800",
+      image: "https://s7ap1.scene7.com/is/image/incredibleindia/1-samten-yongcha-monastery-mechuka-arunachal-pradesh-attr-hero?qlt=82&ts=1726743121180",
       category: "Offbeat"
     }
   ];
