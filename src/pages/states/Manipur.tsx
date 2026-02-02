@@ -64,7 +64,7 @@ const Manipur = () => {
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1590077428593-a55bb07c4665?w=1920"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3c8uJ2Z6s_vIVj0s5FkDJjWM6OUHvspuYQA&s"
             alt="Loktak Lake Manipur"
             className="w-full h-full object-cover scale-105"
           />
