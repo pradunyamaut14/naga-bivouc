@@ -9,49 +9,49 @@ const Manipur = () => {
     {
       name: "Loktak Lake",
       description: "The largest freshwater lake in Northeast India, famous for floating phumdis and Keibul Lamjao National Park.",
-      image: "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?w=800",
+      image: "https://pulitzercenter.org/sites/default/files/styles/height_500/public/12-14-17/essay_2_of_12.jpg.webp?itok=Z8l80gET",
       category: "Nature"
     },
     {
       name: "Keibul Lamjao National Park",
       description: "World’s only floating national park and the natural habitat of the rare Sangai deer.",
-      image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkQsSMg0Ocy9l3PQfnrHdf6HIYk5fvqRwMAw&s",
       category: "Wildlife"
     },
     {
       name: "Kangla Fort",
       description: "Ancient seat of Manipur’s rulers and the spiritual & historical heart of Imphal.",
-      image: "https://images.unsplash.com/photo-1605649481806-c1b8a9a52c57?w=800",
+      image: "https://s7ap1.scene7.com/is/image/incredibleindia/kangla-fort-imphal-manipur-1-attr-hero?qlt=82&ts=1742165496756",
       category: "History"
     },
     {
       name: "Imphal War Cemetery",
       description: "World War II memorial maintained by the Commonwealth War Graves Commission.",
-      image: "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?w=800",
+      image: "https://s7ap1.scene7.com/is/image/incredibleindia/imphal-war-cemetery-imphal-manipur-3-attr-about?qlt=82&ts=1742174411837",
       category: "Heritage"
     },
     {
       name: "Shree Govindajee Temple",
       description: "Most important Vaishnavite temple in Manipur, located near Kangla Fort.",
-      image: "https://images.unsplash.com/photo-1605649481806-c1b8a9a52c57?w=800",
+      image: "https://superbcollections.com/wp-content/uploads/2023/09/1654674959images-10.jpeg",
       category: "Spiritual"
     },
     {
       name: "Andro Village",
       description: "Traditional cultural village known for pottery, heritage museum and local crafts.",
-      image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800",
+      image: "https://banasri.in/wp-content/uploads/2024/07/Andro-village-in-Manipur.jpg",
       category: "Cultural"
     },
     {
       name: "Ukhrul",
       description: "Hill district famous for Shirui Lily, rolling hills and Tangkhul Naga culture.",
-      image: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=800",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1ipbutjoD3FmT2aViEeDhW6yqHLpuyxejWQ&s",
       category: "Hill Station"
     },
     {
       name: "Moreh (Indo-Myanmar Border)",
       description: "International trade town near Myanmar border, gateway to Southeast Asia.",
-      image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK7ZDcjCIgVcltSPu_aIbqe0jK08mZoTiTtg&s",
       category: "Border Town"
     }
   ];
