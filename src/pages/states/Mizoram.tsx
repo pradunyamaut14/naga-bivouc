@@ -76,7 +76,7 @@ const Mizoram = () => {
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrR2kwu-3IVBZmztVkmkxFatlfBKqOIoyRcQ&s"
             alt="Mizoram"
             className="w-full h-full object-cover scale-105"
           />
