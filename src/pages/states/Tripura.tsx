@@ -76,7 +76,7 @@ const Tripura = () => {
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=1920"
+            src="https://neidc.org/wp-content/uploads/2024/07/MEGHALAY.pdf-2_page-0001-scaled.jpg"
             alt="Tripura"
             className="w-full h-full object-cover scale-105"
           />
