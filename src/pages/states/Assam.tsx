@@ -9,49 +9,49 @@ const Assam = () => {
     {
       name: "Kaziranga National Park",
       description: "UNESCO World Heritage Site, home to the world’s largest population of one-horned rhinoceros.",
-      image: "https://images.unsplash.com/photo-1581852017103-68ac65514cf7?w=800",
+      image: "https://i.ytimg.com/vi/-Ucld-GcXOU/maxresdefault.jpg",
       category: "Wildlife"
     },
     {
       name: "Majuli Island",
       description: "World’s largest river island, cultural heart of Assamese Vaishnavite traditions.",
-      image: "https://images.unsplash.com/photo-1524499982521-1ffd58dd89ea?w=800",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSEkCF3zPiNZSJhnjaJWXq_HGauAtFfrEXvg&s",
       category: "Cultural"
     },
     {
       name: "Kamakhya Temple",
       description: "One of the most powerful Shakti Peethas in India, located atop Nilachal Hill in Guwahati.",
-      image: "https://images.unsplash.com/photo-1605649481806-c1b8a9a52c57?w=800",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmUNtt1Y-62rFWdEvXh6xPH7wLwKN6vx6cNA&s",
       category: "Spiritual"
     },
     {
       name: "Tea Gardens of Assam",
       description: "Vast rolling estates producing world-famous Assam tea. Perfect for slow, scenic exploration.",
-      image: "https://images.unsplash.com/photo-1574068468068-a809653dad67?w=800",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2pKcFtFQ3-2ApotXMHujZhcnTynBlVTwbIQ&s",
       category: "Plantation"
     },
     {
       name: "Manas National Park",
       description: "UNESCO listed biosphere reserve known for tigers, elephants and rare golden langurs.",
-      image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800",
+      image: "https://media.assettype.com/sentinelassam-english%2F2025-06-10%2F9w280rnz%2FManas-National-Park.webp?w=480&dpr=2&auto=format%2Ccompress&fit=max&q=85",
       category: "Wildlife"
     },
     {
       name: "Sivasagar",
       description: "Historic capital of the Ahom Kingdom with monuments like Rang Ghar, Talatal Ghar and temples.",
-      image: "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?w=800",
+      image: "https://i.ytimg.com/vi/TnmvNUG76Bc/maxresdefault.jpg",
       category: "History"
     },
     {
       name: "Haflong",
       description: "Assam’s only hill station, surrounded by hills, lakes and tribal villages.",
-      image: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=800",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1IZCnGqd5j2Y_COdkcbqSdhdalkBFN1h0Hg&s",
       category: "Hill Station"
     },
     {
       name: "Brahmaputra River Cruise",
       description: "Sunset and cultural cruises offering a unique way to experience Assam’s landscapes and life.",
-      image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800",
+      image: "https://res.cloudinary.com/kmadmin/image/upload/v1720441789/kiomoi/brahmaputra_river_cruise_1057.jpg",
       category: "Experience"
     }
   ];
