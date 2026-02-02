@@ -76,7 +76,7 @@ const Sikkim = () => {
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=1920"
+            src="https://s7ap1.scene7.com/is/image/incredibleindia/2-chungthang-mangan-sikkim-2-city-hero?qlt=82&ts=1726655834488"
             alt="Sikkim"
             className="w-full h-full object-cover scale-105"
           />
