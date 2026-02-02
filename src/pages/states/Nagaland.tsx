@@ -76,7 +76,7 @@ const Nagaland = () => {
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1590077428593-a55bb07c4665?w=1920"
+            src="https://s7ap1.scene7.com/is/image/incredibleindia/hornbill-festival-nagaland-blog-art-exp-cit-pop?qlt=82&ts=1726674724135"
             alt="Nagaland"
             className="w-full h-full object-cover scale-105"
           />
