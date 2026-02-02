@@ -76,7 +76,7 @@ const Meghalaya = () => {
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1625046305693-09d71e35d9a6?w=1920"
+            src="https://media.assettype.com/english-sentinelassam%2Fimport%2Fh-upload%2F2020%2F12%2F14%2F181173-meghalaya.webp?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100"
             alt="Meghalaya"
             className="w-full h-full object-cover scale-105"
           />
