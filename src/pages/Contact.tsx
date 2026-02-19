@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, MessageCircle, Clock, ShieldCheck, Star, Map } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 
 const WHATSAPP_NUMBER = "7099623366";
 
@@ -15,6 +16,12 @@ const ContactPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Contact Naga Bivouac – Book Nagaland Tours"
+        description="Contact Naga Bivouac to plan your Nagaland and Northeast India trip. Reach us on WhatsApp, phone or email. Based in Khonoma, Kohima, Nagaland."
+        keywords="contact Naga Bivouac, book Nagaland tour, Nagaland travel contact, WhatsApp Nagaland tour, Kohima travel agent"
+        canonicalPath="/contact"
+      />
       <Navigation />
 
       {/* Hero Section */}
