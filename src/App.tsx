@@ -10,6 +10,8 @@ import Gallery from "./pages/Gallery";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Packages from "./pages/Packages";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import ArunachalPradesh from "./pages/states/ArunachalPradesh";
 import Assam from "./pages/states/Assam";
 import Manipur from "./pages/states/Manipur";
@@ -35,6 +37,8 @@ const App = () => (
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/states/arunachal-pradesh" element={<ArunachalPradesh />} />
           <Route path="/states/assam" element={<Assam />} />
           <Route path="/states/manipur" element={<Manipur />} />
