@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -94,6 +95,12 @@ const Packages = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Tour Packages – Nagaland & Northeast India"
+        description="Explore 30+ curated tour packages across Northeast India. Festival tours, adventure trekking, butterfly watching & cultural experiences in Nagaland, Meghalaya, Assam & more."
+        keywords="Northeast India tour packages, Nagaland packages, Hornbill Festival tour, Dzukou Valley trek package, butterfly watching India, Ziro Music Festival, adventure tours Northeast India, Meghalaya paragliding"
+        canonicalPath="/packages"
+      />
       <Navigation />
 
       {/* Hero Section */}

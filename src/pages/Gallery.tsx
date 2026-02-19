@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 import { useState } from "react";
+import SEOHead from "@/components/SEOHead";
 
 const WHATSAPP_NUMBER = "919876543210";
 
@@ -78,6 +79,12 @@ const GalleryPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Gallery – Nagaland & Northeast India Photos"
+        description="Browse stunning photos of Nagaland, Khonoma village, Dzukou Valley, Hornbill Festival, and Northeast India landscapes from Naga Bivouac tours."
+        keywords="Nagaland photos, Northeast India gallery, Khonoma village images, Dzukou Valley pictures, Hornbill Festival photos, Nagaland travel gallery"
+        canonicalPath="/gallery"
+      />
       <Navigation />
 
       {/* Hero */}

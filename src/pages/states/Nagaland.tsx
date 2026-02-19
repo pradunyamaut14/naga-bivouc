@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Mountain, Compass, Calendar, Route, Users, Info } from "lucide-react";
 import WhatsAppInquiryForm from "@/components/WhatsAppInquiryForm";
+import SEOHead from "@/components/SEOHead";
 
 const Nagaland = () => {
   const attractions = [
@@ -70,6 +71,12 @@ const Nagaland = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Nagaland Tours – Hornbill Festival, Dzukou Valley & More"
+        description="Explore Nagaland with Naga Bivouac. Visit Hornbill Festival, trek Dzukou Valley, explore Khonoma village, Mon district & Kohima. Local Naga guides & custom trips."
+        keywords="Nagaland tours, Hornbill Festival tour, Dzukou Valley trek, Kohima travel, Khonoma village, Mon district Nagaland, Nagaland travel guide, Japfu Peak trek"
+        canonicalPath="/states/nagaland"
+      />
       <Navigation />
 
       {/* Hero */}

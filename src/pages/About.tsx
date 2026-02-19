@@ -1,11 +1,10 @@
-
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mountain, Users, Award, Heart, MessageCircle } from "lucide-react";
-
+import SEOHead from "@/components/SEOHead";
 const WHATSAPP_NUMBER = "919876543210";
 
 const About = () => {
@@ -39,6 +38,12 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="About Naga Bivouac – Local Nagaland Tour Operator"
+        description="Naga Bivouac is a locally owned travel company from Khonoma, Nagaland specializing in authentic Northeast India tours, trekking, cultural immersion & sustainable tourism."
+        keywords="about Naga Bivouac, Nagaland tour operator, local travel company Nagaland, Khonoma travel, sustainable tourism Northeast India"
+        canonicalPath="/about"
+      />
       <Navigation />
       
       {/* Hero Section */}
