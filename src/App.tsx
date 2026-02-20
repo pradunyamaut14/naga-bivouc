@@ -21,6 +21,9 @@ import Nagaland from "./pages/states/Nagaland";
 import Sikkim from "./pages/states/Sikkim";
 import Tripura from "./pages/states/Tripura";
 import NotFound from "./pages/NotFound";
+import AdminLogin from "./pages/AdminLogin";
+import AdminDashboard from "./pages/AdminDashboard";
+import AdminEditor from "./pages/AdminEditor";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +42,10 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/admin" element={<AdminLogin />} />
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
+          <Route path="/admin/editor" element={<AdminEditor />} />
+          <Route path="/admin/editor/:id" element={<AdminEditor />} />
           <Route path="/states/arunachal-pradesh" element={<ArunachalPradesh />} />
           <Route path="/states/assam" element={<Assam />} />
           <Route path="/states/manipur" element={<Manipur />} />

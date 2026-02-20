@@ -137,11 +137,16 @@ const Footer = () => {
             © 2026 Naga Bivouac. All rights reserved.
           </p>
 
-          <p className="font-body text-sm text-naga-mist/60 flex items-center gap-1">
-            Built with <Heart className="h-4 w-4 text-naga-red" /> by 
-            <span className="font-medium text-naga-gold ml-1">Pradunya Maut</span>
-            <Code className="h-4 w-4 ml-1" />
-          </p>
+          <div className="flex items-center gap-4">
+            <p className="font-body text-sm text-naga-mist/60 flex items-center gap-1">
+              Built with <Heart className="h-4 w-4 text-naga-red" /> by 
+              <span className="font-medium text-naga-gold ml-1">Pradunya Maut</span>
+              <Code className="h-4 w-4 ml-1" />
+            </p>
+            <Link to="/admin" className="font-body text-xs text-naga-mist/30 hover:text-naga-mist/50 transition-colors">
+              Admin
+            </Link>
+          </div>
 
         </div>
 
