@@ -39,12 +39,23 @@ const BlogPost = () => {
       // Try DB first
       const { data } = await supabase
         .from("blog_posts")
-        .select("*, profiles:user_id(display_name)")
+        .select("*")
         .eq("slug", slug)
         .eq("published", true)
-        .maybeSingle() as { data: any };
+        .maybeSingle();
 
       if (data) {
+        // Fetch author profile
+        let authorName = data.author;
+        if (data.user_id) {
+          const { data: profile } = await supabase
+            .from("profiles")
+            .select("display_name")
+            .eq("user_id", data.user_id)
+            .maybeSingle();
+          if (profile?.display_name) authorName = profile.display_name;
+        }
+
         const p: PostData = {
           title: data.title,
           slug: data.slug,
@@ -53,7 +64,7 @@ const BlogPost = () => {
           image: data.cover_image || "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1920",
           category: data.category,
           tags: [data.category],
-          author: data.profiles?.display_name || data.author,
+          author: authorName,
           date: data.created_at,
           readTime: `${Math.max(3, Math.ceil(data.content.length / 1000))} min read`,
           metaTitle: `${data.title} – Naga Bivouac Blog`,
