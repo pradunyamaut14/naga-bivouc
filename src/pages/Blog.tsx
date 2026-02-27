@@ -22,6 +22,8 @@ interface DBPost {
   author: string;
   created_at: string;
   content: string;
+  user_id: string | null;
+  profiles?: { display_name: string } | null;
 }
 
 const Blog = () => {
@@ -32,10 +34,10 @@ const Blog = () => {
   useEffect(() => {
     supabase
       .from("blog_posts")
-      .select("id, title, slug, excerpt, cover_image, category, author, created_at, content")
+      .select("id, title, slug, excerpt, cover_image, category, author, created_at, content, user_id, profiles:user_id(display_name)")
       .eq("published", true)
       .order("created_at", { ascending: false })
-      .then(({ data }) => { if (data) setDbPosts(data); });
+      .then(({ data }) => { if (data) setDbPosts(data as unknown as DBPost[]); });
   }, []);
 
   // Merge DB posts with static posts (DB posts first, static as fallback)
@@ -49,7 +51,7 @@ const Blog = () => {
         image: p.cover_image || "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800",
         category: p.category,
         tags: [p.category],
-        author: p.author,
+        author: p.profiles?.display_name || p.author,
         date: p.created_at,
         readTime: `${Math.max(3, Math.ceil(p.content.length / 1000))} min read`,
       })),
@@ -146,7 +148,8 @@ const Blog = () => {
                       <h2 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors line-clamp-2">{post.title}</h2>
                       <p className="text-sm text-muted-foreground mb-4 line-clamp-3">{post.excerpt}</p>
                       <div className="flex items-center justify-between text-xs text-muted-foreground">
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-3 flex-wrap">
+                          <span className="font-medium text-foreground">{post.author}</span>
                           <span className="flex items-center gap-1">
                             <Calendar className="h-3.5 w-3.5" />
                             {new Date(post.date).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" })}
