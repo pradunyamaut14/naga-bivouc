@@ -39,10 +39,10 @@ const BlogPost = () => {
       // Try DB first
       const { data } = await supabase
         .from("blog_posts")
-        .select("*")
+        .select("*, profiles:user_id(display_name)")
         .eq("slug", slug)
         .eq("published", true)
-        .maybeSingle();
+        .maybeSingle() as { data: any };
 
       if (data) {
         const p: PostData = {
@@ -53,7 +53,7 @@ const BlogPost = () => {
           image: data.cover_image || "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1920",
           category: data.category,
           tags: [data.category],
-          author: data.author,
+          author: data.profiles?.display_name || data.author,
           date: data.created_at,
           readTime: `${Math.max(3, Math.ceil(data.content.length / 1000))} min read`,
           metaTitle: `${data.title} – Naga Bivouac Blog`,
@@ -229,9 +229,10 @@ const BlogPost = () => {
           <Badge className="bg-primary text-primary-foreground mb-3">{post.category}</Badge>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3">{post.title}</h1>
           <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+            <span className="font-medium text-foreground">By {post.author}</span>
             <span className="flex items-center gap-1"><Calendar className="h-4 w-4" />{new Date(post.date).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })}</span>
+            <span className="flex items-center gap-1"><Clock className="h-4 w-4" />{new Date(post.date).toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit" })}</span>
             <span className="flex items-center gap-1"><Clock className="h-4 w-4" />{post.readTime}</span>
-            <span>By {post.author}</span>
           </div>
         </div>
       </section>

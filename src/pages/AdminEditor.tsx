@@ -119,7 +119,7 @@ const AdminEditor = () => {
     }
     setSaving(true);
 
-    const postData = {
+    const postData: Record<string, any> = {
       title: title.trim(),
       slug: slug.trim(),
       excerpt: excerpt.trim(),
@@ -134,7 +134,7 @@ const AdminEditor = () => {
     if (id) {
       ({ error } = await supabase.from("blog_posts").update(postData).eq("id", id));
     } else {
-      ({ error } = await supabase.from("blog_posts").insert(postData));
+      ({ error } = await supabase.from("blog_posts").insert(postData as any));
     }
 
     setSaving(false);
