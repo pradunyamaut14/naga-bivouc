@@ -23,21 +23,33 @@ interface DBPost {
   created_at: string;
   content: string;
   user_id: string | null;
-  profiles?: { display_name: string } | null;
+}
+
+interface Profile {
+  user_id: string;
+  display_name: string;
 }
 
 const Blog = () => {
   const [search, setSearch] = useState("");
   const [categoryFilter, setCategoryFilter] = useState("All");
   const [dbPosts, setDbPosts] = useState<DBPost[]>([]);
+  const [profiles, setProfiles] = useState<Record<string, string>>({});
 
   useEffect(() => {
-    supabase
-      .from("blog_posts")
-      .select("id, title, slug, excerpt, cover_image, category, author, created_at, content, user_id, profiles:user_id(display_name)")
-      .eq("published", true)
-      .order("created_at", { ascending: false })
-      .then(({ data }) => { if (data) setDbPosts(data as unknown as DBPost[]); });
+    const fetchData = async () => {
+      const [postsRes, profilesRes] = await Promise.all([
+        supabase.from("blog_posts").select("id, title, slug, excerpt, cover_image, category, author, created_at, content, user_id").eq("published", true).order("created_at", { ascending: false }),
+        supabase.from("profiles").select("user_id, display_name"),
+      ]);
+      if (postsRes.data) setDbPosts(postsRes.data);
+      if (profilesRes.data) {
+        const map: Record<string, string> = {};
+        profilesRes.data.forEach((p: Profile) => { map[p.user_id] = p.display_name; });
+        setProfiles(map);
+      }
+    };
+    fetchData();
   }, []);
 
   // Merge DB posts with static posts (DB posts first, static as fallback)
@@ -51,14 +63,14 @@ const Blog = () => {
         image: p.cover_image || "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800",
         category: p.category,
         tags: [p.category],
-        author: p.profiles?.display_name || p.author,
+        author: (p.user_id && profiles[p.user_id]) || p.author,
         date: p.created_at,
         readTime: `${Math.max(3, Math.ceil(p.content.length / 1000))} min read`,
       })),
       ...staticPosts.filter(p => !dbSlugs.has(p.slug)),
     ];
     return merged;
-  }, [dbPosts]);
+  }, [dbPosts, profiles]);
 
   const categories = useMemo(() => {
     const cats = new Set(allPosts.map((p) => p.category));
